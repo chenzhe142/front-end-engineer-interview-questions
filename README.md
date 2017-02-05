@@ -3,6 +3,8 @@ A collection of questions I have been asked during front end job interview.
 Some of the practical questions are pretty challenging and interesting to solve.
 Hope this helps you prepare your interview better!
 
+Please feel free to create pull requests, and add your interview questions here. :)
+
 ## javascripts
 - ajax: request, response, how to implement, and solve it using native javascripts
 - prototype inheritance
