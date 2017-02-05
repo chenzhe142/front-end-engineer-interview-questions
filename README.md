@@ -10,15 +10,14 @@ Hope this helps you prepare your interview better!
 - event capture vs. event bubbling
 - `==` vs `===`
 - how to use `addEventListener(eventName, function, useCapture)`
-- what does Event.preventDefault() mean?
-- how to solve scope issue? what is the scope of `this` referring to in .bind(this)?
-- how to track user clicking event?
+- what does `Event.preventDefault()` mean?
+- how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
 - `let` vs `var`
 
 ## html
-- web accessibility: how to make <a> tag accessible?
+- web accessibility: how to make `<a>` tag accessible?
 - what are the commonly used attributes in order to make tags accessible?
-- what is iframe?
+- what is `iframe`?
 
 ## css
 
@@ -31,6 +30,7 @@ Hope this helps you prepare your interview better!
 - infinite scrolling
 - form validation
 - how do you make a website faster?
+- how to track user clicking event?
 - how to implement an infinite scrolling carousel?
 - what is cookie, and how to set it?
 - write a function to toggle `checkAll` checkbox, and other normal boxes
