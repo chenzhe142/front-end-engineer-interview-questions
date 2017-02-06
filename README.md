@@ -229,11 +229,17 @@ Semantic HTML or semantic markup is HTML that introduces meaning to the web page
 By adding semantic tags to your document, you provide additional information about the document, which aids in communications.
 
 ### - web accessibility: how to make `<a>` tag accessible?
+
+1. make the text of `<a>` concise. so that when screen readers read the link, people with disabilities can understand it.
+2. to be continued
+
 ### - what are the commonly used attributes in order to make tags accessible?
 ### - what is `iframe`?
 ### - can you nest `<a>`?
 ### - what's new in HTML5?
 ### - how to use data attributes?
+To access `data` attribute, use `element.dataset.attributeName`.
+
 ### - What is Doctype & why its important?
 ### - What are meta tags?
 
