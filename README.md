@@ -80,11 +80,12 @@ In order to achieve the goal, we can bind function for each `<li>` element. But 
 
 From [stack overflow - what is DOM event delegation?](http://stackoverflow.com/questions/1687296/what-is-dom-event-delegation):
 
-DOM event delegation is a mechanism of responding to ui-events via a single common parent rather than each child, through the magic of event "bubbling" (aka event propagation).
+```DOM event delegation is a mechanism of responding to ui-events via a single common parent rather than each child, through the magic of event "bubbling" (aka event propagation).```
 
-Event bubbling provides the foundation for event delegation in browsers. Now you can bind an event handler to a single parent element, and that handler will get executed whenever the event occurs on any of its child nodes (and any of their children in turn). This is event delegation.
+```Event bubbling provides the foundation for event delegation in browsers. Now you can bind an event handler to a single parent element, and that handler will get executed whenever the event occurs on any of its child nodes (and any of their children in turn). This is event delegation.```
 
 Using event delegation:
+
 ```javascript
 var target = document.querySelector('.parent');
 
@@ -96,6 +97,10 @@ target.addEventListener('click', function(event) {
   console.log(event.target.textContent);
 }, false);
 ```
+
+#### what's good about event delegation
+1. With event delegation, the number of event bindings can be drastically decreased by moving them to a common parent element.
+2. total memory used by `addEventListener` goes down
 
 Further reading:
 - [stack overflow - what is DOM event delegation?](http://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
