@@ -62,6 +62,17 @@ Interviewers usually give you an object, and let you distinguish either the outp
 
 ### - event capture vs. event bubbling. when to use them?
 
+Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event.
+
+The event propagation mode determines in which order the elements receive the event.
+
+With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+
+Further reading:
+- [stack overflow - what is event bubbling and capturing?](http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
+
 ### - event delegation.
 
 Assume we have an unordered list. We want to output the text when we click on the list element. Note that we may add/delete list elements.
@@ -110,6 +121,13 @@ Further reading:
 ### - how to use `addEventListener(eventName, function, useCapture)`
 ### - what does `Event.preventDefault()` mean?
 ### - how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
+
+documentation: [MDN - .bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+
+```javascript
+Function.prototype.bind()
+```
+
 ### - `let` vs `var`
 ### - what is promise? how to use it?
 
@@ -139,6 +157,28 @@ var newPromise = new Promise(function(resolve, reject) {
 ```
 
 ## html
+### - what is website accessibility, and how to improve the accessibility of a website?
+It means people with disabilities can use the web. In details, they can perceive, navigate and interact with the website.
+
+How to improve:
+1. Do not make your pages dependent on images
+2. Make sure all your images have ALT text. Screen readers cannot "read images". In order for your images meaningful for people with disabilities, you need to add written descriptions for the images.
+3. Don't make the font size too small
+4. Use highly contrasting colors for your text and background.
+5. Screen reader friendly: use proper `aria` label, name and descriptions to navigate users to interact the page.
+6. Use semantic markups, and then enhance with ARIA.
+7. etc.
+
+To use accessibility API describe an object:
+1. role
+2. name
+3. state
+
+Further readings:
+- [w3.org - Introduction to web accessibility](https://www.w3.org/WAI/intro/accessibility.php)
+- [w3.org - How people with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web/Overview.html)
+- [Smashing magazine - web accessibility with accessibility API](https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/)
+
 ### - web accessibility: how to make `<a>` tag accessible?
 ### - what are the commonly used attributes in order to make tags accessible?
 ### - what is `iframe`?
@@ -147,6 +187,19 @@ var newPromise = new Promise(function(resolve, reject) {
 ### - how to use data attributes?
 
 ## css
+### - what CSS preprocessor do you use? Pros and cons?
+I use `Stylus` and `PostCSS` (with css-next plugin).
+
+Pros:
+1. nested syntax
+2. can use variable, function, mixins, etc.
+3. etc.
+
+Cons:
+1. harder to debugging. change file -> compile -> refresh page to see changes
+2. learning curve
+
+### - what is `float`?
 
 ## frameworks
 ### - how do you think of Angular 2?
