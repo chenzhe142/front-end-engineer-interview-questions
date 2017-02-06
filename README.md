@@ -5,8 +5,15 @@ Hope this helps you prepare your interview better!
 
 Please feel free to create pull requests, and add your interview questions here. :)
 
-## javascripts
-### ajax: request, response, how to implement, and solve it using native javascripts
+- [javascript](#javascript)
+- [html](#html)
+- [css](#css)
+- [frameworks](#frameworks)
+- [practical questions](practical-questions)
+- [user experience](user-experience)
+
+## javascript
+### - ajax: request, response, how to implement, and solve it using native javascripts
 
 There are two ways of doing Ajax call, one is using `XMLHttpRequest`, and the other is using `fetch`.
 
@@ -41,7 +48,7 @@ fetch(myRequest).then(function(response) {
 ```
 
 
-### prototype inheritance
+### - prototype inheritance
 
 Unlike class inheritance in other languages (Java, Python, etc.), inheritance in JavaScript is entirely different. Make sure you have read through documentations before interview.
 
@@ -52,14 +59,14 @@ Here are some useful links and books for further reading:
 Interviewers usually give you an object, and let you distinguish either the output of a function, or an inner variable's value.
 
 
-### event delegation
-### event capture vs. event bubbling
-### `==` vs `===`
-### how to use `addEventListener(eventName, function, useCapture)`
-### what does `Event.preventDefault()` mean?
-### how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
-### `let` vs `var`
-### what is promise? how to use it?
+### - event delegation
+### - event capture vs. event bubbling
+### - `==` vs `===`
+### - how to use `addEventListener(eventName, function, useCapture)`
+### - what does `Event.preventDefault()` mean?
+### - how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
+### - `let` vs `var`
+### - what is promise? how to use it?
 
 See documentation: [MDN Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
@@ -87,27 +94,27 @@ var newPromise = new Promise(function(resolve, reject) {
 ```
 
 ## html
-### web accessibility: how to make `<a>` tag accessible?
-### what are the commonly used attributes in order to make tags accessible?
-### what is `iframe`?
+### - web accessibility: how to make `<a>` tag accessible?
+### - what are the commonly used attributes in order to make tags accessible?
+### - what is `iframe`?
 
 ## css
 
 ## frameworks
-### how do you think of Angular 2?
-### what do you like about React?
+### - how do you think of Angular 2?
+### - what do you like about React?
 
 ## practical questions
-### lazy loading images
-### infinite scrolling
-### form validation
-### how do you make a website faster?
-### how to track user clicking event?
-### how to implement an infinite scrolling carousel?
-### what is cookie, and how to set it?
-### write a function to toggle `checkAll` checkbox, and other normal boxes
+### - lazy loading images
+### - infinite scrolling
+### - form validation
+### - how do you make a website faster?
+### - how to track user clicking event?
+### - how to implement an infinite scrolling carousel?
+### - what is cookie, and how to set it?
+### - write a function to toggle `checkAll` checkbox, and other normal boxes
 
 ## user experience
 Although UX design is not the main focus of front end engineers, interviewers may still ask you and check your understanding on good user experience. It would be good to have some basic understanding on UX, and stay up-to-date for the latest UX trend.
-### what do you think makes a good UX engineer?
-### when to use optimistic update?
+### - what do you think makes a good UX engineer?
+### - when to use optimistic update?
