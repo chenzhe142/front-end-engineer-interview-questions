@@ -15,17 +15,28 @@ Please feel free to create pull requests, and add your interview questions here.
 ## javascript
 ### - ajax: request, response, how to implement, and solve it using native javascripts
 
+AJAX is the use of JavaScript to send and receive using HTTP without reloading the page.
+
 There are two ways of doing Ajax call, one is using `XMLHttpRequest`, and the other is using `fetch`.
 
 XMLHttpRequest: [MDN]()
 
 Using `XMLHttpRequest`
-```
+
+```javascript
+var request = new XMLHttpRequest();
+request.open("POST", "path/to/api", true);
+request.onreadystatechange = function () {
+  if (request.readyState != 4 || request.status != 200) return;
+  alert("Success: " + request.responseText);
+};
+request.send("banana=yellow");
 ```
 
 fetch: [MDN]()
 
 Using `fetch`
+
 ```javascript
 var myRequest = new Request('http://www.zhechen.co/', {
   method: 'GET',
@@ -47,6 +58,8 @@ fetch(myRequest).then(function(response) {
 
 ```
 
+### - what is prototype
+A prototype is an internal object from which other objects inherit properties. Its main purpose is to allow multiple instances of an object to share a common property. Thus, object properties which are defined using the prototype object are inherited by all instances which reference it.
 
 ### - prototype inheritance
 
@@ -59,6 +72,7 @@ Here are some useful links and books for further reading:
 
 Interviewers usually give you an object, and let you distinguish either the output of a function, or an inner variable's value.
 
+### - difference between prototype inheritance & classical inheritance
 
 ### - event capture vs. event bubbling. when to use them?
 
@@ -73,7 +87,11 @@ With capturing, the event is first captured by the outermost element and propaga
 Further reading:
 - [stack overflow - what is event bubbling and capturing?](http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
 
+### - why do you want to prevent event bubbling?
+
 ### - event delegation.
+
+If there are many elements inside one parent, and you want to handle events on them - don’t bind handlers to each element. Instead, bind the single handler to their parent, and get the child from e.target || e.srcElement.
 
 Assume we have an unordered list. We want to output the text when we click on the list element. Note that we may add/delete list elements.
 
@@ -109,15 +127,20 @@ target.addEventListener('click', function(event) {
 }, false);
 ```
 
-#### what's good about event delegation
+#### pros
 1. With event delegation, the number of event bindings can be drastically decreased by moving them to a common parent element.
 2. total memory used by `addEventListener` goes down
+
+#### cons
+You need caution when managing some mouse events. If your code is handling the mousemove event; Not all events bubble.; There’s a risk your event management code could become a performance bottleneck.
 
 Further reading:
 - [stack overflow - what is DOM event delegation?](http://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
 - [David Walsh - how javascript event delegation works](https://davidwalsh.name/event-delegate)
 
 ### - `==` vs `===`
+‘==’ evaluates equality of the value, while ‘===’ evaluates equality of type and value.
+
 ### - how to use `addEventListener(eventName, function, useCapture)`
 ### - what does `Event.preventDefault()` mean?
 ### - how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
@@ -127,6 +150,15 @@ documentation: [MDN - .bind()](https://developer.mozilla.org/en-US/docs/Web/Java
 ```javascript
 Function.prototype.bind()
 ```
+
+We use the Bind () method primarily to call a function with the this value set explicitly. It other words, bind () allows us to easily set which specific object will be bound to this when a function or method is invoked.
+
+This might seem relatively trivial, but often the this value in methods and functions must be set explicitly when you need a specific object bound to the function’s this value.
+
+The need for bind usually occurs when we use the this keyword in a method and we call that method from a receiver object; in such cases, sometimes this is not bound to the object that we expect it to be bound to, resulting in errors in our applications.
+
+
+### - What is a “closure” in JavaScript? Provide an example/why use closure?
 
 ### - `let` vs `var`
 ### - what is promise? how to use it?
@@ -156,6 +188,8 @@ var newPromise = new Promise(function(resolve, reject) {
 
 ```
 
+### - callback vs promise
+
 ## html
 ### - what is website accessibility, and how to improve the accessibility of a website?
 It means people with disabilities can use the web. In details, they can perceive, navigate and interact with the website.
@@ -181,12 +215,19 @@ Further readings:
 - [w3.org - How people with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web/Overview.html)
 - [Smashing magazine - web accessibility with accessibility API](https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/)
 
+### - explain semantic markup
+Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation.
+
+By adding semantic tags to your document, you provide additional information about the document, which aids in communications.
+
 ### - web accessibility: how to make `<a>` tag accessible?
 ### - what are the commonly used attributes in order to make tags accessible?
 ### - what is `iframe`?
 ### - can you nest `<a>`?
 ### - what's new in HTML5?
 ### - how to use data attributes?
+### - What is Doctype & why its important?
+### - What are meta tags?
 
 ## css
 ### - what CSS preprocessor do you use? Pros and cons?
@@ -204,6 +245,31 @@ Cons:
 2. learning curve
 
 ### - what is `float`?
+In web design, page elements with the CSS float property applied to them are just like the images in the print layout where the text flows around them. Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning. Absolutely positioned page elements are removed from the flow of the webpage.
+
+### - explain clearfix
+A clearfix is a way for an element to automatically clear its child elements, so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally. The clearfix is a way to combat the zero-height container problem for floated elements.
+
+```css
+.clearfix {
+  overflow: auto;
+}
+```
+
+或者:
+
+```css
+.clearfix:after {
+   content: "";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+```
+
+## browser compatibility
+
 
 ## frameworks
 ### - how do you think of Angular 2?
@@ -215,6 +281,15 @@ Cons:
 ### - form validation
 ### - how to check if an element is in viewport?
 ### - design a calendar
+### - How to give <a> so that it won’t take you to another page but gives you alert message.
+
+```javascript
+$('a').on('click', function(evt) {
+  alert['No!'];
+  evt.preventDefault();
+});
+```
+
 ### - how do you make a website faster?
 
 1. css sprite
