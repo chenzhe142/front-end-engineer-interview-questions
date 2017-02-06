@@ -26,7 +26,7 @@ Using `XMLHttpRequest`
 fetch: [MDN]()
 
 Using `fetch`
-```
+```javascript
 var myRequest = new Request('http://www.zhechen.co/', {
   method: 'GET',
   headers: {
@@ -72,7 +72,7 @@ See documentation: [MDN Promise](https://developer.mozilla.org/en-US/docs/Web/Ja
 
 Blog post: [usage of Promise](https://www.toptal.com/javascript/javascript-promises)
 
-```
+```javascript
 var rollDice = function() {
   return Math.ceil(Math.random() * 6);
 };
