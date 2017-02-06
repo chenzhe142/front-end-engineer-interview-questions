@@ -93,6 +93,8 @@ With capturing, the event is first captured by the outermost element and propaga
 
 Further reading:
 - [stack overflow - what is event bubbling and capturing?](http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
+- [Quirks mode - Event order](http://www.quirksmode.org/js/events_order.html)
+- [CSS Tricks - the difference between "return false;" and "event.preventDefault();" ](https://css-tricks.com/return-false-and-prevent-default/)
 
 
 ### - why do you want to prevent event bubbling?
@@ -157,6 +159,11 @@ Further reading:
 
 
 
+### - what does `Event.preventDefault()` mean?
+
+- [Quirks mode - Event order](http://www.quirksmode.org/js/events_order.html)
+- [CSS Tricks - the difference between "return false;" and "event.preventDefault();" ](https://css-tricks.com/return-false-and-prevent-default/)
+
 ### - `==` vs `===`
 ‘==’ evaluates equality of the value, while ‘===’ evaluates equality of type and value.
 
@@ -164,8 +171,6 @@ Further reading:
 
 ### - how to use `addEventListener(eventName, function, useCapture)`
 
-
-### - what does `Event.preventDefault()` mean?
 
 
 ### - how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
