@@ -216,6 +216,21 @@ Cons:
 ### - how to check if an element is in viewport?
 ### - design a calendar
 ### - how do you make a website faster?
+
+1. css sprite
+2. load pictures only when needed
+3. load javascript files only when needed
+4. Optimize CSS and JS files. Enable compression: minify front end files, combine multiple front end files into one
+5. use CDN
+6. check if you put unused code into the page, or JS CSS files.
+7. eliminate HTTP requests
+8. make images internet-friendly
+
+HTTP/2 may also help. However, be extremely cautions to mention it, because your interviewer may not know about HTTP/2's new feature. Don't get into trouble!
+
+1. use HTTP/2 to have multiple connection. Front end files will be downloaded in parallel.
+2. HTTP/2 server push - it allows a web server to send resources to a browser before the browser gets to request them
+
 ### - how to track user clicking event?
 ### - how to implement an infinite scrolling carousel?
 ### - what is cookie, and how to set it?
