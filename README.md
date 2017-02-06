@@ -53,6 +53,7 @@ fetch(myRequest).then(function(response) {
 Unlike class inheritance in other languages (Java, Python, etc.), inheritance in JavaScript is entirely different. Make sure you have read through documentations before interview.
 
 Here are some useful links and books for further reading:
+
 1. MDN Introduction to JavaScript: [prototype inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 2. JavaScript - the good parts
 
