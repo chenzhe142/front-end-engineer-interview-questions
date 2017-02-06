@@ -161,6 +161,7 @@ var newPromise = new Promise(function(resolve, reject) {
 It means people with disabilities can use the web. In details, they can perceive, navigate and interact with the website.
 
 How to improve:
+
 1. Do not make your pages dependent on images
 2. Make sure all your images have ALT text. Screen readers cannot "read images". In order for your images meaningful for people with disabilities, you need to add written descriptions for the images.
 3. Don't make the font size too small
@@ -170,6 +171,7 @@ How to improve:
 7. etc.
 
 To use accessibility API describe an object:
+
 1. role
 2. name
 3. state
@@ -191,11 +193,13 @@ Further readings:
 I use `Stylus` and `PostCSS` (with css-next plugin).
 
 Pros:
+
 1. nested syntax
 2. can use variable, function, mixins, etc.
 3. etc.
 
 Cons:
+
 1. harder to debugging. change file -> compile -> refresh page to see changes
 2. learning curve
 
