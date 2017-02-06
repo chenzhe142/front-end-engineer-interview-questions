@@ -127,6 +127,14 @@ target.addEventListener('click', function(event) {
 }, false);
 ```
 
+#### example 2:
+```javascript
+document.addEventListener('click', function(event) {
+  event.target.style.visibility = 'none';
+}, false);
+```
+We delegate clicking event to `document`. When an element is clicked, use `event.target` to access that element, and set it to `visibility: hidden`.
+
 #### pros
 1. With event delegation, the number of event bindings can be drastically decreased by moving them to a common parent element.
 2. total memory used by `addEventListener` goes down
@@ -307,6 +315,39 @@ HTTP/2 may also help. However, be extremely cautions to mention it, because your
 2. HTTP/2 server push - it allows a web server to send resources to a browser before the browser gets to request them
 
 ### - how to track user clicking event?
+
+#### example 1: save clicked elements into an array
+See codepen demo [here](http://codepen.io/chenzhe142/pen/PWBbJo?editors=1111)
+
+```html
+<div class="container">
+  <a href="#section-a" class="post">post a new comment</a>
+</div>
+
+<div class="section">
+  <div class="section-a">
+    this is section a
+  </div>
+</div>
+```
+
+```javascript
+var clickingElements = [];
+
+document.addEventListener('click', function(event) {
+  
+  console.log('trigger post');
+  clickingElements.push(event.target);
+  console.log(clickingElements);
+  
+}, false);
+```
+Use event delegation, delegating all elements's event inside of `<body>` to `document`. When any element is clicked, add `eventTarget` to `clickingElements` array.
+
+#### example 2: when clicking an element, trigger a `POST`, writing into backend database for logging
+
+
+
 ### - how to implement an infinite scrolling carousel?
 ### - what is cookie, and how to set it?
 ### - write a function to toggle `checkAll` checkbox, and other normal boxes
