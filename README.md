@@ -9,8 +9,8 @@ Please feel free to create pull requests, and add your interview questions here.
 - [html](#html)
 - [css](#css)
 - [frameworks](#frameworks)
-- [practical questions](practical-questions)
-- [user experience](user-experience)
+- [practical questions](#practical-questions)
+- [user experience](#user-experience)
 
 ## javascript
 ### - ajax: request, response, how to implement, and solve it using native javascripts
