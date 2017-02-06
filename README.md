@@ -197,6 +197,12 @@ var newPromise = new Promise(function(resolve, reject) {
 ```
 
 ### - callback vs promise
+### - what is event loop? 
+### - Non-blocking javascript: we know that browser is single-threaded, and other tasks will be blocked if one task is not yet finished. how would you solve thise issue?
+
+1. Service Worker - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+2. Split one huge task into small tasks. For example, use `setTimeout()` to call a certain function. [Stack overflow](http://stackoverflow.com/questions/26615966/how-to-make-non-blocking-javascript-code)
+3. If the task is too heavy, let server to do the job.
 
 ## html
 ### - what is website accessibility, and how to improve the accessibility of a website?
@@ -231,7 +237,11 @@ By adding semantic tags to your document, you provide additional information abo
 ### - web accessibility: how to make `<a>` tag accessible?
 
 1. make the text of `<a>` concise. so that when screen readers read the link, people with disabilities can understand it.
-2. to be continued
+2. don't capitaliz link text. avoid using ASCII charactors, and using URLs as text.
+3. restrict numbers of links on a page
+4. always alert a user when opening a new tab/window. For example, add a new icon "external-link" so that screen readers can read it to people.
+5. 
+3.  to be continued
 
 ### - what are the commonly used attributes in order to make tags accessible?
 ### - what is `iframe`?
@@ -270,7 +280,7 @@ A clearfix is a way for an element to automatically clear its child elements, so
 }
 ```
 
-或者:
+or:
 
 ```css
 .clearfix:after {
