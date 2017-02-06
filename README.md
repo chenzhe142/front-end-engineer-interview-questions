@@ -59,8 +59,47 @@ Here are some useful links and books for further reading:
 Interviewers usually give you an object, and let you distinguish either the output of a function, or an inner variable's value.
 
 
-### - event delegation
-### - event capture vs. event bubbling
+### - event capture vs. event bubbling. when to use them?
+
+### - event delegation.
+
+Assume we have an unordered list. We want to output the text when we click on the list element. Note that we may add/delete list elements.
+
+Here is the HTML markup:
+
+```html
+<ul class="parent">
+ <li>one</li>
+ <li>two</li>
+ <li>three</li>
+</ul>
+```
+
+In order to achieve the goal, we can bind function for each `<li>` element. But there is a better way to do it.
+
+From [stack overflow - what is DOM event delegation?](http://stackoverflow.com/questions/1687296/what-is-dom-event-delegation):
+
+DOM event delegation is a mechanism of responding to ui-events via a single common parent rather than each child, through the magic of event "bubbling" (aka event propagation).
+
+Event bubbling provides the foundation for event delegation in browsers. Now you can bind an event handler to a single parent element, and that handler will get executed whenever the event occurs on any of its child nodes (and any of their children in turn). This is event delegation.
+
+Using event delegation:
+```javascript
+var target = document.querySelector('.parent');
+
+target.addEventListener('click', function(event) {
+  // currentTarget => <ul class="parent">
+  console.log(event.currentTarget);
+
+  // target: the element that you are clicking on
+  console.log(event.target.textContent);
+}, false);
+```
+
+Further reading:
+- [stack overflow - what is DOM event delegation?](http://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
+- [David Walsh - how javascript event delegation works](https://davidwalsh.name/event-delegate)
+
 ### - `==` vs `===`
 ### - how to use `addEventListener(eventName, function, useCapture)`
 ### - what does `Event.preventDefault()` mean?
@@ -97,6 +136,9 @@ var newPromise = new Promise(function(resolve, reject) {
 ### - web accessibility: how to make `<a>` tag accessible?
 ### - what are the commonly used attributes in order to make tags accessible?
 ### - what is `iframe`?
+### - can you nest `<a>`?
+### - what's new in HTML5?
+### - how to use data attributes?
 
 ## css
 
@@ -108,6 +150,8 @@ var newPromise = new Promise(function(resolve, reject) {
 ### - lazy loading images
 ### - infinite scrolling
 ### - form validation
+### - how to check if an element is in viewport?
+### - design a calendar
 ### - how do you make a website faster?
 ### - how to track user clicking event?
 ### - how to implement an infinite scrolling carousel?
