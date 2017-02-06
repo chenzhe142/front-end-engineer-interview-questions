@@ -12,7 +12,10 @@ Please feel free to create pull requests, and add your interview questions here.
 - [practical questions](#practical-questions)
 - [user experience](#user-experience)
 
+
+
 ## javascript
+
 ### - ajax: request, response, how to implement, and solve it using native javascripts
 
 AJAX is the use of JavaScript to send and receive using HTTP without reloading the page.
@@ -58,8 +61,10 @@ fetch(myRequest).then(function(response) {
 
 ```
 
+
 ### - what is prototype
 A prototype is an internal object from which other objects inherit properties. Its main purpose is to allow multiple instances of an object to share a common property. Thus, object properties which are defined using the prototype object are inherited by all instances which reference it.
+
 
 ### - prototype inheritance
 
@@ -72,7 +77,9 @@ Here are some useful links and books for further reading:
 
 Interviewers usually give you an object, and let you distinguish either the output of a function, or an inner variable's value.
 
+
 ### - difference between prototype inheritance & classical inheritance
+
 
 ### - event capture vs. event bubbling. when to use them?
 
@@ -87,7 +94,9 @@ With capturing, the event is first captured by the outermost element and propaga
 Further reading:
 - [stack overflow - what is event bubbling and capturing?](http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
 
+
 ### - why do you want to prevent event bubbling?
+
 
 ### - event delegation.
 
@@ -146,11 +155,19 @@ Further reading:
 - [stack overflow - what is DOM event delegation?](http://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
 - [David Walsh - how javascript event delegation works](https://davidwalsh.name/event-delegate)
 
+
+
 ### - `==` vs `===`
 ‘==’ evaluates equality of the value, while ‘===’ evaluates equality of type and value.
 
+
+
 ### - how to use `addEventListener(eventName, function, useCapture)`
+
+
 ### - what does `Event.preventDefault()` mean?
+
+
 ### - how to solve scope issue? what is the scope of `this` referring to in `.bind(this)`?
 
 documentation: [MDN - .bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
@@ -168,7 +185,10 @@ The need for bind usually occurs when we use the this keyword in a method and we
 
 ### - What is a “closure” in JavaScript? Provide an example/why use closure?
 
+
 ### - `let` vs `var`
+
+
 ### - what is promise? how to use it?
 
 See documentation: [MDN Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
@@ -197,14 +217,23 @@ var newPromise = new Promise(function(resolve, reject) {
 ```
 
 ### - callback vs promise
+
+
 ### - what is event loop? 
+
+
 ### - Non-blocking javascript: we know that browser is single-threaded, and other tasks will be blocked if one task is not yet finished. how would you solve thise issue?
 
 1. Service Worker - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 2. Split one huge task into small tasks. For example, use `setTimeout()` to call a certain function. [Stack overflow](http://stackoverflow.com/questions/26615966/how-to-make-non-blocking-javascript-code)
 3. If the task is too heavy, let server to do the job.
 
+
+
+
 ## html
+
+
 ### - what is website accessibility, and how to improve the accessibility of a website?
 It means people with disabilities can use the web. In details, they can perceive, navigate and interact with the website.
 
@@ -229,10 +258,12 @@ Further readings:
 - [w3.org - How people with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web/Overview.html)
 - [Smashing magazine - web accessibility with accessibility API](https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/)
 
+
 ### - explain semantic markup
 Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation.
 
 By adding semantic tags to your document, you provide additional information about the document, which aids in communications.
+
 
 ### - web accessibility: how to make `<a>` tag accessible?
 
@@ -243,17 +274,46 @@ By adding semantic tags to your document, you provide additional information abo
 5. 
 3.  to be continued
 
+
 ### - what are the commonly used attributes in order to make tags accessible?
+
+
 ### - what is `iframe`?
+
+
 ### - can you nest `<a>`?
+
+
 ### - what's new in HTML5?
+
+
 ### - how to use data attributes?
 To access `data` attribute, use `element.dataset.attributeName`.
 
+Usage:
+
+1. tracking user behavior, such as clicking event.
+
+Pros:
+
+1. Easy to store some data on a tag. Easy access.
+
+Cons:
+
+1. Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. 
+2. In addition, search crawlers may not index data attributes' values. 
+3. `element.dataset.attributeName` does not work on IE 10 and before. To use it, use `.getAttribute()`.
+
 ### - What is Doctype & why its important?
+
+
 ### - What are meta tags?
 
+
+
+
 ## css
+
 ### - what CSS preprocessor do you use? Pros and cons?
 I use `Stylus` and `PostCSS` (with css-next plugin).
 
@@ -268,8 +328,10 @@ Cons:
 1. harder to debugging. change file -> compile -> refresh page to see changes
 2. learning curve
 
+
 ### - what is `float`?
 In web design, page elements with the CSS float property applied to them are just like the images in the print layout where the text flows around them. Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning. Absolutely positioned page elements are removed from the flow of the webpage.
+
 
 ### - explain clearfix
 A clearfix is a way for an element to automatically clear its child elements, so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally. The clearfix is a way to combat the zero-height container problem for floated elements.
@@ -292,33 +354,47 @@ or:
 }
 ```
 
+
+
 ## browser compatibility
 
 
+
 ## frameworks
+
 ### - how do you think of Angular 2?
+
 ### - what do you like about React?
 
+
+
 ## practical questions
+
 ### - lazy loading images
+
 ### - infinite scrolling
+
 ### - form validation
+
 ### - how to check if an element is in viewport?
+
 ### - design a calendar
+
 ### - How to give <a> so that it won’t take you to another page but gives you alert message.
 
 ```javascript
-$('a').on('click', function(evt) {
-  alert['No!'];
-  evt.preventDefault();
-});
+var aTag = document.querySelector('a');
+a.addEventListener('click', function(event) {
+  alert('hey');
+  event.preventDefault();
+}, false);
 ```
 
 ### - how do you make a website faster?
 
 1. css sprite
 2. load pictures only when needed
-3. load javascript files only when needed
+3. load javascript files only when needed - use `<script src="path/to/script" async />`
 4. Optimize CSS and JS files. Enable compression: minify front end files, combine multiple front end files into one
 5. use CDN
 6. check if you put unused code into the page, or JS CSS files.
@@ -329,6 +405,7 @@ HTTP/2 may also help. However, be extremely cautions to mention it, because your
 
 1. use HTTP/2 to have multiple connection. Front end files will be downloaded in parallel.
 2. HTTP/2 server push - it allows a web server to send resources to a browser before the browser gets to request them
+
 
 ### - how to track user clicking event?
 
@@ -365,10 +442,17 @@ Use event delegation, delegating all elements's event inside of `<body>` to `doc
 
 
 ### - how to implement an infinite scrolling carousel?
+
 ### - what is cookie, and how to set it?
+
 ### - write a function to toggle `checkAll` checkbox, and other normal boxes
 
+
+
 ## user experience
+
 Although UX design is not the main focus of front end engineers, interviewers may still ask you and check your understanding on good user experience. It would be good to have some basic understanding on UX, and stay up-to-date for the latest UX trend.
+
 ### - what do you think makes a good UX engineer?
+
 ### - when to use optimistic update?
