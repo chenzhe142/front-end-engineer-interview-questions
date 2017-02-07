@@ -1,5 +1,7 @@
 # design patterns
 
+The notes are taken from Addy Osmani's book, [learning javascript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
 ## - constructor pattern
 
 ```javascript
