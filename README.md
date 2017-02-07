@@ -78,9 +78,9 @@ $.ajax({
     console.log('shoot! cannot make ajax call');
   },
   success: function(data) {
-    console.log('data retrieved!'');
+    console.log('data retrieved!');
   }
-})
+});
 
 ```
 
