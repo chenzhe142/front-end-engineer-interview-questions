@@ -43,7 +43,11 @@ fetch: [MDN]()
 Using `fetch`
 
 ```javascript
-var myRequest = new Request('http://www.zhechen.co/', {
+// use query params
+var url = new URL('http://www.example.com/api');
+url.searchParams.append('name', 'zchen');
+
+var myRequest = new Request(url, {
   method: 'GET',
   headers: {
     'Accept': 'application/json',
@@ -60,6 +64,23 @@ fetch(myRequest).then(function(response) {
   console.log('cannot fetch');
   console.log(error);
 });
+
+```
+
+Using jQuery
+
+```javascript
+$.ajax({
+  url: 'www.example.com/api',
+  dataType: 'json',
+  type: 'GET',
+  error: function() {
+    console.log('shoot! cannot make ajax call');
+  },
+  success: function(data) {
+    console.log('data retrieved!'');
+  }
+})
 
 ```
 
