@@ -295,12 +295,18 @@ By adding semantic tags to your document, you provide additional information abo
 
 ### - web accessibility: how to make `<a>` tag accessible?
 
+HTML markup:
+
+1. `href` should present
+2. `name`
+3. `id` if needed
+4. `textContent`
+
 1. make the text of `<a>` concise. so that when screen readers read the link, people with disabilities can understand it.
 2. don't capitaliz link text. avoid using ASCII charactors, and using URLs as text.
 3. restrict numbers of links on a page
-4. always alert a user when opening a new tab/window. For example, add a new icon "external-link" so that screen readers can read it to people.
-5. 
-3.  to be continued
+4. always alert a user when opening a new tab/window. For example, add a new icon "external-link" so that screen readers can read it to people. 
+5.  to be continued
 
 
 ### - what are the commonly used attributes in order to make tags accessible?
