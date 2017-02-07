@@ -1,6 +1,6 @@
-## design patterns
+# design patterns
 
-### - constructor pattern
+## - constructor pattern
 
 ```javascript
 function Car( model, year, miles ) {
@@ -47,7 +47,7 @@ Car.prototype.toString = function () {
 
 ```
 
-### - the module pattern
+## - the module pattern
 
 The Module pattern encapsulates "privacy", state and organization using `closures`.
 
@@ -138,7 +138,7 @@ We also can't access private members in methods that are added to the object at 
 Other disadvantages include the inability to create automated unit tests for private members and additional complexity when bugs require hot fixes. It's simply not possible to patch privates. Instead, one must override all public methods which interact with the buggy privates. Developers can't easily extend privates either, so it's worth remembering privates are not as flexible as they may initially appear.
 
 
-### the revealing module pattern
+## - the revealing module pattern
 
 The result of his efforts was an updated pattern where we would simply define all of our functions and variables in the private scope and return an anonymous object with pointers to the private functionality we wished to reveal as public.
 
@@ -175,3 +175,155 @@ var myRevealingModule = (function () {
 myRevealingModule.setName( "Paul Kinlan" );
 ```
 
+
+## - the observer pattern
+
+The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
+
+## - publish / subscribe pattern
+
+Basic idea: `hashMap: {eventName: [..callback]}`
+
+```javascript
+var pubsub = {};
+ 
+(function(myObject) {
+ 
+    // Storage for topics that can be broadcast
+    // or listened to
+    var topics = {};
+ 
+    // An topic identifier
+    var subUid = -1;
+ 
+    // Publish or broadcast events of interest
+    // with a specific topic name and arguments
+    // such as the data to pass along
+    myObject.publish = function( topic, args ) {
+ 
+        if ( !topics[topic] ) {
+            return false;
+        }
+ 
+        var subscribers = topics[topic],
+            len = subscribers ? subscribers.length : 0;
+ 
+        while (len--) {
+            subscribers[len].func( topic, args );
+        }
+ 
+        return this;
+    };
+ 
+    // Subscribe to events of interest
+    // with a specific topic name and a
+    // callback function, to be executed
+    // when the topic/event is observed
+    myObject.subscribe = function( topic, func ) {
+ 
+        if (!topics[topic]) {
+            topics[topic] = [];
+        }
+ 
+        var token = ( ++subUid ).toString();
+        topics[topic].push({
+            token: token,
+            func: func
+        });
+        return token;
+    };
+ 
+    // Unsubscribe from a specific
+    // topic, based on a tokenized reference
+    // to the subscription
+    myObject.unsubscribe = function( token ) {
+        for ( var m in topics ) {
+            if ( topics[m] ) {
+                for ( var i = 0, j = topics[m].length; i < j; i++ ) {
+                    if ( topics[m][i].token === token ) {
+                        topics[m].splice( i, 1 );
+                        return token;
+                    }
+                }
+            }
+        }
+        return this;
+    };
+}( pubsub ));
+```
+
+#### Example: user interface notification
+
+Next, let's imagine we have a web application responsible for displaying real-time stock information.
+
+The application might have a grid for displaying the stock stats and a counter for displaying the last point of update. When the data model changes, the application will need to update the grid and counter. In this scenario, our subject (which will be publishing topics/notifications) is the data model and our subscribers are the grid and counter.
+
+When our subscribers receive notification that the model itself has changed, they can update themselves accordingly.
+
+In our implementation, our subscriber will listen to the topic "newDataAvailable" to find out if new stock information is available. If a new notification is published to this topic, it will trigger gridUpdate to add a new row to our grid containing this information. It will also update a last updated counter to log the last time data was added
+
+```javascript
+// Return the current local time to be used in our UI later
+getCurrentTime = function (){
+ 
+   var date = new Date(),
+         m = date.getMonth() + 1,
+         d = date.getDate(),
+         y = date.getFullYear(),
+         t = date.toLocaleTimeString().toLowerCase();
+ 
+        return (m + "/" + d + "/" + y + " " + t);
+};
+ 
+// Add a new row of data to our fictional grid component
+function addGridRow( data ) {
+ 
+   // ui.grid.addRow( data );
+   console.log( "updated grid component with:" + data );
+ 
+}
+ 
+// Update our fictional grid to show the time it was last
+// updated
+function updateCounter( data ) {
+ 
+   // ui.grid.updateLastChanged( getCurrentTime() );
+   console.log( "data last updated at: " + getCurrentTime() + " with " + data);
+ 
+}
+ 
+// Update the grid using the data passed to our subscribers
+gridUpdate = function( topic, data ){
+ 
+  if ( data !== undefined ) {
+     addGridRow( data );
+     updateCounter( data );
+   }
+ 
+};
+ 
+// Create a subscription to the newDataAvailable topic
+var subscriber = pubsub.subscribe( "newDataAvailable", gridUpdate );
+ 
+// The following represents updates to our data layer. This could be
+// powered by ajax requests which broadcast that new data is available
+// to the rest of the application.
+ 
+// Publish changes to the gridUpdated topic representing new entries
+pubsub.publish( "newDataAvailable", {
+  summary: "Apple made $5 billion",
+  identifier: "APPL",
+  stockPrice: 570.91
+});
+ 
+pubsub.publish( "newDataAvailable", {
+  summary: "Microsoft made $20 million",
+  identifier: "MSFT",
+  stockPrice: 30.85
+});
+```
+
+
+Further readings:
+
+- [David Walsh - Pub / Sub Javascript object](https://davidwalsh.name/pubsub-javascript)
