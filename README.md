@@ -286,6 +286,9 @@ Further readings:
 - [w3.org - How people with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web/Overview.html)
 - [Smashing magazine - web accessibility with accessibility API](https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/)
 
+Online tools for checking your markup:
+- [achecker](http://achecker.ca/checker/index.php#output_div)
+
 
 ### - explain semantic markup
 Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation.
