@@ -11,6 +11,8 @@ Please feel free to create pull requests, and add your interview questions here.
 - [frameworks](#frameworks)
 - [practical questions](#practical-questions)
 - [user experience](#user-experience)
+- [system design](#system-design)
+- [product-taste](#product-taste)
 
 
 
@@ -461,3 +463,8 @@ Although UX design is not the main focus of front end engineers, interviewers ma
 ### - what do you think makes a good UX engineer?
 
 ### - when to use optimistic update?
+
+
+## system design
+
+## product taste
