@@ -257,6 +257,19 @@ var newPromise = new Promise(function(resolve, reject) {
 3. If the task is too heavy, let server to do the job.
 
 
+### - immediately-invoked function express
+
+```javascript
+var iife = function(word) {
+  console.log(word);
+}('awesome');
+
+// the function is executed instantly: 
+// output: 'awesome'
+```
+
+- [Ben Alman - immediately invoked function expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
+
 
 
 ## html
