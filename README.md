@@ -125,6 +125,10 @@ Further reading:
 
 ### - event delegation.
 
+`Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.`
+
+`Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.`
+
 If there are many elements inside one parent, and you want to handle events on them - don’t bind handlers to each element. Instead, bind the single handler to their parent, and get the child from e.target || e.srcElement.
 
 Assume we have an unordered list. We want to output the text when we click on the list element. Note that we may add/delete list elements.
@@ -246,15 +250,29 @@ var newPromise = new Promise(function(resolve, reject) {
 
 ### - callback vs promise
 
+*promise*: promise is a method that let you handle asynchronous operation based the operation's final state.
 
-### - what is event loop? 
+If it's resolved or fulfilled, we do a function. Or it is rejected, we do another function. syntax is better.
+
+*callback*: function used as another function's parameter / arguments
+
+
+### - what is event loop?
+
+JavaScript runtimes contain a message queue, and it stores a list of messages to be processed and their associated callback functions.
+
+In a loop, the queue grabs for the next message, and calls its associated function. Since javascript is single-threaded, queue waits for the function to be finished, and then get the next message.
+
+- [The javascript event loop: explained](http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/)
 
 
 ### - Non-blocking javascript: we know that browser is single-threaded, and other tasks will be blocked if one task is not yet finished. how would you solve thise issue?
 
 1. Service Worker - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+
 2. Split one huge task into small tasks. For example, use `setTimeout()` to call a certain function. [Stack overflow](http://stackoverflow.com/questions/26615966/how-to-make-non-blocking-javascript-code)
-3. If the task is too heavy, let server to do the job.
+
+3. If the task is too heavy, let server do the job.
 
 
 ### - immediately-invoked function express
@@ -264,7 +282,7 @@ var iife = function(word) {
   console.log(word);
 }('awesome');
 
-// the function is executed instantly: 
+// the function is executed instantly:
 // output: 'awesome'
 ```
 
@@ -286,7 +304,10 @@ How to improve:
 4. Use highly contrasting colors for your text and background.
 5. Screen reader friendly: use proper `aria` label, name and descriptions to navigate users to interact the page.
 6. Use semantic markups, and then enhance with ARIA.
-7. etc.
+7. add labels for form elements
+8. make sure you can navigate through a page using keyboard only
+9. create meaningful links
+10. etc.
 
 To use accessibility API describe an object:
 
@@ -321,7 +342,7 @@ HTML markup:
 1. make the text of `<a>` concise. so that when screen readers read the link, people with disabilities can understand it.
 2. don't capitaliz link text. avoid using ASCII charactors, and using URLs as text.
 3. restrict numbers of links on a page
-4. always alert a user when opening a new tab/window. For example, add a new icon "external-link" so that screen readers can read it to people. 
+4. always alert a user when opening a new tab/window. For example, add a new icon "external-link" so that screen readers can read it to people.
 5.  to be continued
 
 
@@ -350,8 +371,8 @@ Pros:
 
 Cons:
 
-1. Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. 
-2. In addition, search crawlers may not index data attributes' values. 
+1. Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them.
+2. In addition, search crawlers may not index data attributes' values.
 3. `element.dataset.attributeName` does not work on IE 10 and before. To use it, use `.getAttribute()`.
 
 ### - What is Doctype & why its important?
@@ -478,11 +499,11 @@ See codepen demo [here](http://codepen.io/chenzhe142/pen/PWBbJo?editors=1111)
 var clickingElements = [];
 
 document.addEventListener('click', function(event) {
-  
+
   console.log('trigger post');
   clickingElements.push(event.target);
   console.log(clickingElements);
-  
+
 }, false);
 ```
 Use event delegation, delegating all elements's event inside of `<body>` to `document`. When any element is clicked, add `eventTarget` to `clickingElements` array.
