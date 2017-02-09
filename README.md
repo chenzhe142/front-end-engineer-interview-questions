@@ -318,7 +318,10 @@ var iife = function(word) {
 
 - [Ben Alman - immediately invoked function expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
 
+### -debouncing
 
+- [David Walsh - Function debounce](https://davidwalsh.name/function-debounce)
+- [CSS Tricks - the difference between throttling and debouncing](https://css-tricks.com/the-difference-between-throttling-and-debouncing/)
 
 ## html
 
