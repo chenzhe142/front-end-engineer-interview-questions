@@ -38,6 +38,15 @@ request.onreadystatechange = function () {
 request.send("banana=yellow");
 ```
 
+Parameters
+
+```javascript
+xhrReq.open(method, url);
+// the default value of async is true
+xhrReq.open(method, url, async);
+xhrReq.open(method, url, async, user);
+xhrReq.open(method, url, async, user, password);
+```
 fetch: [MDN]()
 
 Using `fetch`
