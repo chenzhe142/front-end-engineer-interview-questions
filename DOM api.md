@@ -2,7 +2,9 @@
 
 ## methods
 
-### `getBoundingClientRect()`
+### Viewport
+
+#### - `getBoundingClientRect()`
 The `Element.getBoundingClientRect()` method returns the size of an element and its position relative to the viewport.
 
 ```javascript
@@ -14,6 +16,9 @@ ClientRect {
   width: 672
 }
 ```
+
+#### - `clientHeight`
+MDN: [Element.clientHeight()](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight)
 
 ## object
 
@@ -36,3 +41,7 @@ function draw() {
 }
 ```
 See result in [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images)
+
+### `Array`
+
+#### `Array.prototype.splice(start, deleteCount, item1, item2, ...)`
