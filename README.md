@@ -36,6 +36,16 @@ request.onreadystatechange = function () {
   alert("Success: " + request.responseText);
 };
 request.send("banana=yellow");
+
+var request = new XMLHttpRequest();
+request.open('GET', 'http://www.example.com');
+request.onreadystatechange = function() {
+  if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+    console.log(request.responseText);
+  }
+};
+
+request.send();
 ```
 
 Parameters
@@ -484,6 +494,8 @@ or:
 ## practical questions
 
 ### - lazy loading images
+
+[CSS Tricks - lazy loading](https://css-tricks.com/snippets/javascript/lazy-loading-images/)
 
 ### - infinite scrolling
 
