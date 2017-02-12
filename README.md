@@ -325,14 +325,14 @@ In a loop, the queue grabs for the next message, and calls its associated functi
 
 
 ### - immediately-invoked function express
-
 ```javascript
-var iife = function(word) {
-  console.log(word);
-}('awesome');
+(function test() {
+    console.log('kakak');
+})();
 
-// the function is executed instantly:
-// output: 'awesome'
+var a = function() {
+    console.log('a');
+}();
 ```
 
 - [Ben Alman - immediately invoked function expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
