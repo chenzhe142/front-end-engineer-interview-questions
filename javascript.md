@@ -59,3 +59,132 @@ arrow functions do not get their own implicit `this` parameter when we call them
 ## `Function.prototype.bind()`
 `.bind()` is designed to **create** and return a **new** function that is bound to the passed-in object. It creates a completely new function.
 
+## closure
+closure allows a function to access and manipulate variables that are external to that function.
+
+```javascript
+function Ninja() {
+  // the scope of the variable is limited to inside the constructor function,
+  // it's a "private" variable.
+  var name = "who knows";
+}
+```
+
+### usage
+- mimic private vairables
+
+## execution context stack
+
+```
+|                          |
+| tryNextFunction('he')    |
+|--------------------------|
+| runFunction('lala')      |
+|--------------------------|
+| global execution context |
+----------------------------
+```
+
+## variable definitions: `const`, `var`, `let`
+`let` and `const` are introduced by ES6.
+- `var`: mutable - it is defined in **the closest function** or **global lexical environment**. **blocks are ignored!**
+- `const`: immutable, value can only be set once - it defines variables in the closest lexical environment (which can be a block, loop, a function, or even global environment)
+- `let`: mutable - same as `const` above
+
+## how does Javscript engine run and execute?
+```javascript
+const firstRobin = 'robin';
+check(firstRobin);
+
+function check(input) {
+    console.log(`check ${input}`);
+}
+```
+from the example above, function call `check(firstRobin)` will execute sucessfully, even though the actual `check()` function declaration is after the execution.
+
+This only works for function declaration (i.e. `function() {}`, not `var a = function() {}`)
+
+Although Javascript code is executed line by line, it turns out that Javascript engine "cheats" a little. It has two phases when running the code:
+1. javascript engine **visits** and **registers** all declared variables within the current lexical environment.
+2. javascript executes the code
+
+## variable hoisting
+variables are visited and registered in lexical environments before any code is executed.
+
+## `promise`
+A `promise` is a built-in type of objects that help you work with asynchronous code. A `promise` is a placeholder for a value that we don't have yet, but will at some later point. They are specially good for working with multiple asynchronous steps.
+
+```javascript
+const namePromise = new Promise(function(resolve, reject) {
+  if (getJson().status === 200) {
+    resolve('promise resolved');
+  } else {
+    reject('promised failed');
+  }
+});
+```
+disadvantages of callback:
+1. difficult error handling
+2. performing sequences of steps is tricky.
+3. performing a number of steps in parallel is also tricky.
+
+advantage of `promise`: 
+1. avoid a bunch of nested callbacks for error or response handling.
+2. easy to handle a sequence of asyn
+
+
+## `generator` (covered in Secrets of JavaSccript Ninja, working with generator functions section)
+a `generator` is a function that generates a sequence of values. `generator` can receive standard arguments.
+
+a `generator` works almost like a small program, a state machine that moves between states:
+- **suspended start**
+- **executing**
+- **suspended yield**
+- **completed**
+
+calling the generator will create an object called an `iterator`. 
+
+```javascript
+function* NameGenerator() {
+  yield 'Amy';
+  yield 'Allen';
+  yield 'Frank';
+}
+
+var nameIterator = NameGenerator();
+nameIterator.next(); // Object: {value: 'Amy', done: 'false'}
+```
+
+### usage 1: generate ids
+```javascript
+function *IdGenerator() {
+  let id = 0;
+  while (true) {
+    yield ++id;
+  }
+}
+```
+
+### usage 2: traverse the DOM
+- recursion version:
+```javascript
+function traverseDOM(element, callback) {
+  callback(element);
+  element = element.firstElementChild;
+  while (element) {
+    traverseDOM(element, callback);
+    element = element.nextElementSibling;
+  }
+}
+```
+- generator:
+```javascript
+function* DomTraversal(element) {
+  yield element;
+  element = element.firstElementChild;
+  while (element) {
+    yield* DomTraversal(element);
+    element = element.nextElementSibling;
+  }
+}
+```
