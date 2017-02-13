@@ -8,7 +8,6 @@
 Array is object, but object is not array. Array is based on object, with its own unique prototype methods.
 
 
-
 ## strict mode: `use strict`
 It disables `arguments` params. It changes the behavior of Javascript engines so that errors are thrown instead of silently picked up.
 
@@ -114,6 +113,8 @@ variables are visited and registered in lexical environments before any code is 
 ## `promise`
 A `promise` is a built-in type of objects that help you work with asynchronous code. A `promise` is a placeholder for a value that we don't have yet, but will at some later point. They are specially good for working with multiple asynchronous steps.
 
+We can chaining promises with `then()`.
+
 ```javascript
 const namePromise = new Promise(function(resolve, reject) {
   if (getJson().status === 200) {
@@ -129,8 +130,47 @@ disadvantages of callback:
 3. performing a number of steps in parallel is also tricky.
 
 advantage of `promise`: 
-1. avoid a bunch of nested callbacks for error or response handling.
-2. easy to handle a sequence of asyn
+1. simplifies the approache of dealing with asynchronous tasks.
+2. can work with a sequence of handling
+
+```javascript
+function getJSON(url) {
+  return new Promise((resolve, reject) => {
+    const request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.onload = function() {
+      try {
+        if (this.status === 200) {
+          resolve(JSON.parse(this.response));
+        } else {
+          reject(this.status + ' ' + this.statusText);
+        }
+      } catch(e) {
+        reject(e.message);
+      }
+    };
+    
+    request.onerror = function() {
+      reject(this.status + ' ' + this.statusText);
+    };
+    
+  });
+}
+```
+
+## `async` and `await`
+```javascript
+(async function () {
+  try {
+    const ninjas = await getJSON('data/ninjas.json');
+    const missions = await getJSON('data/missions.json');
+    
+    console.log(missions);
+  } catch(e) {
+    console.log('error: ' + e);
+  }
+})();
+```
 
 
 ## `generator` (covered in Secrets of JavaSccript Ninja, working with generator functions section)
