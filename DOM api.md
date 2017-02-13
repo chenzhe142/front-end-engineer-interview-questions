@@ -45,3 +45,10 @@ See result in [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 ### `Array`
 
 #### `Array.prototype.splice(start, deleteCount, item1, item2, ...)`
+
+### 'FormData'
+```javascript
+var formElement = document.querySelector('form');
+var formData = new FormData(formElement);
+formData.append('username', 'Zoe');
+```
