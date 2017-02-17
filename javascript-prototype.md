@@ -66,7 +66,77 @@ class Worker extends Person {
 }
 ```
 
+## `getter` and `setter`
+Getter and setter methods can be defined in two ways:
+- by specifying them within object literals or within ES6 class definitions
 
+```javascript
+const names = {
+    nameList: ['andy', 'amy', 'adam'],
+    get firstName() {
+        return this.nameList[0];
+    },
+    set firstName(value) {
+        this.nameList[0] = value;
+    }
+}
 
+names.firstName; //output: 'andy'
+```
 
+- by using the built-in `Object.defineProperty` method
+```javascript
+var Company = function() {
+    let _ceo = 'someone';
 
+    Object.defineProperty(this, 'ceo', {
+        get: () => {
+            return _ceo;
+        },
+        set: (value) => {
+          // validate value
+          if (typeof value !== 'string') {
+                throw new TypeError('ceo\'s name should be string!');
+            }
+            _ceo = value;
+        }
+    });
+}
+
+var newCompany = new Company();
+
+// access get() method
+console.log(newCompany.ceo); // output: 'someone'
+
+// access set() method
+newCompany.ceo = 'me';
+
+// access get() method
+console.log(newCompany.ceo); // output: 'me'
+```
+
+### usage
+- data validation
+
+```javascript
+set: (value) => {
+  // validate value
+  if (typeof value !== 'string') {
+    throw new TypeError('ceo\'s name should be string!');
+  }
+  _ceo = value;
+}
+```
+
+- define computed properties
+```javascript
+var manager = {
+    firstName: 'blake',
+    lastName: 'weiss',
+    get fullName() {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+
+console.log(manager.fullName);
+```
