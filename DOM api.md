@@ -2,6 +2,46 @@
 
 ## methods
 
+### DOM Element Node
+
+#### - `ParentNode.append()`
+The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
+
+`DOMString` objects are inserted as equivalent `Text` nodes.
+
+**polyfill for IE 9 and higher:**
+```javascript
+// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
+(function (arr) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty('append')) {
+      return;
+    }
+    Object.defineProperty(item, 'append', {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function append() {
+        var argArr = Array.prototype.slice.call(arguments),
+          docFrag = document.createDocumentFragment();
+        
+        argArr.forEach(function (argItem) {
+          var isNode = argItem instanceof Node;
+          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+        });
+        
+        this.appendChild(docFrag);
+      }
+    });
+  });
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+```
+
+#### - `Node.appendChild()`
+- It adds a node to the end of the list of children of a specified parent node. 
+- If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
+- If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
+
 ### Viewport
 
 #### - `getBoundingClientRect()`
