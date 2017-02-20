@@ -4,6 +4,23 @@
 
 ### DOM Element Node
 
+#### - `node.children`
+`Node.children` is a read-only property that returns a live `HTMLCollection` of the child elements of Node.
+
+`node.children` is an array-like object. It does not have array's methods.
+
+- To convert it to an array
+```javascript
+var childrenNode = divElement.children;
+var childrenNodeList = [];
+
+for (let i = 0; i < childrenNode.length; i += 1) {
+  childrenNodeList.push(childrenNode[i]);
+}
+
+
+```
+
 #### - `ParentNode.append()`
 The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
 
@@ -61,6 +78,12 @@ ClientRect {
 MDN: [Element.clientHeight()](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight)
 
 ## object
+
+### `HTMLCollection()`
+The `HTMLCollection` interface represents **a generic collection** (**array-like object** similar to `arguments`) of elements (in document order) and offers methods and properties for selecting from the list.
+
+- `HTMLCollection.length`
+- `HTMLCollection.item()` - Returns the specific node at the given zero-based index into the list. Returns null if the index is out of range.
 
 ### `Image()`
 
