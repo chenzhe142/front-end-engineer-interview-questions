@@ -92,3 +92,19 @@ var formElement = document.querySelector('form');
 var formData = new FormData(formElement);
 formData.append('username', 'Zoe');
 ```
+
+### `EventSource`
+MDN - [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+```javascript
+// create a EventSource object
+var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } ); 
+
+// listen to a message
+evtSource.onmessage = function(e) {
+  var newElement = document.createElement("li");
+  
+  newElement.innerHTML = "message: " + e.data;
+  eventList.appendChild(newElement);
+}
+
+```
