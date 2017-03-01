@@ -59,6 +59,23 @@ The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` ob
 - If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
 - If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
 
+#### - `HTMLElement.dataset`
+- it allows access, both in reading and writing mode, to all the custom data attributes (`data-*`) set on the element, either in HTML or in the DOM.
+
+Sample markup:
+```html
+<a href="/path-to-member-profile" id="memberLink" data-member-id="123">Jack Smith</a>
+```
+
+Usage:
+```javascript
+let element = document.getElementById('memberLink');
+let memberId = element.dataset.memberId; // use camel-case to access data-* attribute
+
+// output: 123
+console.log(memberId);
+```
+
 ### Viewport
 
 #### - `getBoundingClientRect()`
