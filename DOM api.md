@@ -21,6 +21,9 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ```
 
+#### - `node.parentElement`
+get its parentElement
+
 #### - `ParentNode.append()`
 The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
 
