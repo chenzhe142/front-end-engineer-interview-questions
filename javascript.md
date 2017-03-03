@@ -41,14 +41,13 @@ When a function is assigned to a property of an object, it would be invoked by r
 #### what happens if not using `new` operator to construct an object?
 In nonstrict mode, the `this` parameter will refer to `window` object. You may not invoke functions properly.
 
-
-### via function's `apply()` or `call()` methods - `fly.call(ninja)` or `fly.apply(ninja)`
-- `.apply(this, [arguments])` - the object to be used as function context, **an array of values** to be used as the invocation arguments.
-- `.call(this, arguments)` - the object to be used as function context, **arguments that are passed directly into the argument list**.
-
 ## `Function.prototype.apply` vs `Function.prototype.call`
 - `.apply(this, [arguments])` - the object to be used as function context, **an array of values** to be used as the invocation arguments.
 - `.call(this, arguments)` - the object to be used as function context, **arguments that are passed directly into the argument list**.
+
+## `Array.prototype.forEach` vs `Array.prototype.map`
+- `forEach` operates on the original array elements
+- `map` explicitly returns a new array
 
 ## ES6 - arrow function
 arrow functions do not get their own implicit `this` parameter when we call them. They remember the value of the `this` parameter at the time they were created.
