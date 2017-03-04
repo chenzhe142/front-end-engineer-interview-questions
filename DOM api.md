@@ -21,8 +21,34 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ```
 
+#### - `node.nextSibling`
+
+#### - `node.previousSibling`
+
+#### - `node.firstChild`
+
+#### - `node.lastChild`
+
+#### - `node.parentNode`
+
 #### - `node.parentElement`
 get its parentElement
+
+#### - `node.parentNode` vs `node.parentElement`
+- In most cases, it is the same as parentNode. 
+- The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
+
+```javascript
+document.body.parentNode; // the <html> element
+document.body.parentElement; // the <html> element
+
+document.documentElement.parentNode; // the document node
+document.documentElement.parentElement; // null
+```
+
+#### - `node.nextElementSibling`
+
+#### - `node.previousElementSibling`
 
 #### - `ParentNode.append()`
 The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
