@@ -128,7 +128,7 @@ disadvantages of callback:
 2. performing sequences of steps is tricky.
 3. performing a number of steps in parallel is also tricky.
 
-advantage of `promise`: 
+advantage of `promise`:
 1. simplifies the approache of dealing with asynchronous tasks.
 2. can work with a sequence of handling
 
@@ -148,11 +148,11 @@ function getJSON(url) {
         reject(e.message);
       }
     };
-    
+
     request.onerror = function() {
       reject(this.status + ' ' + this.statusText);
     };
-    
+
   });
 }
 ```
@@ -163,7 +163,7 @@ function getJSON(url) {
   try {
     const ninjas = await getJSON('data/ninjas.json');
     const missions = await getJSON('data/missions.json');
-    
+
     console.log(missions);
   } catch(e) {
     console.log('error: ' + e);
@@ -181,7 +181,7 @@ a `generator` works almost like a small program, a state machine that moves betw
 - **suspended yield**
 - **completed**
 
-calling the generator will create an object called an `iterator`. 
+calling the generator will create an object called an `iterator`.
 
 ```javascript
 function* NameGenerator() {
