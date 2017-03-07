@@ -4,3 +4,5 @@
 - `<article>`
 - `<aside>`
 - `<section>`
+- `<caption>`
+- `<strong>`
