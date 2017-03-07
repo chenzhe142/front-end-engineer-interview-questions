@@ -4,5 +4,5 @@
 - `<article>`
 - `<aside>`
 - `<section>`
-- `<caption>`
+- `<caption>`: the title of a `<table>`. first decendent of `<table>`
 - `<strong>`
