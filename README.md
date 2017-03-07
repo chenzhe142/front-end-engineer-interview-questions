@@ -1,9 +1,5 @@
-# front-end-engineer-interview-questions
-A collection of questions I have been asked during front end job interview.
-Some of the practical questions are pretty challenging and interesting to solve.
-Hope this helps you prepare your interview better!
-
-Please feel free to create pull requests, and add your interview questions here. :)
+# front end study notes
+A notebook repo to keep track of front end technologies & knowledges I learned daily.
 
 - [javascript](#javascript)
 - [html](#html)
