@@ -30,3 +30,16 @@ Reflow occurs when:
 
 ## repaint
 It goes through all the elements and determines their visibility, colour, outline and other visual style properties, then it updates the relevant parts of the screen.
+
+## The rendering cycle
+### Video: [Google I/O 2013 - True Grit: Debugging CSS & Render Performance](https://www.youtube.com/watch?v=gqc88qWuiI4)
+
+Edits to the document cause the browser to enter the rendering cycle.
+
+1. Build the DOM
+2. Calculate CSS property values
+3. Build the rendering tree
+4. Calculate layout
+5. Paint
+6. Composite
+
