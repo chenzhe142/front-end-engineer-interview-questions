@@ -3,11 +3,10 @@
 ## DOM Element Node
 
 ### - `node.children`
-`Node.children` is a read-only property that returns a live `HTMLCollection` of the child elements of Node.
+- a read-only property that returns a live `HTMLCollection` of the child elements of Node.
+- `Node.children` is an array-like object.
 
-`node.children` is an array-like object. It does not have array's methods.
-
-- To convert it to an array
+#### To convert it to an array
 ```javascript
 var childrenNode = divElement.children;
 var childrenNodeList = [];
@@ -19,33 +18,27 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ```
 
-### - `node.nextSibling`
-
-### - `node.previousSibling`
-
 ### - `node.firstChild`
 
 ### - `node.lastChild`
 
+### - `node.nextSibling`
+
+### - `node.previousSibling`
+
 ### - `node.parentNode`
 
-### - `node.parentElement`: get its parentElement
-
-### - `node.parentNode` vs `node.parentElement`
-- In most cases, it is the same as parentNode. 
-- The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
-
-```javascript
-document.body.parentNode; // the <html> element
-document.body.parentElement; // the <html> element
-
-document.documentElement.parentNode; // the document node
-document.documentElement.parentElement; // null
-```
+### - `node.parentElement`
 
 ### - `node.nextElementSibling`
 
 ### - `node.previousElementSibling`
+
+### - `HTMLElement.dataset`
+- it allows access, both in reading and writing mode, to all the custom data attributes (`data-*`) set on the element, either in HTML or in the DOM.
+- access with **camelCase**
+
+### - `Element.setAttribute('attributeName', 'value')`
 
 ### - `ParentNode.append()`
 The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
@@ -67,11 +60,25 @@ var dupNode = node.cloneNode(deep);
 
 ### - `ChildNode.remove()`: removes the object from the tree it belongs to.
 
-### - `HTMLElement.dataset`
-- it allows access, both in reading and writing mode, to all the custom data attributes (`data-*`) set on the element, either in HTML or in the DOM.
-- access with **camelCase**
+### - `node.parentNode` vs `node.parentElement`
+- In most cases, it is the same as parentNode. 
+- The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
 
-### - `Element.setAttribute('attributeName', 'value')`
+### - `HTMLElement vs Node`
+
+#### `node`
+
+- A `node` is the generic name for any type of object in the DOM hierarchy. 
+
+- A node could be one of the built-in DOM elements such as `document` or `document.body`. it could be an HTML tag specified in the HTML such as <input> or <p> or it could be a text node that is created by the system to hold a block of text inside another element. 
+
+- So, in a nutshell, **a node is any DOM object**.
+
+#### `element`
+
+- An `element` is one specific type of node. 
+- And there are many other types of nodes (text nodes, comment nodes, document nodes, etc...).
+
 
 
 ## Viewport
