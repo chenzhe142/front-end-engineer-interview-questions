@@ -1,8 +1,8 @@
 # Dealing with pragmatic issues
 
 ## Reflow
-[Stack overflow - what is DOM reflow](http://stackoverflow.com/questions/27637184/what-is-dom-reflow)
-[Repaints and reflows: manipulating the DOM responsibly](http://blog.letitialew.com/post/30425074101/repaints-and-reflows-manipulating-the-dom)
+### [Stack overflow - what is DOM reflow](http://stackoverflow.com/questions/27637184/what-is-dom-reflow)
+### [Repaints and reflows: manipulating the DOM responsibly](http://blog.letitialew.com/post/30425074101/repaints-and-reflows-manipulating-the-dom)
 
 A **reflow** computes the layout of the page. A reflow on an element recomputes the dimensions and position of the element, and it also triggers further reflows on that **element’s children, ancestors and elements that appear after it in the DOM**. Then it calls a final repaint. 
 
