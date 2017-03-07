@@ -1,6 +1,11 @@
 # DOM API
 
-## DOM Element Node
+- [Node](#node)
+- [Element](#element)
+- [Viewport](#viewport)
+
+
+## Node
 
 ### - `node.children`
 - a read-only property that returns a live `HTMLCollection` of the child elements of Node.
@@ -34,9 +39,8 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ### - `node.previousElementSibling`
 
-### - `HTMLElement.dataset`
-- it allows access, both in reading and writing mode, to all the custom data attributes (`data-*`) set on the element, either in HTML or in the DOM.
-- access with **camelCase**
+### - `HTMLElement.dataset`: access `data-*`
+- access with **camelCase** => `data-member-id` as `dataset.memberId`
 
 ### - `Element.setAttribute('attributeName', 'value')`
 
@@ -73,7 +77,7 @@ var dupNode = node.cloneNode(deep);
 
 - A node could be one of the built-in DOM elements such as `document` or `document.body`. it could be an HTML tag specified in the HTML such as <input> or <p> or it could be a text node that is created by the system to hold a block of text inside another element. 
 
-- So, in a nutshell, **a node is any DOM object**.
+- **a node is any DOM object**
 
 #### `element`
 
@@ -81,6 +85,31 @@ var dupNode = node.cloneNode(deep);
 - And there are many other types of nodes (text nodes, comment nodes, document nodes, etc...).
 
 
+## `Element`
+
+### `Element.id`
+
+### `Element.classList`: return `DOMTokenList`
+
+### `Element.classNames`: return `DOMString`
+
+### `Element.innerHTML`
+
+### `Element.tagName`
+
+### `Element.getAttribute(attributeName)`
+
+### `Element.hasAttribute(attributeName)`
+
+### `Element.removeAttribute(attributeName)`
+
+### `Element.setAttribute(attributeName, attributeValue)`
+
+### `Element.querySelector()`
+
+### `Element.querySelectorAll()`
+
+### `Element.style`
 
 ## Viewport
 
