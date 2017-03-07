@@ -65,6 +65,7 @@ var dupNode = node.cloneNode(deep);
 - The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
 
 ### - `HTMLElement vs Node`
+[MDN - Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
 
 #### `node`
 
