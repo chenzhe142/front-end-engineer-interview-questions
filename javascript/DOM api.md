@@ -39,11 +39,6 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ### - `node.previousElementSibling`
 
-### - `HTMLElement.dataset`: access `data-*`
-- access with **camelCase** => `data-member-id` as `dataset.memberId`
-
-### - `Element.setAttribute('attributeName', 'value')`
-
 ### - `ParentNode.append()`
 The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
 
@@ -110,6 +105,9 @@ var dupNode = node.cloneNode(deep);
 ### `Element.querySelectorAll()`
 
 ### `Element.style`
+
+### `HTMLElement.dataset`: access `data-*`
+- access with **camelCase** => `data-member-id` as `dataset.memberId`
 
 ## Viewport
 
