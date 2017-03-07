@@ -1,10 +1,8 @@
 # DOM API
 
-## methods
+## DOM Element Node
 
-### DOM Element Node
-
-#### - `node.children`
+### - `node.children`
 `Node.children` is a read-only property that returns a live `HTMLCollection` of the child elements of Node.
 
 `node.children` is an array-like object. It does not have array's methods.
@@ -21,20 +19,19 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ```
 
-#### - `node.nextSibling`
+### - `node.nextSibling`
 
-#### - `node.previousSibling`
+### - `node.previousSibling`
 
-#### - `node.firstChild`
+### - `node.firstChild`
 
-#### - `node.lastChild`
+### - `node.lastChild`
 
-#### - `node.parentNode`
+### - `node.parentNode`
 
-#### - `node.parentElement`
-get its parentElement
+### - `node.parentElement`: get its parentElement
 
-#### - `node.parentNode` vs `node.parentElement`
+### - `node.parentNode` vs `node.parentElement`
 - In most cases, it is the same as parentNode. 
 - The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
 
@@ -46,78 +43,40 @@ document.documentElement.parentNode; // the document node
 document.documentElement.parentElement; // null
 ```
 
-#### - `node.nextElementSibling`
+### - `node.nextElementSibling`
 
-#### - `node.previousElementSibling`
+### - `node.previousElementSibling`
 
-#### - `ParentNode.append()`
+### - `ParentNode.append()`
 The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
 
-`DOMString` objects are inserted as equivalent `Text` nodes.
+- `DOMString` objects are inserted as equivalent `Text` nodes.
+- Polyfill Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
 
-**polyfill for IE 9 and higher:**
-```javascript
-// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty('append')) {
-      return;
-    }
-    Object.defineProperty(item, 'append', {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function append() {
-        var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment();
-        
-        argArr.forEach(function (argItem) {
-          var isNode = argItem instanceof Node;
-          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-        });
-        
-        this.appendChild(docFrag);
-      }
-    });
-  });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
-```
-
-#### - `Node.appendChild()`
+### - `Node.appendChild()`
 - It adds a node to the end of the list of children of a specified parent node. 
 - If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
 - If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
 
-#### - `Node.cloneNode()`
-It returns a duplicate of the node on which this method was called.
+### - `Node.cloneNode()`: returns a duplicate of the node on which this method was called.
 
 ```javascript
 // set deep to true if you want to clone its children.
 var dupNode = node.cloneNode(deep);
 ```
 
-#### - `ChildNode.remove()`: removes the object from the tree it belongs to.
+### - `ChildNode.remove()`: removes the object from the tree it belongs to.
 
-#### - `HTMLElement.dataset`
+### - `HTMLElement.dataset`
 - it allows access, both in reading and writing mode, to all the custom data attributes (`data-*`) set on the element, either in HTML or in the DOM.
+- access with **camelCase**
 
-Sample markup:
-```html
-<a href="/path-to-member-profile" id="memberLink" data-member-id="123">Jack Smith</a>
-```
+### - `Element.setAttribute('attributeName', 'value')`
 
-Usage:
-```javascript
-let element = document.getElementById('memberLink');
-let memberId = element.dataset.memberId; // use camel-case to access data-* attribute
 
-// output: 123
-console.log(memberId);
-```
+## Viewport
 
-### Viewport
-
-#### - `getBoundingClientRect()`
+### - `getBoundingClientRect()`
 The `Element.getBoundingClientRect()` method returns the size of an element and its position relative to the viewport.
 
 ```javascript
@@ -130,18 +89,18 @@ ClientRect {
 }
 ```
 
-#### - `clientHeight`
+### - `clientHeight`
 MDN: [Element.clientHeight()](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight)
 
-## object
 
-### `HTMLCollection()`
+
+## `HTMLCollection()`
 The `HTMLCollection` interface represents **a generic collection** (**array-like object** similar to `arguments`) of elements (in document order) and offers methods and properties for selecting from the list.
 
 - `HTMLCollection.length`
 - `HTMLCollection.item()` - Returns the specific node at the given zero-based index into the list. Returns null if the index is out of range.
 
-### `Image()`
+## `Image()`
 
 ```javascript
 function draw() {
@@ -161,20 +120,20 @@ function draw() {
 ```
 See result in [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images)
 
-### `Array`
+## `Array`
 
-#### `Array.prototype.splice(start, deleteCount, item1, item2, ...)`
+### `Array.prototype.splice(start, deleteCount, item1, item2, ...)`
 
-#### `Array.isArray()`
+### `Array.isArray()`
 
-### `FormData`
+## `FormData`
 ```javascript
 var formElement = document.querySelector('form');
 var formData = new FormData(formElement);
 formData.append('username', 'Zoe');
 ```
 
-### `EventSource`
+## `EventSource`
 MDN - [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
 ```javascript
 // create a EventSource object
