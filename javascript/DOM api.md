@@ -96,6 +96,8 @@ It returns a duplicate of the node on which this method was called.
 var dupNode = node.cloneNode(deep);
 ```
 
+#### - `ChildNode.remove()`: removes the object from the tree it belongs to.
+
 #### - `HTMLElement.dataset`
 - it allows access, both in reading and writing mode, to all the custom data attributes (`data-*`) set on the element, either in HTML or in the DOM.
 
