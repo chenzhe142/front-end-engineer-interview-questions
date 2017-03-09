@@ -4,6 +4,11 @@
 - [Element](#element)
 - [Viewport](#viewport)
 
+## Event
+
+### `Event.target`: element that triggers the event
+
+### `Event.currentTarget`: element where the event is originally binded to.
 
 ## Node
 
