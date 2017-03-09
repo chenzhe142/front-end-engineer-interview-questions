@@ -20,7 +20,7 @@
 
 ## inline
 - `span`
-- `img`
+- `img`: it acts like `inline-block` elements in some browser
 - `input`
 - `a`
 - `em`
@@ -29,5 +29,7 @@
 - `label`
 - `select`
 - `textarea`
+
+### inline elements only have wrapped height & width. It means it will do nothing if you are setting `width` or `height` for it.
 
 [MDN - inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
