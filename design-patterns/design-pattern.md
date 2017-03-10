@@ -5,6 +5,9 @@
 - [the revealing module pattern](#the-revealing-module-pattern)
 - [the observer pattern](#the-observer-pattern)
 - [publish / subscribe pattern](#publish--subscribe-pattern)
+- [factory pattern](#factory-pattern)
+- [singleton pattern](#singleton-pattern)
+- [facade pattern](#facade-pattern)
 
 The notes are taken from Addy Osmani's book, [learning javascript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
@@ -335,3 +338,34 @@ pubsub.publish( "newDataAvailable", {
 Further readings:
 
 - [David Walsh - Pub / Sub Javascript object](https://davidwalsh.name/pubsub-javascript)
+
+## factory pattern
+It provides a generic interface for creating objects, where we can specify the type of factory object we wish to create.
+```javascript
+var Limo = function(){
+ this.carType = 'limo';
+};
+
+var Suv = function() {
+ this.carType = 'suv';
+};
+
+var CarFactory = function(carType) {
+ if (carType === 'limo') {
+  return new Limo();
+ } else if (carType === 'suv') {
+  return new Suv();
+ }
+};
+
+```
+
+## singleton pattern
+It restricts instantiation of a class to a single object.
+- If instance does not exist, create one
+- If exists, return that instance
+
+## facade pattern
+It provides a convenient higher-level interface to a larger body of code, hiding its true underlying complexity. Whenever we use jQuery's `$(el).css()` or `$(el).animate()` methods, we are using a Facade.
+
+### performance issue is hidden behind when using Facade as well. One example: `getElementById` vs `$(#someId)`
