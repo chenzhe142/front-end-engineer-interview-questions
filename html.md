@@ -6,3 +6,4 @@
 - `<section>`
 - `<caption>`: the title of a `<table>`. first decendent of `<table>`
 - `<strong>`
+- `<datalist>`: can be used in auto-suggestion list. See [MDN - `<datalist>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
