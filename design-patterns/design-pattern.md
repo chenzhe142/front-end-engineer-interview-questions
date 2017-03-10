@@ -1,8 +1,14 @@
 # design patterns
 
+- [constructor pattern](#constructor-pattern)
+- [the module pattern](#the-module-pattern)
+- [the revealing module pattern](#the-revealing-module-pattern)
+- [the observer pattern](#the-observer-pattern)
+- [publish / subscribe pattern](#publish-subscribe-pattern)
+
 The notes are taken from Addy Osmani's book, [learning javascript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
-## - constructor pattern
+## constructor pattern
 
 ```javascript
 function Car( model, year, miles ) {
@@ -49,7 +55,7 @@ Car.prototype.toString = function () {
 
 ```
 
-## - the module pattern
+## the module pattern
 
 The Module pattern encapsulates "privacy", state and organization using `closures`.
 
@@ -140,7 +146,7 @@ We also can't access private members in methods that are added to the object at 
 Other disadvantages include the inability to create automated unit tests for private members and additional complexity when bugs require hot fixes. It's simply not possible to patch privates. Instead, one must override all public methods which interact with the buggy privates. Developers can't easily extend privates either, so it's worth remembering privates are not as flexible as they may initially appear.
 
 
-## - the revealing module pattern
+## the revealing module pattern
 
 The result of his efforts was an updated pattern where we would simply define all of our functions and variables in the private scope and return an anonymous object with pointers to the private functionality we wished to reveal as public.
 
@@ -178,11 +184,11 @@ myRevealingModule.setName( "Paul Kinlan" );
 ```
 
 
-## - the observer pattern
+## the observer pattern
 
 The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
 
-## - publish / subscribe pattern
+## publish / subscribe pattern
 
 Basic idea: `hashMap: {eventName: [..callback]}`
 
