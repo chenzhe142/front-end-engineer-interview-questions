@@ -4,7 +4,7 @@
 - [the module pattern](#the-module-pattern)
 - [the revealing module pattern](#the-revealing-module-pattern)
 - [the observer pattern](#the-observer-pattern)
-- [publish / subscribe pattern](#publish-subscribe-pattern)
+- [publish / subscribe pattern](#publish--subscribe-pattern)
 
 The notes are taken from Addy Osmani's book, [learning javascript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
