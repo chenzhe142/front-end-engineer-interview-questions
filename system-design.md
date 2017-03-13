@@ -6,7 +6,7 @@ following these 4 steps can help you tackle any system design problem.
 
 1. scale
  - queries per second. Read? Write? Use harddisk or RAM?
- - is latency matters?
+ - does latency matter?
  - what features? (user register, can create event, book a conference room, etc)
  - what user interface? what platform?
 
@@ -31,6 +31,9 @@ following these 4 steps can help you tackle any system design problem.
 
 4. functionality in detai
  - what api?
+   - `query(user, day)`
+    - `insert(user, event)` 
+    - `delete(user, event)`
  - what's the structure of HTTP response?
 
 ## storage pros vs. cons
