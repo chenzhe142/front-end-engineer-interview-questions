@@ -11,6 +11,31 @@ Array is object, but object is not array. Array is based on object, with its own
 ## strict mode: `use strict`
 It disables `arguments` params. It changes the behavior of Javascript engines so that errors are thrown instead of silently picked up.
 
+## Array.prototype.reduce
+`arr.reduce(callback, [initialValue])`
+
+```javascript
+// callback: (accumulator, currentValue)
+// - accumulator: previously returned value
+// - currentValue
+
+var sum = [0, 1, 2, 3].reduce(function(acc, val) {
+  return acc + val;
+}, 0);
+// sum is 6
+
+var list1 = [[0, 1], [2, 3], [4, 5]];
+var list2 = [0, [1, [2, [3, [4, [5]]]]]];
+
+const flatten = arr => arr.reduce(
+  (acc, val) => acc.concat(
+    Array.isArray(val) ? flatten(val) : val
+  ),
+  []);
+flatten(list1); // returns [0, 1, 2, 3, 4, 5]
+flatten(list2); // returns [0, 1, 2, 3, 4, 5]
+```
+
 ## invoking functions
 **When a function is invoked, two implicit parameters are passed to the function, `arguments` and `this`.**
 
