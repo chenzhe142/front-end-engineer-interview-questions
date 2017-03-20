@@ -34,6 +34,13 @@ const flatten = arr => arr.reduce(
   []);
 flatten(list1); // returns [0, 1, 2, 3, 4, 5]
 flatten(list2); // returns [0, 1, 2, 3, 4, 5]
+
+// ES5
+var flatten2 = function(array) {
+    return array.reduce(function(acc, val) {
+        return acc.concat(Array.isArray(val) ? flatten2(val) : val);
+    }, []);
+};
 ```
 
 ## invoking functions
