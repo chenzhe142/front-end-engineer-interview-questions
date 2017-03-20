@@ -43,3 +43,6 @@ Edits to the document cause the browser to enter the rendering cycle.
 5. Paint
 6. Composite
 
+## autocomplete - triggering multiple ajax call
+- use `event.preventDefault()` to cancel previous events.
+- Cancels the event if it is cancelable, without stopping further propagation of the event.
