@@ -11,7 +11,11 @@ Array is object, but object is not array. Array is based on object, with its own
 ## strict mode: `use strict`
 It disables `arguments` params. It changes the behavior of Javascript engines so that errors are thrown instead of silently picked up.
 
-## Array.prototype.reduce
+## Array.prototype.concat - don't change the existing array
+Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+## Array.prototype.reduce - don't change the existing array
+
 `arr.reduce(callback, [initialValue])`
 
 ```javascript
@@ -41,6 +45,34 @@ var flatten2 = function(array) {
         return acc.concat(Array.isArray(val) ? flatten2(val) : val);
     }, []);
 };
+
+// iterative:
+var list1 = [[0, 1], [2, 3], [4, 5]];
+var list2 = [0, [1, [2, [3, [4, [5]]]]]];
+
+var flatten = function(array) {
+    let i = 0;
+    
+    var queue = array.slice();
+    var result = [];
+
+    while (queue.length > 0) {
+        const val = queue.shift();
+        if (Array.isArray(val)) {
+            queue = val.concat(queue);
+        } else {
+            result.push(val);
+        }
+    }
+    
+    return result;
+};
+
+var a = flatten(list1);
+console.log(a);
+
+var b = flatten(list2);
+console.log(b);
 ```
 
 ## invoking functions
