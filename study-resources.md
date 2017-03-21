@@ -16,3 +16,5 @@
 - [Smashing Magazine](https://www.smashingmagazine.com)
 - [Tubik studio - blog](https://tubikstudio.com/the-ultimate-guide-to-creating-a-mobile-application/)
 
+## blogs
+- [一亩三分地 － 骑驴找马换工作](http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=184542&extra=page%3D1%26filter%3Dsortid%26sortid%3D192%26sortid%3D192)
