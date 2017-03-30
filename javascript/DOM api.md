@@ -1,5 +1,6 @@
 # DOM API
 
+- [Event](#event)
 - [Node](#node)
 - [Element](#element)
 - [Viewport](#viewport)
