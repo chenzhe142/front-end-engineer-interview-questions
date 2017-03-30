@@ -6,9 +6,17 @@
 
 ## Event
 
+### [Event dispatch and DOM event flow - W3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
+
 ### `Event.target`: element that triggers the event
 
 ### `Event.currentTarget`: element where the event is originally binded to.
+
+### `Event.eventPhase`
+- `Event.NONE`
+- `Event.CAPTURING_PHASE`
+- `Event.AT_TARGET`
+- `Event.BUBBLING_PHASE`
 
 ## Node
 
