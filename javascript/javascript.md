@@ -11,12 +11,12 @@ Array is object, but object is not array. Array is based on object, with its own
 ## strict mode: `use strict`
 It disables `arguments` params. It changes the behavior of Javascript engines so that errors are thrown instead of silently picked up.
 
-## Array.from()
+## `Array.from()`
 Creates a new Array instance from an array-like or iterable object.
 
-## Array.isArray()
+## `Array.isArray()`
 
-## Array.prototype.concat - don't change the existing array, returns a new array.
+## `Array.prototype.concat` - don't change the existing array, returns a new array.
 Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
 
 `arr.reduce(callback, [initialValue])`
