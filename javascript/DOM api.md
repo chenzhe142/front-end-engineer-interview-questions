@@ -12,6 +12,8 @@
 2. target phase
 3. bubble phase
 
+Event objects complete these phases as described below. A phase will be skipped if it is not supported, or if the event object’s propagation has been stopped. For example, if the `bubbles` attribute is set to `false`, the bubble phase will be skipped, and if `stopPropagation()` has been called prior to the dispatch, all phases will be skipped.
+
 ### `Event.target`: element that triggers the event
 
 ### `Event.currentTarget`: element where the event is originally binded to.
