@@ -1,6 +1,11 @@
 # DOM API
 
 - [Event](#event)
+  - event flow
+  - `event.target`
+  - `event.currentTarget`
+  - `event.eventPhase`
+  - creating `CustomEvent`
 - [Node](#node)
 - [Element](#element)
 - [Viewport](#viewport)
