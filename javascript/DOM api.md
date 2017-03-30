@@ -7,6 +7,10 @@
 ## Event
 
 ### [Event dispatch and DOM event flow - W3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
+![DOM Event Flow](https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg)
+1. capture phase
+2. target phase
+3. bubble phase
 
 ### `Event.target`: element that triggers the event
 
