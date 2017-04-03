@@ -30,6 +30,9 @@ Event objects complete these phases as described below. A phase will be skipped 
 - `Event.AT_TARGET`
 - `Event.BUBBLING_PHASE`
 
+### `Event order`
+http://www.quirksmode.org/js/events_order.html#link4
+
 ## Creating custom event
 [MDN - create & dispatch customized event](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
 
