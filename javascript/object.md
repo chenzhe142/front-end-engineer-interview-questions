@@ -25,18 +25,17 @@
     - if no params, return a copy
     - if `startPos`, return `list[startPos:]`
     - if `startPos` and `endPos`, return `list[startPos:endPos]`. endPos is not included
+    
   3. `.splice()`
-    - **deletion**
+  
+    - deletion
+`.splice(positionToDelete, numberOfElementToDelete)`
 
-    `.splice(positionToDelete, numberOfElementToDelete)`
+    - insertion
+`.splice(positionToInsert, 0, elements)`
 
-    - **insertion**
-
-    `.splice(positionToInsert, 0, elements)`
-
-    - **replacement**
-
-    `.splice(positionToReplace, 1, element)`
+    - replacement
+`.splice(positionToReplace, 1, element)`
 
 ### Location methods
 item must be strictly equal as if compared using `===`
