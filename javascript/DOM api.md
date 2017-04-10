@@ -64,6 +64,25 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 
 ### - `node.parentNode`
 
+### - `node.children`
+
+### - `node.childNodes`
+
+### - `node.replaceChild(oldNode, newNode)`
+
+### - `node.removeChild(node)`
+
+### - `node.insertBefore(nodeToInsert, referenceNode)`
+
+if `referenceNode` is `null`, it acts like `appendChild()`
+
+### - `node.cloneNode(shouldDeepCopy)`
+if `shouldDeepCopy` sets to true, the method will copy childNodes as well.
+
+`.cloneNode()` doesn't copy JavaScript properties that you added to DOM nodes, such as event handlers. It only copies attributes and optionally, childNodes.
+
+### - `node.hasChildNodes()`
+
 ### - `node.parentElement`
 
 ### - `node.nextElementSibling`
@@ -71,13 +90,13 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 ### - `node.previousElementSibling`
 
 ### - `ParentNode.append()`
-The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode. 
+The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode.
 
 - `DOMString` objects are inserted as equivalent `Text` nodes.
 - Polyfill Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
 
 ### - `Node.appendChild()`
-- It adds a node to the end of the list of children of a specified parent node. 
+- It adds a node to the end of the list of children of a specified parent node.
 - If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
 - If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
 
@@ -91,7 +110,7 @@ var dupNode = node.cloneNode(deep);
 ### - `ChildNode.remove()`: removes the object from the tree it belongs to.
 
 ### - `node.parentNode` vs `node.parentElement`
-- In most cases, it is the same as parentNode. 
+- In most cases, it is the same as parentNode.
 - The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
 
 ### - `HTMLElement vs Node`
@@ -99,15 +118,15 @@ var dupNode = node.cloneNode(deep);
 
 #### `node`
 
-- A `node` is the generic name for any type of object in the DOM hierarchy. 
+- A `node` is the generic name for any type of object in the DOM hierarchy.
 
-- A node could be one of the built-in DOM elements such as `document` or `document.body`. it could be an HTML tag specified in the HTML such as <input> or <p> or it could be a text node that is created by the system to hold a block of text inside another element. 
+- A node could be one of the built-in DOM elements such as `document` or `document.body`. it could be an HTML tag specified in the HTML such as <input> or <p> or it could be a text node that is created by the system to hold a block of text inside another element.
 
 - **a node is any DOM object**
 
 #### `element`
 
-- An `element` is one specific type of node. 
+- An `element` is one specific type of node.
 - And there are many other types of nodes (text nodes, comment nodes, document nodes, etc...).
 
 
@@ -140,6 +159,53 @@ var dupNode = node.cloneNode(deep);
 ### `HTMLElement.dataset`: access `data-*`
 - access with **camelCase** => `data-member-id` as `dataset.memberId`
 
+## The Document type
+`Document` represents the document node.
+
+- `nodeName`: `#document`
+- `nodeValue`: `null`
+- `parentNode`: `null`
+- `document.body` refers to `<body>` element
+- `document.documentElement` refers to `<html>` element
+- `document.title` refers to the page title
+- `document.URL`
+- `document.domain`
+
+## Selector API
+
+### - `querySelector()`
+### - `querySelectorAll()`
+### - `matchesSelector()` check if an element would be returned by `querySelectorAll` or `querySelector`
+### - `getElementsByClassName()` is added in HTML5
+### - `node.classList` provides a way to easily manipulate class names
+  - `add`
+  - `remove`
+  - `toggle`
+  - `contains`
+
+### -  Focus management
+  - `document.activeElements` contains a pointer to the DOM element that currently has focus
+  - `.focus()`
+  - `document.hasFocus()`
+
+### - Custom Data `data-`
+access by `node.dataset.appId`
+
+### - Markup insertion
+  1. `.innerHTML` it is not available for all elements. Be extremely careful when using this method.
+  2. `.outerHTML`
+  3. `.insertAdjacentHTML()`
+
+When using the methods above, it is best to manually remove all event handlers and properties that are on elements.
+
+### - `node.innerText`
+
+### - `scrollIntoView()`
+
+### - `node.children` contains `element` node
+
+### - `parentNode.contains(childNode)`
+
 ## Viewport
 
 ### - `getBoundingClientRect()`
@@ -147,10 +213,10 @@ The `Element.getBoundingClientRect()` method returns the size of an element and 
 
 ```javascript
 ClientRect {
-  top: -110, 
-  right: 672, 
-  bottom: -29, 
-  left: 0, 
+  top: -110,
+  right: 672,
+  bottom: -29,
+  left: 0,
   width: 672
 }
 ```
@@ -203,12 +269,12 @@ formData.append('username', 'Zoe');
 MDN - [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
 ```javascript
 // create a EventSource object
-var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } ); 
+var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 
 // listen to a message
 evtSource.onmessage = function(e) {
   var newElement = document.createElement("li");
-  
+
   newElement.innerHTML = "message: " + e.data;
   eventList.appendChild(newElement);
 }
