@@ -25,18 +25,17 @@
     - if no params, return a copy
     - if `startPos`, return `list[startPos:]`
     - if `startPos` and `endPos`, return `list[startPos:endPos]`. endPos is not included
+    
   3. `.splice()`
-    - **deletion**
+  
+    - deletion
+`.splice(positionToDelete, numberOfElementToDelete)`
 
-    `.splice(positionToDelete, numberOfElementToDelete)`
+    - insertion
+`.splice(positionToInsert, 0, elements)`
 
-    - **insertion**
-
-    `.splice(positionToInsert, 0, elements)`
-
-    - **replacement**
-
-    `.splice(positionToReplace, 1, element)`
+    - replacement
+`.splice(positionToReplace, 1, element)`
 
 ### Location methods
 item must be strictly equal as if compared using `===`
@@ -45,6 +44,17 @@ item must be strictly equal as if compared using `===`
   2. `.lastIndexOf()`
 
 ### Iterative methods
+以下方法都不会修改array中所包含的值
+
+  1. `.every()`
+  
+  2. `.filter()`
+  
+  3. `.forEach()`
+  
+  4. `.map()`
+  
+  5. `.some()
 
 ### `Array.prototype.map` vs `Array.prototype.forEach`
 `.map` method creates a new array with the results of calling a provided function on every element in this array.
