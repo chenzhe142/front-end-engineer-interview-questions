@@ -1,5 +1,7 @@
 # quicksort & quick selection
 
+[Leetcode - kth largest element in an array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
 ## Partition
 
 ```javascript

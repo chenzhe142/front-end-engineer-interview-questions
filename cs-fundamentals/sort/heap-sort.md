@@ -1,5 +1,7 @@
 # heap & priority queue
 
+[Leetcode - kth largest element in an array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
 ## heap
 
 利用最大堆进行排序的算法HEAPSORT的基本思想是：
