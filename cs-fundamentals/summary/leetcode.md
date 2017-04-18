@@ -8,3 +8,6 @@
 
 
 ## Depth first search
+
+## Bucket sort: sort in linear time. usually the data range is known.
+1. [H-index](https://leetcode.com/problems/h-index/#/description)
