@@ -125,3 +125,10 @@ console.log(a);
 var b = flatten(list2);
 console.log(b);
 ```
+## String
+
+### Check substring
+  1. `String.prototype.includes(substring)`
+
+### Check char
+  1. `String.prototype.indexof(char)`
