@@ -38,11 +38,25 @@ http://www.quirksmode.org/js/events_order.html#link4
 
 ## Node
 
-### - `node.children`
-- a read-only property that returns a live `HTMLCollection` of the child elements of Node.
-- `Node.children` is an array-like object.
+- A `node` is the generic name for any type of object in the DOM hierarchy.
+- A node could be one of the built-in DOM elements such as `document` or `document.body`. it could be an HTML tag specified in the HTML such as `<input>` or `<p>` or it could be a text node that is created by the system to hold a block of text inside another element.
+- a node is any DOM object
 
-#### To convert it to an array
+### modify itself
+1. `node.remove()`: removes the object from the tree it belongs to.
+2. `node.cloneNode(shouldDeepCopy)`
+    - if `shouldDeepCopy` sets to true, the method will copy childNodes as well.
+    - `.cloneNode()` doesn't copy JavaScript properties that you added to DOM nodes, such as event handlers. It only copies attributes and optionally, childNodes.
+3. `node.append()`
+    - The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode.
+      - `DOMString` objects are inserted as equivalent `Text` nodes.
+      - Polyfill Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
+
+### with children nodes
+1. `node.children`
+    - a read-only property that returns a live `HTMLCollection` of the child elements of Node.
+    - `Node.children` is an array-like object.
+    - To convert it to an array
 ```javascript
 var childrenNode = divElement.children;
 var childrenNodeList = [];
@@ -50,87 +64,42 @@ var childrenNodeList = [];
 for (let i = 0; i < childrenNode.length; i += 1) {
   childrenNodeList.push(childrenNode[i]);
 }
-
-
 ```
+2. `node.childNodes`
+3. `node.firstChild`
+4. `node.lastChild`
+5. `node.hasChildNodes()`
+6. `node.replaceChild(oldNode, newNode)`
+7. `node.removeChild(node)`
+8. `node.insertBefore(nodeToInsert, referenceNode)`
+    - if `referenceNode` is `null`, it acts like `appendChild()`
+9. `node.appendChild()`
+    - It adds a node to the end of the list of children of a specified parent node.
+    - If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
+    - If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
 
-### - `node.firstChild`
+### With neighbor nodes
+1. `node.nextSibling`
+2. `node.previousSibling`
 
-### - `node.lastChild`
+### With parent node
+1. `node.parentNode`
 
-### - `node.nextSibling`
-
-### - `node.previousSibling`
-
-### - `node.parentNode`
-
-### - `node.children`
-
-### - `node.childNodes`
-
-### - `node.replaceChild(oldNode, newNode)`
-
-### - `node.removeChild(node)`
-
-### - `node.insertBefore(nodeToInsert, referenceNode)`
-
-if `referenceNode` is `null`, it acts like `appendChild()`
-
-### - `node.cloneNode(shouldDeepCopy)`
-if `shouldDeepCopy` sets to true, the method will copy childNodes as well.
-
-`.cloneNode()` doesn't copy JavaScript properties that you added to DOM nodes, such as event handlers. It only copies attributes and optionally, childNodes.
-
-### - `node.hasChildNodes()`
-
-### - `node.parentElement`
-
-### - `node.nextElementSibling`
-
-### - `node.previousElementSibling`
-
-### - `ParentNode.append()`
-The `ParentNode.append` method inserts a set of `Node` objects or `DOMString` objects after the last child of the ParentNode.
-
-- `DOMString` objects are inserted as equivalent `Text` nodes.
-- Polyfill Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
-
-### - `Node.appendChild()`
-- It adds a node to the end of the list of children of a specified parent node.
-- If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
-- If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
-
-### - `Node.cloneNode()`: returns a duplicate of the node on which this method was called.
-
-```javascript
-// set deep to true if you want to clone its children.
-var dupNode = node.cloneNode(deep);
-```
-
-### - `ChildNode.remove()`: removes the object from the tree it belongs to.
+### With elements
+1. `node.parentElement`
+2. `node.nextElementSibling`
+3. `node.previousElementSibling`
 
 ### - `node.parentNode` vs `node.parentElement`
-- In most cases, it is the same as parentNode.
-- The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
+  - In most cases, it is the same as parentNode.
+  - The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
 
 ### - `HTMLElement vs Node`
 [MDN - Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
 
-#### `node`
-
-- A `node` is the generic name for any type of object in the DOM hierarchy.
-
-- A node could be one of the built-in DOM elements such as `document` or `document.body`. it could be an HTML tag specified in the HTML such as <input> or <p> or it could be a text node that is created by the system to hold a block of text inside another element.
-
-- **a node is any DOM object**
-
-#### `element`
-
+## `Element`
 - An `element` is one specific type of node.
 - And there are many other types of nodes (text nodes, comment nodes, document nodes, etc...).
-
-
-## `Element`
 
 ### `Element.id`
 
