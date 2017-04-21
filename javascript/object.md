@@ -1,5 +1,13 @@
 # Object
 
+Menu
+- [Array](#array)
+- [String](#string)
+- [Math](#math)
+- [Map](#map)
+- [Set](#set)
+
+
 ## Array
 
 ### Detecting array
@@ -135,6 +143,8 @@ console.log(b);
 
 ### Remove trailing & front whitespace
   1. `.trim()`
+  2. `.trimLeft()`
+  3. `.trimRight()`
   
 ## Math
 
@@ -152,3 +162,35 @@ console.log(b);
   3. `Math.log()` 自然对数
   4. `Math.pow(num, power)`
   5. `Math.sqrt()`
+
+## Map (ECMAScript 2015)
+[MDN - Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:
+  - easily to get `.size` for a Map
+  - the key of objects is only allowed for `String` and `Symbol`. Map allows any values, including function, objects, and any primitive.
+
+### performance: `object` vs `map`
+according to [Jsperf - object vs map](https://jsperf.com/es6-map-vs-object-properties/2), `map` is faster and more suitable for performing as a `hashmap`
+
+### methods
+  1. `.set(key, value)`
+  2. `.has(key)`
+  3. `.keys()`
+  4. `.delete(key)`
+  5. `.clear()`
+  6. `.size()`
+
+## Set (ECMAScript 2015)
+[MDN - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+### methods
+  1. `.length`
+  2. `.add(value)`
+  3. `.clear()`
+  4. `.delete(value)`
+  5. `.has(value)`
+  6. `.keys()`
+  
+
+
