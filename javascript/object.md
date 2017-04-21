@@ -132,3 +132,23 @@ console.log(b);
 
 ### Check char
   1. `String.prototype.indexof(char)`
+
+### Remove trailing & front whitespace
+  1. `.trim()`
+  
+## Math
+
+### Rounding
+  1. `Math.ceil`
+  2. `Math.floor`
+  3. `Math.round`
+
+### Randomize
+  1. `Math.random`
+
+### Others
+  1. `Math.abs()`
+  2. `Math.exp()` e的m次幂
+  3. `Math.log()` 自然对数
+  4. `Math.pow(num, power)`
+  5. `Math.sqrt()`
