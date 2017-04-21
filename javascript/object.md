@@ -163,7 +163,8 @@ console.log(b);
   4. `Math.pow(num, power)`
   5. `Math.sqrt()`
 
-## Map (ECMAScript 2015)
+## Map
+Map is added in ECMAScript 2015.
 [MDN - Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:
@@ -181,7 +182,8 @@ according to [Jsperf - object vs map](https://jsperf.com/es6-map-vs-object-prope
   5. `.clear()`
   6. `.size()`
 
-## Set (ECMAScript 2015)
+## Set
+Set is added in ECMAScript 2015.
 [MDN - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
 ### methods
