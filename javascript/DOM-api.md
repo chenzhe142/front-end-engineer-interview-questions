@@ -9,6 +9,7 @@
 - [Element](#element)
   - property
   - methods
+- [DocumentFragment](#DocumentFragment)
 - [The Document type](#)
 - [Selector API](#)
 - [Viewport](#viewport)
@@ -54,12 +55,12 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 5. `node.hasChildNodes()`
 6. `node.replaceChild(oldNode, newNode)`
 7. `node.removeChild(node)`
-8. `node.insertBefore(nodeToInsert, referenceNode)`
-    - if `referenceNode` is `null`, it acts like `appendChild()`
-9. `node.appendChild()`
+8. `node.appendChild()`
     - It adds a node to the end of the list of children of a specified parent node.
     - If the given child is a reference to an existing node in the document, it moves it from its current position to the new position.
     - If needed, use `Node.cloneNode()` to get a copy, and use `.appendChild()` method
+9. `node.insertBefore(nodeToInsert, referenceNode)`
+    - if `referenceNode` is `null`, it acts like `appendChild()`
 
 ### With neighbor nodes
 1. `node.nextSibling`
@@ -104,6 +105,15 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 4. `Element.setAttribute(attributeName, attributeValue)`
 5. `Element.querySelector()`
 6. `Element.querySelectorAll()`
+
+## `DocumentFragment`
+The key difference is that because the document fragment isn't part of the actual DOM's structure, changes made to the fragment **don't affect the document**, cause reflow, or incur any performance impact that can occur when changes are made.
+
+`DocumentFragment`继承了`Node`的所有方法，通常用于执行那些针对document的DOM操作。
+
+```javascript
+var fragment = document.createDocumentFragment();
+```
 
 ## The Document type
 `Document` represents the document node.
