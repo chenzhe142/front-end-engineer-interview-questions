@@ -1,40 +1,23 @@
 # DOM API
 
+- [Node](#node)
+  - modify itself
+  - with children nodes
+  - with neighbor nodes
+  - with parent nodes
+  - with elements
+- [Element](#element)
+  - property
+  - methods
+- [The Document type](#)
+- [Selector API](#)
+- [Viewport](#viewport)
 - [Event](#event)
   - event flow
   - `event.target`
   - `event.currentTarget`
   - `event.eventPhase`
   - creating `CustomEvent`
-- [Node](#node)
-- [Element](#element)
-- [Viewport](#viewport)
-
-## Event
-
-### [Event dispatch and DOM event flow - W3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
-![DOM Event Flow](https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg)
-1. capture phase
-2. target phase
-3. bubble phase
-
-Event objects complete these phases as described below. A phase will be skipped if it is not supported, or if the event object’s propagation has been stopped. For example, if the `bubbles` attribute is set to `false`, the bubble phase will be skipped, and if `stopPropagation()` has been called prior to the dispatch, all phases will be skipped.
-
-### `Event.target`: element that triggers the event
-
-### `Event.currentTarget`: element where the event is originally binded to.
-
-### `Event.eventPhase`
-- `Event.NONE`
-- `Event.CAPTURING_PHASE`
-- `Event.AT_TARGET`
-- `Event.BUBBLING_PHASE`
-
-### `Event order`
-http://www.quirksmode.org/js/events_order.html#link4
-
-## Creating custom event
-[MDN - create & dispatch customized event](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
 
 ## Node
 
@@ -90,43 +73,37 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 2. `node.nextElementSibling`
 3. `node.previousElementSibling`
 
-### - `node.parentNode` vs `node.parentElement`
+### `node.parentNode` vs `node.parentElement`
   - In most cases, it is the same as parentNode.
   - The only difference comes when a node's parentNode is not an element. If so, parentElement is null.
 
-### - `HTMLElement vs Node`
+### `HTMLElement vs Node`
 [MDN - Node.nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
 
 ## `Element`
 - An `element` is one specific type of node.
 - And there are many other types of nodes (text nodes, comment nodes, document nodes, etc...).
 
-### `Element.id`
+### Property
+1. `Element.id`
+2. `Element.classList`
+    - return `DOMTokenList`
+3. `Element.classNames`
+    - return `DOMString`
+4. `Element.innerHTML`
+5. `Element.tagName`
+6. `Element.style`
+7. `HTMLElement.dataset`: access `data-*`
+    - access with **camelCase**
+    - `data-member-id` as `dataset.memberId`
 
-### `Element.classList`: return `DOMTokenList`
-
-### `Element.classNames`: return `DOMString`
-
-### `Element.innerHTML`
-
-### `Element.tagName`
-
-### `Element.getAttribute(attributeName)`
-
-### `Element.hasAttribute(attributeName)`
-
-### `Element.removeAttribute(attributeName)`
-
-### `Element.setAttribute(attributeName, attributeValue)`
-
-### `Element.querySelector()`
-
-### `Element.querySelectorAll()`
-
-### `Element.style`
-
-### `HTMLElement.dataset`: access `data-*`
-- access with **camelCase** => `data-member-id` as `dataset.memberId`
+### Methods
+1. `Element.getAttribute(attributeName)`
+2. `Element.hasAttribute(attributeName)`
+3. `Element.removeAttribute(attributeName)`
+4. `Element.setAttribute(attributeName, attributeValue)`
+5. `Element.querySelector()`
+6. `Element.querySelectorAll()`
 
 ## The Document type
 `Document` represents the document node.
@@ -243,3 +220,28 @@ evtSource.onmessage = function(e) {
 }
 
 ```
+## Event
+
+### [Event dispatch and DOM event flow - W3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
+![DOM Event Flow](https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg)
+1. capture phase
+2. target phase
+3. bubble phase
+
+Event objects complete these phases as described below. A phase will be skipped if it is not supported, or if the event object’s propagation has been stopped. For example, if the `bubbles` attribute is set to `false`, the bubble phase will be skipped, and if `stopPropagation()` has been called prior to the dispatch, all phases will be skipped.
+
+### `Event.target`: element that triggers the event
+
+### `Event.currentTarget`: element where the event is originally binded to.
+
+### `Event.eventPhase`
+- `Event.NONE`
+- `Event.CAPTURING_PHASE`
+- `Event.AT_TARGET`
+- `Event.BUBBLING_PHASE`
+
+### `Event order`
+http://www.quirksmode.org/js/events_order.html#link4
+
+## Creating custom event
+[MDN - create & dispatch customized event](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
