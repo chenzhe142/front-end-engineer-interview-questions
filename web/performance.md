@@ -1,5 +1,9 @@
 # Dealing with pragmatic issues
 
+## JavaScript
+1. access一个object中的key需要`O(n)`
+2. access a value in array by index需要`O(1)`
+
 ## Reflow
 ### [Stack overflow - what is DOM reflow](http://stackoverflow.com/questions/27637184/what-is-dom-reflow)
 ### [Repaints and reflows: manipulating the DOM responsibly](http://blog.letitialew.com/post/30425074101/repaints-and-reflows-manipulating-the-dom)
