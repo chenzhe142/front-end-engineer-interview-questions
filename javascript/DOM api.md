@@ -252,12 +252,6 @@ function draw() {
 ```
 See result in [here](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images)
 
-## `Array`
-
-### `Array.prototype.splice(start, deleteCount, item1, item2, ...)`
-
-### `Array.isArray()`
-
 ## `FormData`
 ```javascript
 var formElement = document.querySelector('form');
