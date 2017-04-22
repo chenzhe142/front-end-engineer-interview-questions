@@ -33,9 +33,9 @@ Menu
     - if no params, return a copy
     - if `startPos`, return `list[startPos:]`
     - if `startPos` and `endPos`, return `list[startPos:endPos]`. endPos is not included
-    
+
   3. `.splice()`
-  
+
     - deletion
 `.splice(positionToDelete, numberOfElementToDelete)`
 
@@ -55,13 +55,13 @@ item must be strictly equal as if compared using `===`
 以下方法都不会修改array中所包含的值
 
   1. `.every()`
-  
+
   2. `.filter()`
-  
+
   3. `.forEach()`
-  
+
   4. `.map()`
-  
+
   5. `.some()
 
 ### `Array.prototype.map` vs `Array.prototype.forEach`
@@ -145,7 +145,11 @@ console.log(b);
   1. `.trim()`
   2. `.trimLeft()`
   3. `.trimRight()`
-  
+
+### Ascii <=> Char
+  1. `s.charCodeAt(index)`
+  2. `String.fromCharCode(asciiCode)`
+
 ## Math
 
 ### Rounding
@@ -193,6 +197,3 @@ Set is added in ECMAScript 2015.
   4. `.delete(value)`
   5. `.has(value)`
   6. `.keys()`
-  
-
-
