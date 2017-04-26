@@ -9,14 +9,21 @@
     - where it is used by a web page?
   3. User behavior & interaction
     - what are we expected for user to use the widget?
+    - accessibility
+      - use `aria-label`, `role`, `alt`, `for`
   3. Data
     - get data from server
       - what
+        - ajax
+        - streaming, websocket
       - when
+        - initial load, lazy load
       - where
     - send data to server
       - what
+        - validate & serialize formData
       - when
+        - could be clicking event
       - where
   4. platform
     - desktop
@@ -37,3 +44,10 @@
       - Model: stores business logic
       - Emitter
         - link `View` and  `Model`
+        - `View`'render method can subscribe to `Model`'s update or change event
+  2. design methods
+  3. think about code reuse & maintainability
+
+## 附录
+1. [Model-View-Controller MVC in JavaScript](https://alexatnet.com/articles/model-view-controller-mvc-javascript)
+2. [被误解的MVC和被神化的MVVM](http://www.infoq.com/cn/articles/rethinking-mvc-mvvm)

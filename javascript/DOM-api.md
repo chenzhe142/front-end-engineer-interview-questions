@@ -41,14 +41,16 @@
     - a read-only property that returns a live `HTMLCollection` of the child elements of Node.
     - `Node.children` is an array-like object.
     - To convert it to an array
-```javascript
-var childrenNode = divElement.children;
-var childrenNodeList = [];
 
-for (let i = 0; i < childrenNode.length; i += 1) {
-  childrenNodeList.push(childrenNode[i]);
-}
-```
+  ```javascript
+  var childrenNode = divElement.children;
+  var childrenNodeList = [];
+
+  for (let i = 0; i < childrenNode.length; i += 1) {
+    childrenNodeList.push(childrenNode[i]);
+  }
+  ```
+
 2. `node.childNodes`
 3. `node.firstChild`
 4. `node.lastChild`
@@ -106,6 +108,24 @@ for (let i = 0; i < childrenNode.length; i += 1) {
 5. `Element.querySelector()`
 6. `Element.querySelectorAll()`
 
+### position & viewport
+1. `Element.getBoundingClientRect()`
+  The `Element.getBoundingClientRect()` method returns the size of an element and its position relative to the viewport.
+
+  ```javascript
+  ClientRect {
+    top: -110,
+    right: 672,
+    bottom: -29,
+    left: 0,
+    width: 672
+  }
+  ```
+
+2. `Element.clientHeight` & `Element.clientWidth`
+  ![clientHeight](https://mdn.mozillademos.org/files/346/Dimensions-client.png)
+3. `Element.offsetTop` calculates the offset from its `offsetParent`
+
 ## `DocumentFragment`
 The key difference is that because the document fragment isn't part of the actual DOM's structure, changes made to the fragment **don't affect the document**, cause reflow, or incur any performance impact that can occur when changes are made.
 
@@ -161,25 +181,6 @@ When using the methods above, it is best to manually remove all event handlers a
 ### - `node.children` contains `element` node
 
 ### - `parentNode.contains(childNode)`
-
-## Viewport
-
-### - `getBoundingClientRect()`
-The `Element.getBoundingClientRect()` method returns the size of an element and its position relative to the viewport.
-
-```javascript
-ClientRect {
-  top: -110,
-  right: 672,
-  bottom: -29,
-  left: 0,
-  width: 672
-}
-```
-
-### - `clientHeight`
-MDN: [Element.clientHeight()](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight)
-
 
 
 ## `HTMLCollection()`

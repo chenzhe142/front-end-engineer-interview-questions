@@ -1,5 +1,13 @@
 # Dealing with pragmatic issues
 
+- [JavaScript tricks](#javascript)
+- [Web Performance](#web-performance)
+- [lazy-loading](#lazy-loading)
+- [throttle](#throttle)
+- [debounce](#debounce)
+- [reflow](#reflow)
+- [repaint](#repaint)
+
 ## JavaScript
 1. access一个object中的key需要`O(n)`
 2. access a value in array by index需要`O(1)`
@@ -17,7 +25,59 @@ In addition to general programming best practices, you should expect for intervi
 - Reduce browser reflows and when to promote an element to the GPU.
 - Differences between the browser layout, compositing and painting.
 
-## `throttle` 
+## lazy-loading
+本章节摘自文章：[学习原生JS延时加载](https://www.denpe.com/javascript-images-lazyload/)
+
+1. 基本原理
+
+  - 正常网页页面结构：头部CSS样式和少量JS；中间部分是内容，包括图片、视频、文本等；底部主要JS文件。
+  - 浏览器打开网页时这些资源按顺序从前到后逐一加载，而大多页面都无法一屏显示完全。
+  - 如果初次打开页面时让浏览器只加载可视区域的图片，不加载当前不可见图片，就可以把下载看不见图片的时间用来下载页面后面的js等内容，大大提高页面访问速度。
+  - 当鼠标像下滚动浏览器时，再按需加载出现在可视区的图片。
+
+2. 方法
+  ![lazy-loading](https://www.denpe.com/content/images/2016/01/imglazyload.png)
+  ```javascript
+  const getTopOffset = function(element) {
+    let offset = 0;
+
+    while (element.offsetParent) {
+      offset += element.offsetTop;
+      element = element.offsetParent;
+    }
+
+    return offset;
+  }
+
+  const img = document.getElementsByTagName('img')[0];
+
+  if (img.offsetTop <= document.body.scrollTop + window.innerHeight) {
+    img.src = img.dataset.imgSrc;
+  }
+  ```
+
+  jQuery's implementation of calculating offset:
+
+  `到viewport top的offset + window.scrollTop = total top offset`
+
+  ```javascript
+  rect = elem.getBoundingClientRect();
+
+	doc = elem.ownerDocument;
+	docElem = doc.documentElement;
+	win = doc.defaultView;
+
+	return {
+		top: rect.top + win.pageYOffset - docElem.clientTop,
+		left: rect.left + win.pageXOffset - docElem.clientLeft
+	};
+  ```
+
+## infinite scrolling & loading
+本章节摘自[JS+HTML实现列表动态无限滚动](https://segmentfault.com/a/1190000008730771)
+
+
+## `throttle`
 
 我们这里说的throttle就是函数节流的意思。再说的通俗一点就是函数调用的频度控制器，是连续执行时间间隔控制。主要应用的场景比如：
 
@@ -51,7 +111,7 @@ function throttle(fn, threshhold, scope) {
 }
 ```
 
-```
+```javascript
 /*
 * 频率控制 返回函数连续调用时，fn 执行频率限定为每多少时间执行一次
 * @param fn {function}  需要调用的函数
@@ -93,18 +153,7 @@ var throttle = function (fn,delay, immediate, debounce) {
        last_call = curr;
    }
 };
- 
-/*
-* 空闲控制 返回函数连续调用时，空闲时间必须大于或等于 delay，fn 才会执行
-* @param fn {function}  要调用的函数
-* @param delay   {number}    空闲时间
-* @param immediate  {bool} 给 immediate参数传递false 绑定的函数先执行，而不是delay后后执行。
-* @return {function}实际调用函数
-*/
- 
-var debounce = function (fn, delay, immediate) {
-   return throttle(fn, delay, immediate, true);
-};
+
 ```
 
 ## `debounce`
@@ -116,76 +165,53 @@ debounce主要应用的场景比如：
 
 - 文本输入keydown 事件，keyup 事件，例如做autocomplete
 
+算法：
+1. check if there's already scheduled task
+2. if so, cancel it, reschedule
+3. if none, schedule a new one
+
 ```javascript
 // as long as the event is triggered, it won't invoke the function.
 _.debounce = function(func, wait, immediate) {
     var timeout, result;
-    
+
     return function() {
       var context = this, args = arguments;
+
       var later = function() {
         timeout = null;
-        if (!immediate) result = func.apply(context, args);
+        if (!immediate) {
+          result = func.apply(context, args);
+        }
       };
-      
+
       var callNow = immediate && !timeout;
-      
+
       clearTimeout(timeout);
-      
+
       timeout = setTimeout(later, wait);
-      
+
       if (callNow) {
         result = func.apply(context, args);
       }
-      
+
       return result;
     };
   };
 ```
 
-## Reflow
-### [Stack overflow - what is DOM reflow](http://stackoverflow.com/questions/27637184/what-is-dom-reflow)
-### [Repaints and reflows: manipulating the DOM responsibly](http://blog.letitialew.com/post/30425074101/repaints-and-reflows-manipulating-the-dom)
+## How do you make a website faster?
 
-A **reflow** computes the layout of the page. A reflow on an element recomputes the dimensions and position of the element, and it also triggers further reflows on that **element’s children, ancestors and elements that appear after it in the DOM**. Then it calls a final repaint. 
+1. css sprite
+2. load pictures only when needed
+3. load javascript files only when needed - use `<script src="path/to/script" async />`
+4. Optimize CSS and JS files. Enable compression: minify front end files, combine multiple front end files into one
+5. use CDN
+6. check if you put unused code into the page, or JS CSS files.
+7. eliminate HTTP requests
+8. make images internet-friendly
 
-**Reflowing is very expensive, but unfortunately it can be triggered easily.**
+HTTP/2 may also help. However, be extremely cautions to mention it, because your interviewer may not know about HTTP/2's new feature. Don't get into trouble!
 
-Reflow occurs when:
-- insert, remove or update an element in the DOM
-- modify content on the page, e.g. the text in an input box
-- move a DOM element
-- animate a DOM element
-- take measurements of an element such as offsetHeight or getComputedStyle
-- change a CSS style
-- change the className of an element
-- add or remove a stylesheet
-- resize the window
-- scroll
-
-### How to prevent
-1. avoid setting multiple inline styles, setting styles individually.
-2. use `classNames` of elements and do so as low as in the DOM tree as possible.
-3. batch DOM changes, and perform changes "offline". i.e., removing the element from the active DOM (`$.detach()` in jQuery), performing DOM changes, and re-appending the element to the DOM.
-4. avoid computing styles too often. try to cache values.
-5. apply animations with position `fixed` or `absolute`.
-6. stay away from table layouts.
-
-## repaint
-It goes through all the elements and determines their visibility, colour, outline and other visual style properties, then it updates the relevant parts of the screen.
-
-## The rendering cycle
-### Video: [Google I/O 2013 - True Grit: Debugging CSS & Render Performance](https://www.youtube.com/watch?v=gqc88qWuiI4)
-
-Edits to the document cause the browser to enter the rendering cycle.
-
-1. Build the DOM
-2. Calculate CSS property values
-3. Build the rendering tree
-4. Calculate layout
-5. Paint
-6. Composite
-
-## autocomplete - triggering multiple ajax call
-- use `event.preventDefault()` to cancel previous events.
-- Cancels the event if it is cancelable, without stopping further propagation of the event.
+1. use HTTP/2 to have multiple connection. Front end files will be downloaded in parallel.
+2. HTTP/2 server push - it allows a web server to send resources to a browser before the browser gets to request them

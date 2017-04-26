@@ -4,7 +4,6 @@ A notebook repo to keep track of front end technologies & knowledges I learned d
 - [javascript](#javascript)
 - [html](#html)
 - [css](#css)
-- [frameworks](#frameworks)
 - [practical questions](#practical-questions)
 - [user experience](#user-experience)
 - [system design](#system-design)
@@ -311,7 +310,7 @@ In a loop, the queue grabs for the next message, and calls its associated functi
 - [The javascript event loop: explained](http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/)
 
 
-### - Non-blocking javascript: we know that browser is single-threaded, and other tasks will be blocked if one task is not yet finished. how would you solve thise issue?
+### - Non-blocking javascript: we know that browser is single-threaded, and other tasks will be blocked if one task is not yet finished. how would you solve this issue?
 
 1. Service Worker - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
@@ -341,67 +340,7 @@ var a = function() {
 ## html
 
 
-### - what is website accessibility, and how to improve the accessibility of a website?
-It means people with disabilities can use the web. In details, they can perceive, navigate and interact with the website.
-
-How to improve:
-
-1. Do not make your pages dependent on images
-2. Make sure all your images have ALT text. Screen readers cannot "read images". In order for your images meaningful for people with disabilities, you need to add written descriptions for the images.
-3. Don't make the font size too small
-4. Use highly contrasting colors for your text and background.
-5. Screen reader friendly: use proper `aria` label, name and descriptions to navigate users to interact the page.
-6. Use semantic markups, and then enhance with ARIA.
-7. add labels for form elements
-8. make sure you can navigate through a page using keyboard only
-9. create meaningful links
-10. etc.
-
-To use accessibility API describe an object:
-
-1. role
-2. name
-3. state
-
-Further readings:
-- [w3.org - Introduction to web accessibility](https://www.w3.org/WAI/intro/accessibility.php)
-- [w3.org - How people with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web/Overview.html)
-- [Smashing magazine - web accessibility with accessibility API](https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/)
-
-Online tools for checking your markup:
-- [achecker](http://achecker.ca/checker/index.php#output_div)
-
-
-### - explain semantic markup
-Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation.
-
-By adding semantic tags to your document, you provide additional information about the document, which aids in communications.
-
-
-### - web accessibility: how to make `<a>` tag accessible?
-
-HTML markup:
-
-1. `href` should present
-2. `name`
-3. `id` if needed
-4. `textContent`
-
-1. make the text of `<a>` concise. so that when screen readers read the link, people with disabilities can understand it.
-2. don't capitaliz link text. avoid using ASCII charactors, and using URLs as text.
-3. restrict numbers of links on a page
-4. always alert a user when opening a new tab/window. For example, add a new icon "external-link" so that screen readers can read it to people.
-5.  to be continued
-
-
-### - what are the commonly used attributes in order to make tags accessible?
-
-
 ### - what is `iframe`?
-
-
-### - can you nest `<a>`?
-
 
 ### - what's new in HTML5?
 
@@ -433,19 +372,6 @@ Cons:
 
 ## css
 
-### - what CSS preprocessor do you use? Pros and cons?
-I use `Stylus` and `PostCSS` (with css-next plugin).
-
-Pros:
-
-1. nested syntax
-2. can use variable, function, mixins, etc.
-3. etc.
-
-Cons:
-
-1. harder to debugging. change file -> compile -> refresh page to see changes
-2. learning curve
 
 
 ### - what is `float`?
@@ -479,13 +405,6 @@ or:
 
 
 
-## frameworks
-
-### - how do you think of Angular 2?
-
-### - what do you like about React?
-
-
 
 ## practical questions
 
@@ -510,23 +429,6 @@ a.addEventListener('click', function(event) {
   event.preventDefault();
 }, false);
 ```
-
-### - how do you make a website faster?
-
-1. css sprite
-2. load pictures only when needed
-3. load javascript files only when needed - use `<script src="path/to/script" async />`
-4. Optimize CSS and JS files. Enable compression: minify front end files, combine multiple front end files into one
-5. use CDN
-6. check if you put unused code into the page, or JS CSS files.
-7. eliminate HTTP requests
-8. make images internet-friendly
-
-HTTP/2 may also help. However, be extremely cautions to mention it, because your interviewer may not know about HTTP/2's new feature. Don't get into trouble!
-
-1. use HTTP/2 to have multiple connection. Front end files will be downloaded in parallel.
-2. HTTP/2 server push - it allows a web server to send resources to a browser before the browser gets to request them
-
 
 ### - how to track user clicking event?
 
@@ -561,9 +463,6 @@ Use event delegation, delegating all elements's event inside of `<body>` to `doc
 #### example 2: when clicking an element, trigger a `POST`, writing into backend database for logging
 
 
-
-### - how to implement an infinite scrolling carousel?
-
 ### - what is cookie, and how to set it?
 
 ### - write a function to toggle `checkAll` checkbox, and other normal boxes
@@ -574,15 +473,5 @@ Use event delegation, delegating all elements's event inside of `<body>` to `doc
 
 Although UX design is not the main focus of front end engineers, interviewers may still ask you and check your understanding on good user experience. It would be good to have some basic understanding on UX, and stay up-to-date for the latest UX trend.
 
-### - what do you think makes a good UX engineer?
 
 ### - when to use optimistic update?
-
-
-## system design
-
-Books to read:
-- [Addy Osmani - Learning Javascript design patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#designpatternsjavascript)
-
-
-## product taste

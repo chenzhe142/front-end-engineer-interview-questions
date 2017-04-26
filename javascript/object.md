@@ -138,8 +138,9 @@ console.log(b);
 ### Check substring
   1. `String.prototype.includes(substring)`
 
-### Check char
-  1. `String.prototype.indexof(char)`
+### Check char & substring
+  1. `String.prototype.indexOf(char)`
+  1. `String.prototype.indexOf(substring)`
 
 ### Remove trailing & front whitespace
   1. `.trim()`
