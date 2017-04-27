@@ -2,14 +2,17 @@
 
 ## Computer Science fundamentals
 - Introduction to Algorithms
-- Design Patterns gang of four
+- [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/gp/product/0201633612)
 
 ## JavaScript
-- [Secrets of the JavaScript Ninja](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850)
-- JavaScript - the good parts
+- [Secrets of the JavaScript Ninja (2nd edition)](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850)
+- [JavaScript - the good parts]()
+- [Professional JavaScript for Web Developers](https://www.amazon.com/gp/product/1118026691)
+- [JavaScript: The Definitive Guide: Activate Your Web Pages (Definitive Guides)](https://www.amazon.com/gp/product/0596805527)
+- [Maintable JavaScript: Writing Readable Code](https://www.amazon.com/Maintainable-JavaScript-Writing-Readable-Code/dp/1449327680)
 - JavaScript Garden
 - [Eloquent JavaScript](http://eloquentjavascript.net/)
-- [Maintable JavaScript: Writing Readable Code](https://www.amazon.com/Maintainable-JavaScript-Writing-Readable-Code/dp/1449327680)
+
 
 ## User Experience
 - [UX Mastery](http://uxmastery.com/)
