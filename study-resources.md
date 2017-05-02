@@ -21,3 +21,7 @@
 
 ## blogs
 - [一亩三分地 － 骑驴找马换工作](http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=184542&extra=page%3D1%26filter%3Dsortid%26sortid%3D192%26sortid%3D192)
+
+## common practice & website features
+1. third-party login (Google, Facebook, etc): **OAuth2**
+    - [What you need to know about OAuth2 and logging with Facebook](https://www.smashingmagazine.com/2017/05/oauth2-logging-in-facebook/)
