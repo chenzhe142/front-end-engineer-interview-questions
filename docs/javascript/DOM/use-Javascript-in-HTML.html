@@ -248,6 +248,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../BOM/what-is-BOM.html">
+            
+                <a href="../BOM/what-is-BOM.html">
+            
+                    
+                    What is BOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
 
@@ -428,7 +447,39 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="../../system_design/my-approach.html">
+        <li class="chapter " data-level="6.3" data-path="../../cs_fundamentals/design_patterns/designPattern.html">
+            
+                <a href="../../cs_fundamentals/design_patterns/designPattern.html">
+            
+                    
+                    Design Patterns
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../cs_fundamentals/design_patterns/JavaScript_DesignPattern.html">
+            
+                <a href="../../cs_fundamentals/design_patterns/JavaScript_DesignPattern.html">
+            
+                    
+                    JavaScript Design Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../system_design/my-approach.html">
             
                 <a href="../../system_design/my-approach.html">
             
@@ -509,32 +560,6 @@
     
 
             </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="7.2" data-path="../../cs_fundamentals/design_patterns/designPattern.html">
-            
-                <a href="../../cs_fundamentals/design_patterns/designPattern.html">
-            
-                    
-                    Design Patterns
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="7.3" data-path="../../cs_fundamentals/design_patterns/JavaScript_DesignPattern.html">
-            
-                <a href="../../cs_fundamentals/design_patterns/JavaScript_DesignPattern.html">
-            
-                    
-                    JavaScript Design Patterns
-            
-                </a>
-            
-
             
         </li>
     
@@ -662,7 +687,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="use-javascript-in-html">use JavaScript in HTML</h1>
+<h2 id="the-script-element">the <code>&lt;script&gt;</code> element</h2>
+<p>There are 6 attributes for the <code>&lt;script&gt;</code> element:</p>
+<ol>
+<li><p><code>async</code>: the script should begin downloading immediately, but should not prevent other actions on the page. valid only for external script files.</p>
+<ul>
+<li>HTML5 introduces <code>async</code></li>
+</ul>
+</li>
+<li><p><code>charset</code>: this attribute is rarely used, because most browsers don&apos;t honor its value.</p>
+</li>
+<li><code>defer</code>: the script will be loaded after the page has been completely parsed and displayed.<ul>
+<li>the script will start downloading after the browser has received the closing <code>&lt;/html&gt;</code> tag.</li>
+<li>the HTML5 specification indicates that scripts will be executed in the order in which they appear.</li>
+<li><code>defer</code> attribute may not be fully supported by all browsers. Because of this, it&apos;s still best to put deferred scripts at the bottom of the page.</li>
+</ul>
+</li>
+<li><code>language</code>: deprecated. do not use.</li>
+<li><code>src</code></li>
+<li><code>type</code>: indicates the content type (also MIME type). this value is safe to omit, as &quot;text/javascript&quot; is assumed when missing.</li>
+</ol>
+<h2 id="notes">notes</h2>
+<ul>
+<li>as with inline javascript code, processing of the page is halted while the external file is interpreted.</li>
+<li>always use <code>&lt;script src=&quot;source.js&quot;&gt;&lt;/script&gt;</code> with open and close tag. It&apos;s not legal to have self-closing tag <code>&lt;script /&gt;</code> in HTML.</li>
+<li>browsers don&apos;t check the file extension of included JavaScript files. This leave open the possibility of dynamically generating JavaScript code using JSP or other server-side scripting language. If you don&apos;t use a <code>.js</code> extension, make sure that your server is returning the correct MIME type.</li>
+<li><code>&lt;script&gt;</code> allows to include JavaScript files from outside domains. Make sure you know where the code comes from.</li>
+<li>put <code>&lt;script&gt;</code> at the end of <code>&lt;body&gt;</code> tag.<ul>
+<li>rendering begins when the browser receives the opening <code>&lt;body&gt;</code> tag</li>
+<li>it won&apos;t block the page rendering. The page is completely rendered in the browser before the javascript code is processed.</li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -695,7 +753,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Use JavaScript in HTML","level":"1.4.2","depth":2,"next":{"title":"DOM API","level":"1.4.3","depth":2,"path":"javascript/DOM/DOM-api.md","ref":"javascript/DOM/DOM-api.md","articles":[]},"previous":{"title":"Version change & history","level":"1.4.1","depth":2,"path":"javascript/DOM/history.md","ref":"javascript/DOM/history.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/DOM/use-Javascript-in-HTML.md","mtime":"2017-05-08T22:40:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-09T05:23:20.892Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Use JavaScript in HTML","level":"1.4.2","depth":2,"next":{"title":"DOM API","level":"1.4.3","depth":2,"path":"javascript/DOM/DOM-api.md","ref":"javascript/DOM/DOM-api.md","articles":[]},"previous":{"title":"Version change & history","level":"1.4.1","depth":2,"path":"javascript/DOM/history.md","ref":"javascript/DOM/history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/DOM/use-Javascript-in-HTML.md","mtime":"2017-05-09T06:30:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-09T07:08:27.352Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

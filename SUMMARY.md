@@ -11,6 +11,7 @@
     * [DOM API](javascript/DOM/DOM-api.md)
     * [DOM Manipulation](javascript/DOM/DOM-manipulation.md)
   * [BOM]()
+    * [What is BOM](javascript/BOM/what-is-BOM.md)
 
 ### CSS
   * [Elements](css/elements.md)
@@ -32,6 +33,8 @@
 ### System Design
   * [Front-end](system_design/system-design-frontend.md)
   * [Back-end](system_design/system-design-backend.md)
+  * [Design Patterns](cs_fundamentals/design_patterns/designPattern.md)
+    * [JavaScript Design Patterns](cs_fundamentals/design_patterns/JavaScript_DesignPattern.md)
   * [My approach](system_design/my-approach.md)
 
 ### CS Fundamentals
@@ -39,8 +42,6 @@
     * [Sort]()
       * [Heap sort](cs_fundamentals/algorithm/sort/heapSort.md)
       * [Quicksort](cs_fundamentals/algorithm/sort/quicksort.md)
-  * [Design Patterns](cs_fundamentals/design_patterns/designPattern.md)
-  * [JavaScript Design Patterns](cs_fundamentals/design_patterns/JavaScript_DesignPattern.md)
 
 ### Study Resources
   * [Books & blogs](study_resources/study-resources.md)
