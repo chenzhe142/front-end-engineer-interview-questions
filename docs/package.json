@@ -4,8 +4,7 @@
   "description": "A notebook repo to keep track of front end technologies & knowledges I learned daily",
   "main": "README.md",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "cd _book && git init && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && git add . && git commit -am 'Update docs' && git push origin gh-pages --force"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
