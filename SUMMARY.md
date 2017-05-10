@@ -3,8 +3,11 @@
 ### JavaScript
   * [Overall Introduction](javascript/javascript.md)
   * [ECMAScript]()
-    * [Function](javascript/ECMAScript/function.md)
+    * [Fundamentals](javascript/ECMAScript/fundamentals.md)
+    * [Variable, Scope, and Memory](javascript/ECMAScript/variable-scope-memory.md)
+    * [Reference Types](javascript/ECMAScript/reference-types.md)
     * [Object](javascript/ECMAScript/object.md)
+    * [Function](javascript/ECMAScript/function.md)
   * [DOM]()
     * [Version change & history](javascript/DOM/history.md)
     * [Use JavaScript in HTML](javascript/DOM/use-Javascript-in-HTML.md)
@@ -18,6 +21,8 @@
   * [Position](css/position.md)
   * [Selectors](css/selectors.md)
   * [Specificity](css/specificity.md)
+  * [Flexbox layout](css/flexbox-layout.md)
+  * [Float layout](css/float-layout/md)
 
 ### HTML
   * [Semantic tags](html/html.md)

@@ -3,9 +3,6 @@
 ## hoisting
 This is how JavaScript implements execution context, hoisting declaration at the top of the JavaScript program.
 
-## strict mode: `use strict`
-It disables `arguments` params. It changes the behavior of Javascript engines so that errors are thrown instead of silently picked up.
-
 ## invoking functions
 **When a function is invoked, two implicit parameters are passed to the function, `arguments` and `this`.**
 

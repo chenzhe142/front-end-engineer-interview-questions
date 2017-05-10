@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Rendering · GitBook</title>
+        <title>Flexbox layout · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="performance.html" />
+    <link rel="next" href="float-layout/md" />
     
     
-    <link rel="prev" href="../html/tricks-learnings.html" />
+    <link rel="prev" href="specificity.html" />
     
 
     </head>
@@ -315,9 +315,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../css/elements.html">
+        <li class="chapter " data-level="2.1" data-path="elements.html">
             
-                <a href="../css/elements.html">
+                <a href="elements.html">
             
                     
                     Elements
@@ -328,9 +328,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../css/position.html">
+        <li class="chapter " data-level="2.2" data-path="position.html">
             
-                <a href="../css/position.html">
+                <a href="position.html">
             
                     
                     Position
@@ -341,9 +341,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../css/selectors.html">
+        <li class="chapter " data-level="2.3" data-path="selectors.html">
             
-                <a href="../css/selectors.html">
+                <a href="selectors.html">
             
                     
                     Selectors
@@ -354,9 +354,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../css/specificity.html">
+        <li class="chapter " data-level="2.4" data-path="specificity.html">
             
-                <a href="../css/specificity.html">
+                <a href="specificity.html">
             
                     
                     Specificity
@@ -367,9 +367,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../css/flexbox-layout.html">
+        <li class="chapter active" data-level="2.5" data-path="flexbox-layout.html">
             
-                <a href="../css/flexbox-layout.html">
+                <a href="flexbox-layout.html">
             
                     
                     Flexbox layout
@@ -380,7 +380,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="../css/float-layout/md">
+        <li class="chapter " data-level="2.6" data-path="float-layout/md">
             
                 <span>
             
@@ -446,9 +446,9 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="rendering.html">
+        <li class="chapter " data-level="4.1" data-path="../web/rendering.html">
             
-                <a href="rendering.html">
+                <a href="../web/rendering.html">
             
                     
                     Rendering
@@ -459,9 +459,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="performance.html">
+        <li class="chapter " data-level="4.2" data-path="../web/performance.html">
             
-                <a href="performance.html">
+                <a href="../web/performance.html">
             
                     
                     Performance
@@ -737,7 +737,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Rendering</a>
+        <a href=".." >Flexbox layout</a>
     </h1>
 </div>
 
@@ -752,28 +752,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rendering">rendering</h1>
-<h2 id="server-side-rendering-when-the-browser-fetches-the-page-over-http-it-immediately-gets-back-html-describing-the-page">server-side rendering: When the browser fetches the page over HTTP, it immediately gets back HTML describing the page.</h2>
-<h3 id="good">good</h3>
-<ol>
-<li>The content is visible to search engine like Google</li>
-<li>The page loads faster (relatively, may effect t_done). There&apos;s no &quot;white page&quot; while the browser downloads the rendering code and data and the runs the code.</li>
-<li>It maintains the idea that pages are documents.</li>
-<li>performance is predictable.</li>
-</ol>
-<h3 id="bad">bad</h3>
-<h2 id="client-side-rendering-javascript-running-in-the-browser-produces-html-or-manipulates-the-dom">client-side rendering: JavaScript running in the browser produces HTML or manipulates the DOM.</h2>
-<h3 id="goood">goood</h3>
-<ol>
-<li>can update the screen instantly when event occurs - no need to call &amp; wait for server&apos;s response to re-render &amp; update the page</li>
-<li>improve performance - when you get enough resources, i.e., web pages &amp; templates, no need to call server and fetch pages again.</li>
-</ol>
-<h3 id="bad">bad</h3>
-<ol>
-<li>Loading spinner - people need to wait till they get the data</li>
-<li>unpredictable performance - heavily relied on what devices people use.</li>
-</ol>
-
+                                
                                 
                                 </section>
                             
@@ -806,7 +785,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Rendering","level":"4.1","depth":1,"next":{"title":"Performance","level":"4.2","depth":1,"path":"web/performance.md","ref":"web/performance.md","articles":[]},"previous":{"title":"tricks & learnings","level":"3.3","depth":1,"path":"html/tricks-learnings.md","ref":"html/tricks-learnings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"web/rendering.md","mtime":"2017-05-09T20:09:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T07:35:02.133Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Flexbox layout","level":"2.5","depth":1,"next":{"title":"Float layout","level":"2.6","depth":1,"path":"css/float-layout/md","ref":"css/float-layout/md","articles":[]},"previous":{"title":"Specificity","level":"2.4","depth":1,"path":"css/specificity.md","ref":"css/specificity.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"css/flexbox-layout.md","mtime":"2017-05-10T07:19:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T07:35:02.133Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -135,12 +135,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../ECMAScript/function.html">
+        <li class="chapter " data-level="1.3.1" data-path="../ECMAScript/fundamentals.html">
             
-                <a href="../ECMAScript/function.html">
+                <a href="../ECMAScript/fundamentals.html">
             
                     
-                    Function
+                    Fundamentals
             
                 </a>
             
@@ -148,12 +148,51 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../ECMAScript/object.html">
+        <li class="chapter " data-level="1.3.2" data-path="../ECMAScript/variable-scope-memory.html">
             
-                <a href="../ECMAScript/object.html">
+                <a href="../ECMAScript/variable-scope-memory.html">
+            
+                    
+                    Variable, Scope, and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ECMAScript/reference-types.html">
+            
+                <a href="../ECMAScript/reference-types.html">
+            
+                    
+                    Reference Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ECMAScript/object.md">
+            
+                <span>
             
                     
                     Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ECMAScript/function.html">
+            
+                <a href="../ECMAScript/function.html">
+            
+                    
+                    Function
             
                 </a>
             
@@ -321,6 +360,32 @@
             
                     
                     Specificity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../css/flexbox-layout.html">
+            
+                <a href="../../css/flexbox-layout.html">
+            
+                    
+                    Flexbox layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../css/float-layout/md">
+            
+                <span>
+            
+                    
+                    Float layout
             
                 </a>
             
@@ -694,19 +759,26 @@
 <li><p><code>async</code>: the script should begin downloading immediately, but should not prevent other actions on the page. valid only for external script files.</p>
 <ul>
 <li>HTML5 introduces <code>async</code></li>
+<li><code>async</code> does not guarantee that scripts will be executed in order.</li>
 </ul>
 </li>
 <li><p><code>charset</code>: this attribute is rarely used, because most browsers don&apos;t honor its value.</p>
 </li>
 <li><code>defer</code>: the script will be loaded after the page has been completely parsed and displayed.<ul>
 <li>the script will start downloading after the browser has received the closing <code>&lt;/html&gt;</code> tag.</li>
-<li>the HTML5 specification indicates that scripts will be executed in the order in which they appear.</li>
+<li>the HTML5 specification indicates that scripts will be executed <strong>in the order</strong> in which they appear.</li>
 <li><code>defer</code> attribute may not be fully supported by all browsers. Because of this, it&apos;s still best to put deferred scripts at the bottom of the page.</li>
 </ul>
 </li>
 <li><code>language</code>: deprecated. do not use.</li>
 <li><code>src</code></li>
 <li><code>type</code>: indicates the content type (also MIME type). this value is safe to omit, as &quot;text/javascript&quot; is assumed when missing.</li>
+</ol>
+<h2 id="the-noscript-element">the <code>&lt;noscript&gt;</code> element</h2>
+<p><code>&lt;noscript&gt;</code>&#x4F7F;&#x5F97;&#x4E0D;&#x652F;&#x6301;javascript&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x5E73;&#x7A33;&#x9000;&#x5316;&#xFF0C;&#x7528;&#x4EE5;&#x663E;&#x793A;&#x66FF;&#x4EE3;&#x5185;&#x5BB9;&#x3002;&#x5305;&#x542B;&#x5728;<code>&lt;noscript&gt;</code>&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x53EA;&#x6709;&#x5728;&#x4E0B;&#x5217;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF1A;</p>
+<ol>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;javascript</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;javascript&#xFF0C;&#x4F46;&#x88AB;&#x7981;&#x7528;</li>
 </ol>
 <h2 id="notes">notes</h2>
 <ul>
@@ -753,7 +825,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Use JavaScript in HTML","level":"1.4.2","depth":2,"next":{"title":"DOM API","level":"1.4.3","depth":2,"path":"javascript/DOM/DOM-api.md","ref":"javascript/DOM/DOM-api.md","articles":[]},"previous":{"title":"Version change & history","level":"1.4.1","depth":2,"path":"javascript/DOM/history.md","ref":"javascript/DOM/history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/DOM/use-Javascript-in-HTML.md","mtime":"2017-05-09T06:30:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-09T07:08:27.352Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Use JavaScript in HTML","level":"1.4.2","depth":2,"next":{"title":"DOM API","level":"1.4.3","depth":2,"path":"javascript/DOM/DOM-api.md","ref":"javascript/DOM/DOM-api.md","articles":[]},"previous":{"title":"Version change & history","level":"1.4.1","depth":2,"path":"javascript/DOM/history.md","ref":"javascript/DOM/history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/DOM/use-Javascript-in-HTML.md","mtime":"2017-05-09T20:20:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T07:35:02.133Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
