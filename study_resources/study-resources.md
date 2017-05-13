@@ -10,6 +10,7 @@
 - [JavaScript - the good parts]()
 - [Professional JavaScript for Web Developers](https://www.amazon.com/gp/product/1118026691) **[Work in Progress]**
   - very deep & throughout book to learn
+- [You don't knw JS](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/README.md#you-dont-know-js-types--grammar)
 - [JavaScript: The Definitive Guide: Activate Your Web Pages (Definitive Guides)](https://www.amazon.com/gp/product/0596805527)
 - [Maintainable JavaScript: Writing Readable Code](https://www.amazon.com/Maintainable-JavaScript-Writing-Readable-Code/dp/1449327680)
 - JavaScript Garden
