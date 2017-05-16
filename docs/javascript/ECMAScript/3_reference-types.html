@@ -1,0 +1,1477 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Reference Types · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4_natives.html" />
+    
+    
+    <link rel="prev" href="2_variable-scope-memory.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">JavaScript</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../javascript.html">
+            
+                <a href="../javascript.html">
+            
+                    
+                    Overall Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    ECMAScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1_fundamentals.html">
+            
+                <a href="1_fundamentals.html">
+            
+                    
+                    Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2_variable-scope-memory.html">
+            
+                <a href="2_variable-scope-memory.html">
+            
+                    
+                    Variable, Scope, and Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="3_reference-types.html">
+            
+                <a href="3_reference-types.html">
+            
+                    
+                    Reference Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4_natives.html">
+            
+                <a href="4_natives.html">
+            
+                    
+                    Natives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5_object_oriented_programming.md">
+            
+                <span>
+            
+                    
+                    Object-oriented programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    DOM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../DOM/history.html">
+            
+                <a href="../DOM/history.html">
+            
+                    
+                    Version change & history
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../DOM/use-Javascript-in-HTML.html">
+            
+                <a href="../DOM/use-Javascript-in-HTML.html">
+            
+                    
+                    Use JavaScript in HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../DOM/DOM-api.html">
+            
+                <a href="../DOM/DOM-api.html">
+            
+                    
+                    DOM API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../DOM/DOM-manipulation.html">
+            
+                <a href="../DOM/DOM-manipulation.html">
+            
+                    
+                    DOM Manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    BOM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../BOM/what-is-BOM.html">
+            
+                <a href="../BOM/what-is-BOM.html">
+            
+                    
+                    What is BOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">CSS</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../css/elements.html">
+            
+                <a href="../../css/elements.html">
+            
+                    
+                    Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../css/position.html">
+            
+                <a href="../../css/position.html">
+            
+                    
+                    Position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../css/selectors.html">
+            
+                <a href="../../css/selectors.html">
+            
+                    
+                    Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../css/specificity.html">
+            
+                <a href="../../css/specificity.html">
+            
+                    
+                    Specificity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../css/flexbox-layout.html">
+            
+                <a href="../../css/flexbox-layout.html">
+            
+                    
+                    Flexbox layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../css/float-layout/md">
+            
+                <span>
+            
+                    
+                    Float layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">HTML</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../html/html.html">
+            
+                <a href="../../html/html.html">
+            
+                    
+                    Semantic tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../html/accessibility.html">
+            
+                <a href="../../html/accessibility.html">
+            
+                    
+                    Accessibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../html/tricks-learnings.html">
+            
+                <a href="../../html/tricks-learnings.html">
+            
+                    
+                    tricks & learnings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web Practical Questions</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../web/rendering.html">
+            
+                <a href="../../web/rendering.html">
+            
+                    
+                    Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../web/performance.html">
+            
+                <a href="../../web/performance.html">
+            
+                    
+                    Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Front-end Tools</li>
+        
+        
+    
+
+    
+        
+        <li class="header">System Design</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../system_design/system-design-frontend.html">
+            
+                <a href="../../system_design/system-design-frontend.html">
+            
+                    
+                    Front-end
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../system_design/system-design-backend.html">
+            
+                <a href="../../system_design/system-design-backend.html">
+            
+                    
+                    Back-end
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../cs_fundamentals/design_patterns/designPattern.html">
+            
+                <a href="../../cs_fundamentals/design_patterns/designPattern.html">
+            
+                    
+                    Design Patterns
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../cs_fundamentals/design_patterns/JavaScript_DesignPattern.html">
+            
+                <a href="../../cs_fundamentals/design_patterns/JavaScript_DesignPattern.html">
+            
+                    
+                    JavaScript Design Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../system_design/my-approach.html">
+            
+                <a href="../../system_design/my-approach.html">
+            
+                    
+                    My approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">CS Fundamentals</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../cs_fundamentals/algorithm/leetcode.html">
+            
+                <a href="../../cs_fundamentals/algorithm/leetcode.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" >
+            
+                <span>
+            
+                    
+                    Sort
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" data-path="../../cs_fundamentals/algorithm/sort/heapSort.html">
+            
+                <a href="../../cs_fundamentals/algorithm/sort/heapSort.html">
+            
+                    
+                    Heap sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.2" data-path="../../cs_fundamentals/algorithm/sort/quicksort.html">
+            
+                <a href="../../cs_fundamentals/algorithm/sort/quicksort.html">
+            
+                    
+                    Quicksort
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Study Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../study_resources/study-resources.html">
+            
+                <a href="../../study_resources/study-resources.html">
+            
+                    
+                    Books & blogs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../study_resources/source-code-to-read/readlist.html">
+            
+                <a href="../../study_resources/source-code-to-read/readlist.html">
+            
+                    
+                    Source code to read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试经验</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" >
+            
+                <span>
+            
+                    
+                    Facebook
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" >
+            
+                <span>
+            
+                    
+                    Google
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" >
+            
+                <span>
+            
+                    
+                    LinkedIn
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Reference Types</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id="reference-types">Reference Types</h1>
+<p>&#x9605;&#x8BFB;&#xFF1A;<a href="https://github.com/creeperyang/blog/issues/7" target="_blank">https://github.com/creeperyang/blog/issues/7</a></p>
+<h2 id="object">Object</h2>
+<p><code>Object</code> is a reference type. By using <code>new</code> operator, it creates an instance of <code>Object</code> reference type.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> person = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+</code></pre>
+<p>&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x4E86;<code>Object</code>&#x7684;&#x4E00;&#x4E2A;&#x65B0;instance&#xFF0C;&#x5E76;&#x628A;&#x5176;&#x5B58;&#x50A8;&#x5728;<code>person</code> variable&#x4E2D;&#x3002;&#x4F7F;&#x7528;&#x7684;constructor&#x662F;<code>Object</code>&#xFF0C;&#x5B83;&#x53EA;&#x4E3A;new instance&#x5B9A;&#x4E49;&#x4E86;&#x9ED8;&#x8BA4;&#x7684;property&#x548C;function&#x3002;</p>
+<p>&#x867D;&#x7136;Object instance&#x4E0D;&#x5177;&#x5907;&#x591A;&#x5C11;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x5728;application&#x4E2D;&#x5B58;&#x50A8;&#x548C;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x800C;&#x8A00;&#xFF0C;&#x5B83;&#x4EEC;&#x786E;&#x5B9E;&#x662F;&#x975E;&#x5E38;&#x7406;&#x60F3;&#x7684;&#x9009;&#x62E9;</p>
+<pre><code>const person = {
+  &quot;name&quot;: &apos;adam&apos;,
+  age: 3
+};
+</code></pre><p>&#x5728;&#x6700;&#x540E;&#x4E00;&#x4E2A;property&#x540E;&#x52A0;<code>,</code>&#xFF0C;&#x4F1A;&#x5728;IE7&#x4EE5;&#x53CA;&#x66F4;&#x65E9;&#x7684;&#x7248;&#x672C;&#x548C;opera&#x4E2D;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCar</span>(<span class="hljs-params">brand, options = {}</span>) </span>{
+  <span class="hljs-keyword">this</span>.brand = brand;
+  <span class="hljs-keyword">this</span>.color = options.color || <span class="hljs-string">&apos;red&apos;</span>;
+}
+</code></pre>
+<p>&#x5728;&#x4F20;&#x9012;&#x5927;&#x91CF;optional parameter&#x7684;&#x65F6;&#x5019;&#x63A8;&#x8350;&#x7528;object&#x5305;&#x88F9;&#x4F4F;&#xFF0C;&#x5FC5;&#x8981;&#x7684;parameter&#x4F7F;&#x7528;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3002;</p>
+<h2 id="array">Array</h2>
+<ul>
+<li>Array&#x7684;length&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x52A8;&#x6001;&#x8C03;&#x6574;</li>
+<li>&#x5728;&#x4F7F;&#x7528;Array constructor&#x65F6;&#x53EF;&#x4EE5;&#x7701;&#x7565;new&#xFF0C;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</li>
+<li><code>.length</code> is not read-only. You can modify the value to <strong>add</strong> or <strong>remove</strong> values from the array.</li>
+</ul>
+<h3 id="detecting-array">Detecting array</h3>
+<ol>
+<li><code>Array.isArray()</code> &lt;= recommended</li>
+<li><code>array instanceof Array</code></li>
+</ol>
+<h3 id="stack-method">Stack method</h3>
+<ol>
+<li><code>.push()</code></li>
+<li><code>.pop()</code></li>
+</ol>
+<h3 id="queue-method">Queue method</h3>
+<ol>
+<li><code>.unshift()</code> =&gt; enqueue</li>
+<li><code>.shift()</code> =&gt; dequeue</li>
+</ol>
+<h3 id="reordering">Reordering</h3>
+<ol>
+<li><code>.reverse()</code></li>
+<li><code>.sort()</code><ul>
+<li>to accomplish a correct sort, pass a callback function to it.</li>
+<li>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x6392;&#x5E8F;&#xFF0C;sort()&#x4F1A;&#x8C03;&#x7528;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x9879;&#x7684;toString()&#x8F6C;&#x578B;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x6BD4;&#x8F83;&#x5F97;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4EE5;&#x786E;&#x5B9A;&#x5982;&#x4F55;&#x6392;&#x5E8F;&#xFF0C;&#x5373;&#x4F7F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x662F;&#x6570;&#x503C;&#xFF0C;sort()&#x65B9;&#x6CD5;&#x6BD4;&#x8F83;&#x7684;&#x4E5F;&#x662F;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+</li>
+</ol>
+<h3 id="manipulation-method">Manipulation method</h3>
+<ol>
+<li><code>.concat()</code><ul>
+<li>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x5148;&#x521B;&#x5EFA;&#x5F53;&#x524D;array&#x7684;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x53C2;&#x6570;&#x6DFB;&#x52A0;&#x5230;&#x8FD9;&#x4E2A;copy&#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x65B0;&#x6784;&#x5EFA;&#x7684;&#x6570;&#x7EC4;&#x3002;</li>
+<li>&#x5728;&#x6CA1;&#x6709;parameter&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;copy</li>
+<li>&#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;copy&#x8FC7;&#x53BB;&#xFF0C;</li>
+<li>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;</li>
+</ul>
+</li>
+<li><code>.slice(startPos, endPos)</code><h1 id="-&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6570;&#x7EC4;">- &#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6570;&#x7EC4;</h1>
+<h1 id="reference-type">Reference Type</h1>
+</li>
+</ol>
+<h2 id="object-type"><code>Object</code> type</h2>
+<ul>
+<li><code>Object</code>&#x7684;&#x6BCF;&#x4E2A;instance&#x90FD;&#x6709;&#x4E0B;&#x5217;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;<ol>
+<li><code>Constructor</code></li>
+<li><code>hasOwnProperty(propertyName)</code>: &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x7ED9;&#x5B9A;property&#x5728;&#x5F53;&#x524D;&#x7684;instance&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x5728;prototype&#xFF09;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;</li>
+<li><code>isPrototypeOf(object)</code>: &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x4F20;&#x5165;&#x7684;object&#x662F;&#x5426;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;prototype</li>
+<li><code>propertyIsEnumerable(propertyName)</code>: &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x7ED9;&#x5B9A;property&#x662F;&#x5426;&#x80FD;&#x591F;&#x4F7F;&#x7528;for-in&#x8BED;&#x53E5;&#x3002;<code>propertyName</code>&#x5FC5;&#x987B;&#x4E3A;string&#x3002;</li>
+<li><code>toLocalString()</code></li>
+<li><code>toString()</code>: &#x8FD4;&#x56DE;instance&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;</li>
+<li><code>valueOf()</code>: &#x901A;&#x5E38;&#x4E0E;<code>toString()</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x76F8;&#x540C;</li>
+</ol>
+</li>
+<li>initialize:<ul>
+<li>use <code>literal notation</code> is preferred</li>
+</ul>
+</li>
+<li>access:<ul>
+<li>use <code>dot notation</code> is preferred</li>
+</ul>
+</li>
+</ul>
+<h2 id="array">Array</h2>
+<ul>
+<li>initialize:<ul>
+<li><code>var colors = new Array(10)</code>. you can pass array length (integer) to it.</li>
+</ul>
+</li>
+<li><p>arrays can contain a maximum of 4,294,967,295 items. If exceeds the count, it will throw errors.</p>
+</li>
+<li><p>Detecting array</p>
+<ol>
+<li><code>Array.isArray()</code> &lt;= recommended</li>
+<li><code>array instanceof Array</code></li>
+</ol>
+</li>
+<li><p>Stack method</p>
+<ol>
+<li><code>.push()</code></li>
+<li><code>.pop()</code></li>
+</ol>
+</li>
+<li><p>Queue method</p>
+<ol>
+<li><code>.unshift()</code> =&gt; enqueue</li>
+<li><code>.shift()</code> =&gt; dequeue</li>
+</ol>
+</li>
+<li><p>Reordering</p>
+<ol>
+<li><code>.reverse()</code></li>
+<li><code>.sort()</code><ul>
+<li>to accomplish a correct sort, pass a callback function to it.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Manipulation method</p>
+<ol>
+<li><code>.concat()</code></li>
+<li><p><code>.slice(startPos, endPos)</code></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+<ul>
+<li>if no params, return a copy</li>
+<li>if <code>startPos</code>, return <code>list[startPos:]</code></li>
+<li>if <code>startPos</code> and <code>endPos</code>, return <code>list[startPos:endPos]</code>. endPos is not included</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p><code>.splice()</code>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id="-&#x59CB;&#x7EC8;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;">- &#x59CB;&#x7EC8;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>deletion
+<code>.splice(positionToDelete, numberOfElementToDelete)</code></p>
+</li>
+<li><p>insertion
+<code>.splice(positionToInsert, 0, elements)</code></p>
+</li>
+<li><p>replacement
+<code>.splice(positionToReplace, 1, element)</code></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h3 id="location-methods">Location methods</h3>
+<p>=======</p>
+<ul>
+<li><p>Location methods</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b
+item must be strictly equal as if compared using <code>===</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol>
+<li><code>.indexOf()</code></li>
+<li><code>.lastIndexOf()</code></li>
+</ol>
+</li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x67E5;&#x627E;&#x7684;&#x9879;&#xFF0C;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#x7684;index</p>
+<h3 id="iterative-methods">Iterative methods</h3>
+<p>=======</p>
+<ul>
+<li><p>Iterative methods</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b
+&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;array&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x503C;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol>
+<li><p><code>.every()</code></p>
+</li>
+<li><p><code>.filter()</code></p>
+</li>
+<li><p><code>.forEach()</code></p>
+</li>
+<li><p><code>.map()</code></p>
+</li>
+<li><p>`.some()</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="arrayprototypemap-vs-arrayprototypeforeach"><code>Array.prototype.map</code> vs <code>Array.prototype.forEach</code></h3>
+<p><code>.map</code> method creates a new array with the results of calling a provided function on every element in this array.
+<code>.forEach</code> excutes a callback function for each element</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h3 id="&#x7F29;&#x5C0F;&#x65B9;&#x6CD5;">&#x7F29;&#x5C0F;&#x65B9;&#x6CD5;</h3>
+<ol>
+<li><code>reduce()</code></li>
+<li><code>reduceRight()</code></li>
+</ol>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5728;&#x6BCF;&#x4E00;&#x9879;&#x4E0A;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F5C;&#x4E3A;&#x7F29;&#x5C0F;&#x57FA;&#x7840;&#x7684;&#x521D;&#x59CB;&#x503C;</p>
+<p>Callback function accepts 4 parameters:</p>
+<ul>
+<li><code>prev</code></li>
+<li><code>current</code></li>
+<li><code>index</code></li>
+<li><code>array</code></li>
+</ul>
+<h3 id="arrayfrom"><code>Array.from()</code></h3>
+<p>Creates a new Array instance from an array-like or iterable object.</p>
+<h2 id="date">Date</h2>
+<h2 id="regexp">RegExp</h2>
+<h2 id="function">Function</h2>
+<p>function&#x5B9E;&#x9645;&#x4E0A;&#x662F;object&#xFF0C;&#x6BCF;&#x4E2A;function&#x90FD;&#x662F;Function&#x7C7B;&#x578B;&#x7684;instance&#xFF0C;&#x800C;&#x4E14;&#x90FD;&#x4E0E;&#x5176;&#x4ED6;reference type&#x4E00;&#x6837;&#x5177;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x7531;&#x4E8E;function&#x662F;object&#xFF0C;&#x56E0;&#x6B64;function name&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x4E0D;&#x4F1A;&#x4E0E;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x7ED1;&#x5B9A;&#x3002;</p>
+<p>ECMAScript&#x6CA1;&#x6709;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#xFF08;overload&#xFF09;&#xFF1A;&#x662F;Ada&#x3001;C++&#x3001;C#&#x3001;D&#x548C;Java&#x7B49;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x5177;&#x6709;&#x7684;&#x4E00;&#x9879;&#x7279;&#x6027;&#xFF0C;&#x8FD9;&#x9879;&#x7279;&#x6027;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x6570;&#x9879;&#x540D;&#x79F0;&#x76F8;&#x540C;&#x4F46;&#x529F;&#x80FD;&#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x7684;&#x5B50;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x591A;&#x9879;&#x4EFB;&#x52A1;&#x7684;&#x80FD;&#x529B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Overloading</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">&quot;test1&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a)</span></span>{
+        System.out.println(<span class="hljs-string">&quot;test2&quot;</span>);
+    }   
+
+    <span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x987A;&#x5E8F;&#x4E0D;&#x540C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">test</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,String s)</span></span>{
+        System.out.println(<span class="hljs-string">&quot;test3&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;returntest3&quot;</span>;
+    }   
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">test</span><span class="hljs-params">(String s,<span class="hljs-keyword">int</span> a)</span></span>{
+        System.out.println(<span class="hljs-string">&quot;test4&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;returntest4&quot;</span>;
+    }   
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        Overloading o = <span class="hljs-keyword">new</span> Overloading();
+        System.out.println(o.test());
+        o.test(<span class="hljs-number">1</span>);
+        System.out.println(o.test(<span class="hljs-number">1</span>,<span class="hljs-string">&quot;test3&quot;</span>));
+        System.out.println(o.test(<span class="hljs-string">&quot;test4&quot;</span>,<span class="hljs-number">1</span>));
+    }
+}
+</code></pre>
+<h2 id="&#x51FD;&#x6570;&#x58F0;&#x660E;&#x548C;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;">&#x51FD;&#x6570;&#x58F0;&#x660E;&#x548C;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<p>JavaScript engine&#x4F1A;&#x5148;&#x8BFB;&#x53D6;&#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF0C;<code>function abc()</code>&#xFF0C;&#x5E76;&#x4F7F;&#x5176;&#x5728;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x524D;&#x53EF;&#x7528;&#xFF0C;&#x81F3;&#x4E8E;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;<code>var a = function()</code>&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x7B49;&#x5230;&#x89E3;&#x6790;&#x5668;&#x6267;&#x884C;&#x5230;&#x5B83;&#x6240;&#x5728;&#x7684;&#x4EE3;&#x7801;&#x884C;&#xFF0C;&#x624D;&#x4F1A;&#x771F;&#x6B63;&#x88AB;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x3002;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53EB;&#x505A;function declaration hoisting&#xFF0C;&#x8BFB;&#x53D6;&#x5E76;&#x5C06;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x6DFB;&#x52A0;&#x5230;executive context&#x4E2D;&#x3002;</p>
+<h2 id="&#x4F5C;&#x4E3A;value&#x7684;&#x51FD;&#x6570;">&#x4F5C;&#x4E3A;value&#x7684;&#x51FD;&#x6570;</h2>
+<p>&#x56E0;&#x4E3A;ECMAScript&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x540D;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x53D8;&#x91CF;&#xFF0C;&#x6240;&#x6709;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;value&#x6765;&#x4F7F;&#x7528;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x50CF;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x4E00;&#x6837;&#x628A;&#x4E00;&#x4E2A;function&#x4F20;&#x9012;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;function&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x5C06;function&#x5F53;&#x4F5C;return value&#x3002;</p>
+<h2 id="&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;property">&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;property</h2>
+<ul>
+<li><code>arguments</code>&#xFF1A;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x7740;&#x4F20;&#x5165;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;<ul>
+<li>&#x540C;&#x65F6;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x540D;&#x53EB;<code>callee</code>&#x7684;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x62E5;&#x6709;&#x8FD9;&#x4E2A;arguments&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+</li>
+<li><code>this</code>&#xFF1A;&#x6307;&#x5411;&#x7684;&#x662F;&#x51FD;&#x6570;&#x636E;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x73AF;&#x5883;&#x5BF9;&#x8C61;</li>
+<li><code>caller</code>&#xFF1A;&#x6307;&#x5411;&#x8C03;&#x7528;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>caller</code>&#x548C;<code>callee</code>&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x52A0;&#x5F3A;&#x8FD9;&#x95E8;&#x8BED;&#x8A00;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x8FD9;&#x6837;&#x7B2C;&#x4E09;&#x65B9;&#x4EE3;&#x7801;&#x5C31;&#x4E0D;&#x80FD;&#x5728;&#x76F8;&#x540C;&#x7684;&#x73AF;&#x5883;&#x91CC;&#x7AA5;&#x89C6;&#x5176;&#x4ED6;&#x4EE3;&#x7801;&#x4E86;&#x3002;</p>
+<h2 id="&#x51FD;&#x6570;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;">&#x51FD;&#x6570;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</h2>
+<ul>
+<li><code>.length</code>&#xFF1A;&#x51FD;&#x6570;&#x5E0C;&#x671B;&#x63A5;&#x6536;&#x7684;&#x547D;&#x540D;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;</li>
+<li>&#x6BCF;&#x4E2A;function&#x90FD;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x975E;&#x7EE7;&#x627F;&#x800C;&#x6765;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;<code>apply()</code>&#x548C;<code>call()</code>&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x7528;&#x9014;&#x90FD;&#x662F;&#x5728;&#x7279;&#x5B9A;&#x7684;execution context&#x4E2D;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x7B49;&#x4E8E;&#x8BBE;&#x7F6E;function&#x5185;<code>this</code>&#x5BF9;&#x8C61;&#x7684;&#x503C;&#x3002;<ul>
+<li><code>apply()</code>: <code>this</code>, <code>[]</code></li>
+<li><code>call()</code>: <code>this</code>, arguments</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="&#x7279;&#x6B8A;&#x7684;reference-type-&#x57FA;&#x672C;&#x5305;&#x88C5;&#x7C7B;&#x578B;&#xFF08;primitive-wrapper-type&#xFF09;&#x3002;&#x5B83;&#x4EEC;&#x672C;&#x8D28;&#x4E0A;&#x662F;function&#x3002;">&#x7279;&#x6B8A;&#x7684;reference type: &#x57FA;&#x672C;&#x5305;&#x88C5;&#x7C7B;&#x578B;&#xFF08;primitive wrapper type&#xFF09;&#x3002;&#x5B83;&#x4EEC;&#x672C;&#x8D28;&#x4E0A;&#x662F;function&#x3002;</h1>
+<h2 id="boxing-wrappers">Boxing wrappers</h2>
+<p>&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x4E0E;&#x672C;&#x7AE0;&#x4ECB;&#x7ECD;&#x7684;&#x5176;&#x4ED6;reference type&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x4E5F;&#x5177;&#x6709;&#x4E0E;&#x5404;&#x81EA;&#x7684;&#x57FA;&#x672C;reference type&#x76F8;&#x5E94;&#x7684;&#x7279;&#x6B8A;&#x884C;&#x4E3A;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x6BCF;&#x5F53;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;primitive type&#x7684;value&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540E;&#x53F0;&#x5C31;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x57FA;&#x672C;&#x5305;&#x88C5;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4ECE;&#x800C;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x8C03;&#x7528;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x64CD;&#x4F5C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s1 = <span class="hljs-string">&apos;1234356&apos;</span>;
+<span class="hljs-keyword">var</span> s2 = s1.substring(<span class="hljs-number">2</span>);
+</code></pre>
+<p>&#x5728;&#x4EE5;&#x4E0A;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>s1</code>&#x662F;&#x4E00;&#x4E2A;string&#x7684;primitive type&#x3002;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;primitive type&#x4E0D;&#x662F;object&#xFF0C;&#x56E0;&#x800C;&#x903B;&#x8F91;&#x4E0A;&#x8BB2;&#x5B83;&#x4EEC;&#x4E0D;&#x5E94;&#x8BE5;&#x6709;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x76F4;&#x89C2;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x540E;&#x53F0;&#x5DF2;&#x7ECF;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5904;&#x7406;&#x3002;&#x5F53;&#x7B2C;&#x4E8C;&#x884C;&#x4EE3;&#x7801;&#x8BBF;&#x95EE;<code>s1</code>&#x65F6;&#xFF0C;&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;&#x4E2D;&#x5904;&#x4E8E;&#x4E00;&#x79CD;&#x8BFB;&#x53D6;&#x6A21;&#x5F0F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8981;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x800C;&#x5728;&#x8BFB;&#x53D6;&#x6A21;&#x5F0F;&#x4E2D;&#x8BBF;&#x95EE;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x540E;&#x53F0;&#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x4E0B;&#x5217;&#x5904;&#x7406;&#xFF1A;</p>
+<ol>
+<li>&#x521B;&#x5EFA;<code>String</code>&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x4E2A;instance</li>
+<li>&#x5728;instance&#x4E0A;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x9500;&#x6BC1;&#x8FD9;&#x4E2A;instance</li>
+</ol>
+<p>&#x4EE5;&#x4E0A;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">&apos;some text&apos;</span>);
+<span class="hljs-keyword">var</span> s2 = s1.substring(<span class="hljs-number">2</span>);
+s1 = <span class="hljs-literal">null</span>;
+</code></pre>
+<p>&#x7ECF;&#x8FC7;&#x6B64;&#x756A;&#x5904;&#x7406;&#xFF0C;&#x57FA;&#x672C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5C31;&#x53D8;&#x5F97;&#x8DDF;object&#x4E00;&#x6837;&#x4E86;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#x4E5F;&#x5206;&#x522B;&#x9002;&#x7528;&#x4E8E;<code>Boolean</code>&#x548C;<code>Number</code>&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5E03;&#x5C14;&#x503C;&#x548C;&#x6570;&#x5B57;&#x503C;&#x3002;</p>
+<p>reference type&#x548C;primitive wrapper type&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5C31;&#x662F;<strong>object&#x7684;&#x751F;&#x5B58;&#x671F;</strong>&#x3002;&#x4F7F;&#x7528;<code>new</code>&#x521B;&#x5EFA;&#x7684;reference type&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x6D41;&#x79BB;&#x5F00;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x524D;&#x4E00;&#x76F4;&#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x3002;&#x800C;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684;primitive wrapper type&#x7684;&#x5BF9;&#x8C61;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x77AC;&#x95F4;&#xFF0C;&#x7136;&#x540E;&#x7ACB;&#x5373;&#x88AB;&#x9500;&#x6BC1;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x4E3A;primitive value&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s1 = <span class="hljs-string">&apos;some text&apos;</span>;
+s1.color = <span class="hljs-string">&apos;red&apos;</span>; <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7684;string&#x5BF9;&#x8C61;&#x5728;&#x8FD9;&#x884C;&#x4E4B;&#x540E;&#x5C31;&#x88AB;&#x9500;&#x6BC1;&#x4E86;</span>
+alert(s1.color);  <span class="hljs-comment">//undefined</span>
+</code></pre>
+<p><strong>&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;<code>new String()</code>&#x521B;&#x5EFA;string</strong>&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x5F88;&#x5BB9;&#x6613;&#x8BA9;&#x4EBA;&#x5206;&#x4E0D;&#x6E05;&#x81EA;&#x5DF1;&#x662F;&#x5728;&#x5904;&#x7406;primitive type&#x8FD8;&#x662F;reference type&#x3002;&#x7406;&#x7531;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;123&apos;</span>;
+<span class="hljs-keyword">var</span> b = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">&apos;123&apos;</span>);
+
+<span class="hljs-keyword">typeof</span> a <span class="hljs-comment">// &quot;string&quot;</span>
+<span class="hljs-keyword">typeof</span> b <span class="hljs-comment">// &quot;object&quot;</span>
+</code></pre>
+<h2 id="boolean">Boolean</h2>
+<p>&#x5EFA;&#x8BAE;&#xFF1A;&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x4F7F;&#x7528;<code>Boolean</code>&#x5BF9;&#x8C61;</p>
+<h2 id="number">Number</h2>
+<p>Number&#x7C7B;&#x578B;&#x91CD;&#x5199;&#x4E86;<code>valueOf()</code>, <code>toLocaleString()</code>&#x548C;<code>toString()</code>&#x65B9;&#x6CD5;&#x3002;&#x91CD;&#x5199;&#x540E;&#x7684;<code>valueOf()</code>&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x7684;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5219;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x503C;&#x3002;</p>
+<ul>
+<li><code>toString(&#x8FDB;&#x5236;)</code></li>
+<li><code>toFixed(&#x5C0F;&#x6570;&#x7684;&#x6570;&#x91CF;)</code>&#xFF1A;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x5E26;&#x6709;0&#x5230;20&#x4E2A;&#x5C0F;&#x6570;&#x4F4D;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x4F46;&#x8FD9;&#x53EA;&#x662F;&#x6807;&#x51C6;&#x5B9E;&#x73B0;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x6709;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x4E5F;&#x53EF;&#x80FD;&#x652F;&#x6301;&#x66F4;&#x591A;&#x4F4D;&#x6570;&#x3002;</li>
+<li><code>toExponential()</code>&#xFF1A; &#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;</li>
+<li><code>toPricision()</code>&#xFF1A;&#x53EF;&#x80FD;&#x8FD4;&#x56DE;<code>toFixed()</code>&#xFF0C;&#x6216;<code>toExponential()</code></li>
+<li><code>Number.isInteger()</code>: &#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x662F;&#x6574;&#x6570;</li>
+<li><code>Number.isSafeInteger(..)</code>: &#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5B89;&#x5168;&#x7684;&#x6574;&#x6570;&#x3002;</li>
+</ul>
+<p>&#x5EFA;&#x8BAE;&#xFF1A;&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x4F7F;&#x7528;<code>Number</code>&#x5BF9;&#x8C61;</p>
+<h2 id="string">String</h2>
+<p><code>String</code>&#x662F;string&#x7684;&#x5BF9;&#x8C61;&#x5305;&#x88C5;&#x7C7B;&#x578B;&#x3002;</p>
+<h3 id="&#x5B57;&#x7B26;&#x65B9;&#x6CD5;&#xFF1A;">&#x5B57;&#x7B26;&#x65B9;&#x6CD5;&#xFF1A;</h3>
+<p>Return <code>UTF-16 code unit</code> of a char.</p>
+<p>Unicode code points range from 0 to 1114111 (0x10FFFF). The first 128 Unicode code points are a direct match of the ASCII character encoding. For information on Unicode, see the JavaScript Guide.</p>
+<ol>
+<li><code>.charCodeAt(index)</code></li>
+<li><code>.fromCharCode(utfCode)</code></li>
+<li><code>.charAt(index)</code></li>
+<li>use <code>[]</code></li>
+</ol>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;</h3>
+<!-- todo: add notes for negative indices -->
+<ol>
+<li><code>.concat()</code>&#xFF0C;&#x8FD4;&#x56DE;&#x65B0;&#x62FC;&#x63A5;&#x7684;string&#xFF0C;&#x7B49;&#x4E8E;&#x4F7F;&#x7528;<code>+</code></li>
+<li><code>.slice()</code>: startIndex, &#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x540E;&#x9762;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li><code>.substr()</code>: startIndex, &#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x4E2A;&#x6570;</li>
+<li><code>.substring()</code>: startIndex, &#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x540E;&#x9762;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li><code>.localeCompare()</code>&#xFF1A;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#x3002;<ul>
+<li>&#x5C0F;&#x4E8E;&#xFF1A;-1</li>
+<li>&#x7B49;&#x4E8E;: 0</li>
+<li>&#x5927;&#x4E8E;: 1</li>
+</ul>
+</li>
+</ol>
+<h3 id="check-substring">Check substring</h3>
+<ol>
+<li><code>.includes(substring)</code></li>
+</ol>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x4F4D;&#x7F6E;&#x65B9;&#x6CD5;</h3>
+<ol>
+<li><code>.indexOf(char, startIndex)</code></li>
+<li><code>.indexOf(substring, startIndex)</code></li>
+</ol>
+<h3 id="trim&#x65B9;&#x6CD5;"><code>trim()</code>&#x65B9;&#x6CD5;</h3>
+<p>=======</p>
+<ul>
+<li><p><code>Array.from()</code>
+Creates a new Array instance from an array-like or iterable object.</p>
+</li>
+<li><p><code>Array.prototype.concat</code> - don&apos;t change the existing array, returns a new array.
+Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+</li>
+</ul>
+<p><code>arr.reduce(callback, [initialValue])</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// callback: (accumulator, currentValue)</span>
+<span class="hljs-comment">// - accumulator: previously returned value</span>
+<span class="hljs-comment">// - currentValue</span>
+
+<span class="hljs-keyword">var</span> sum = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">acc, val</span>) </span>{
+  <span class="hljs-keyword">return</span> acc + val;
+}, <span class="hljs-number">0</span>);
+<span class="hljs-comment">// sum is 6</span>
+
+<span class="hljs-keyword">var</span> list1 = [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]];
+<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, [<span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]]]];
+
+<span class="hljs-keyword">const</span> flatten = arr =&gt; arr.reduce(
+  (acc, val) =&gt; acc.concat(
+    <span class="hljs-built_in">Array</span>.isArray(val) ? flatten(val) : val
+  ),
+  []);
+flatten(list1); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
+flatten(list2); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
+
+<span class="hljs-comment">// ES5</span>
+<span class="hljs-keyword">var</span> flatten2 = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">return</span> array.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">acc, val</span>) </span>{
+        <span class="hljs-keyword">return</span> acc.concat(<span class="hljs-built_in">Array</span>.isArray(val) ? flatten2(val) : val);
+    }, []);
+};
+
+<span class="hljs-comment">// iterative:</span>
+<span class="hljs-keyword">var</span> list1 = [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]];
+<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, [<span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]]]];
+
+<span class="hljs-keyword">var</span> flatten = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">var</span> queue = array.slice();
+    <span class="hljs-keyword">var</span> result = [];
+
+    <span class="hljs-keyword">while</span> (queue.length &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">const</span> val = queue.shift();
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Array</span>.isArray(val)) {
+            queue = val.concat(queue);
+        } <span class="hljs-keyword">else</span> {
+            result.push(val);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> result;
+};
+
+<span class="hljs-keyword">var</span> a = flatten(list1);
+<span class="hljs-built_in">console</span>.log(a);
+
+<span class="hljs-keyword">var</span> b = flatten(list2);
+<span class="hljs-built_in">console</span>.log(b);
+</code></pre>
+<h2 id="string">String</h2>
+<h3 id="check-substring">Check substring</h3>
+<ol>
+<li><code>String.prototype.includes(substring)</code></li>
+</ol>
+<h3 id="check-char--substring">Check char &amp; substring</h3>
+<ol>
+<li><code>String.prototype.indexOf(char)</code></li>
+<li><code>String.prototype.indexOf(substring)</code></li>
+</ol>
+<h3 id="remove-trailing--front-whitespace">Remove trailing &amp; front whitespace</h3>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+<ol>
+<li><code>.trim()</code></li>
+<li><code>.trimLeft()</code></li>
+<li><code>.trimRight()</code></li>
+</ol>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;</h3>
+<ol>
+<li><code>toLowerCase()</code></li>
+<li><code>toLocaleLowerCase()</code></li>
+<li><code>toUpperCase()</code></li>
+<li><code>toLocaleUpperCase()</code></li>
+</ol>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x65B9;&#x6CD5;</h3>
+<ol>
+<li><code>.match()</code>&#xFF1A;&#x672C;&#x8D28;&#x4E0A;&#x4E0E;&#x8C03;&#x7528;<code>RegExp</code>&#x7684;<code>exec()</code>&#x65B9;&#x6CD5;&#x76F8;&#x540C;&#xFF0C;&#x5176;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;parameter&#xFF0C;&#x8981;&#x4E48;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8981;&#x4E48;&#x662F;&#x4E00;&#x4E2A;RegExp&#x5BF9;&#x8C61;&#x3002;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x3002;</li>
+<li><code>.search()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x9879;&#x7684;index&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;-1</li>
+<li><code>.replace()</code>&#xFF1A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF08;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;string&#xFF09;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8981;&#x66FF;&#x6362;&#x7684;&#x5185;&#x5BB9;&#xFF08;string, function&#xFF09;&#x3002;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;string&#xFF0C;&#x5219;&#x53EA;&#x4F1A;&#x66FF;&#x6362;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li><code>.split()</code>&#xFF1A;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x6210;&#x591A;&#x4E2A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x3002;<code>split()</code>&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5;&#x4FBF;&#x786E;&#x4FDD;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;&#x65E2;&#x5B9A;&#x5927;&#x5C0F;&#x3002;</li>
+</ol>
+<hr>
+<h1 id="&#x5355;&#x4F53;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#xFF1A;-other-properties-of-the-global-object">&#x5355;&#x4F53;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#xFF1A; Other properties of the Global object</h1>
+<p>&#x5B9A;&#x4E49;&#xFF1A;&#x7531;ECMAScript&#x5B9E;&#x73B0;&#x63D0;&#x4F9B;&#x7684;&#x3001;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x5BBF;&#x4E3B;&#x73AF;&#x5883;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5728;ECMAScript&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x5C31;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#x3002;&#x5B83;&#x4EEC;&#x5DF2;&#x7ECF;&#x63D0;&#x524D;&#x5B9E;&#x4F8B;&#x5316;&#x4E86;&#x3002;</p>
+<h2 id="global">Global</h2>
+<ol>
+<li>URI&#x7F16;&#x7801;&#x65B9;&#x6CD5;<ul>
+<li><code>encodeURI()</code>&#xFF1A;&#x7528;&#x4E8E;&#x6574;&#x4E2A;URI</li>
+<li><code>encodeURIComponent()</code>&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;encode URI&#x7684;&#x67D0;&#x4E00;&#x6BB5;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x60C5;&#x5F62;&#x66F4;&#x591A;</li>
+<li><code>decodeURI()</code></li>
+<li><code>decodeURIComponent()</code></li>
+</ul>
+</li>
+<li>eval()</li>
+<li>window&#x5BF9;&#x8C61;</li>
+</ol>
+<h2 id="global&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;">Global&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</h2>
+<ul>
+<li>undefined</li>
+<li>NaN</li>
+<li>Infinity</li>
+<li>Object</li>
+<li>Array</li>
+<li>Function</li>
+<li>Boolean</li>
+<li>String</li>
+<li>Number</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error</li>
+<li>EvalError</li>
+<li>RangeError</li>
+<li>ReferenceError</li>
+<li>SyntaxError</li>
+<li>TypeError</li>
+<li><h1 id="urierror">URIError</h1>
+<h3 id="ascii--char">Ascii &lt;=&gt; Char</h3>
+</li>
+<li><code>s.charCodeAt(index)</code></li>
+<li><code>String.fromCharCode(asciiCode)</code><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h2 id="math">Math</h2>
+<h3 id="rounding">Rounding</h3>
+<ol>
+<li><code>Math.ceil</code></li>
+<li><code>Math.floor</code></li>
+<li><code>Math.round</code></li>
+</ol>
+<h3 id="randomize">Randomize</h3>
+<ol>
+<li><code>Math.random</code></li>
+</ol>
+<h3 id="others">Others</h3>
+<ol>
+<li><code>Math.abs()</code></li>
+<li><code>Math.exp()</code> e&#x7684;m&#x6B21;&#x5E42;</li>
+<li><code>Math.log()</code> &#x81EA;&#x7136;&#x5BF9;&#x6570;</li>
+<li><code>Math.pow(num, power)</code></li>
+<li><code>Math.sqrt()</code></li>
+</ol>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<hr>
+<h1 id="keyed-collections">Keyed collections</h1>
+<h2 id="map">Map</h2>
+<h1 id="ecma-262-6th-edition---map"><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-map-constructor" target="_blank">ECMA-262 6th edition - Map</a></h1>
+<h2 id="map">Map</h2>
+<p>Map is added in ECMAScript 2015.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank">MDN - Map</a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:</p>
+<ul>
+<li>easily to get <code>.size</code> for a Map</li>
+<li>the key of objects is only allowed for <code>String</code> and <code>Symbol</code>. Map allows any values, including function, objects, and any primitive.</li>
+</ul>
+<h3 id="performance-object-vs-map">performance: <code>object</code> vs <code>map</code></h3>
+<p>according to <a href="https://jsperf.com/es6-map-vs-object-properties/2" target="_blank">Jsperf - object vs map</a>, <code>map</code> is faster and more suitable for performing as a <code>hashmap</code></p>
+<h3 id="methods">methods</h3>
+<ol>
+<li><code>.set(key, value)</code></li>
+<li><code>.has(key)</code></li>
+<li><code>.keys()</code></li>
+<li><code>.delete(key)</code></li>
+<li><code>.clear()</code></li>
+<li><code>.size()</code></li>
+</ol>
+<h2 id="set">Set</h2>
+<p>Set is added in ECMAScript 2015.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank">MDN - Set</a></p>
+<h3 id="methods">methods</h3>
+<ol>
+<li><code>.length</code></li>
+<li><code>.add(value)</code></li>
+<li><code>.clear()</code></li>
+<li><code>.delete(value)</code></li>
+<li><code>.has(value)</code></li>
+<li><code>.keys()</code></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Reference Types","level":"1.3.3","depth":2,"next":{"title":"Natives","level":"1.3.4","depth":2,"path":"javascript/ECMAScript/4_natives.md","ref":"javascript/ECMAScript/4_natives.md","articles":[]},"previous":{"title":"Variable, Scope, and Memory","level":"1.3.2","depth":2,"path":"javascript/ECMAScript/2_variable-scope-memory.md","ref":"javascript/ECMAScript/2_variable-scope-memory.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/3_reference-types.md","mtime":"2017-05-16T04:37:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-16T06:32:35.617Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
