@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Variable, Scope, and Memory · GitBook</title>
+        <title>Natives · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="reference-types.html" />
+    <link rel="next" href="5_object_oriented_programming.md" />
     
     
-    <link rel="prev" href="fundamentals.html" />
+    <link rel="prev" href="3_reference-types.html" />
     
 
     </head>
@@ -135,9 +135,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="fundamentals.html">
+        <li class="chapter " data-level="1.3.1" data-path="1_fundamentals.html">
             
-                <a href="fundamentals.html">
+                <a href="1_fundamentals.html">
             
                     
                     Fundamentals
@@ -148,9 +148,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="variable-scope-memory.html">
+        <li class="chapter " data-level="1.3.2" data-path="2_variable-scope-memory.html">
             
-                <a href="variable-scope-memory.html">
+                <a href="2_variable-scope-memory.html">
             
                     
                     Variable, Scope, and Memory
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="reference-types.html">
+        <li class="chapter " data-level="1.3.3" data-path="3_reference-types.html">
             
-                <a href="reference-types.html">
+                <a href="3_reference-types.html">
             
                     
                     Reference Types
@@ -174,12 +174,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="object.md">
+        <li class="chapter active" data-level="1.3.4" data-path="4_natives.html">
             
-                <span>
+                <a href="4_natives.html">
             
                     
-                    Object
+                    Natives
             
                 </a>
             
@@ -187,7 +187,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="function.html">
+        <li class="chapter " data-level="1.3.5" data-path="5_object_oriented_programming.md">
+            
+                <span>
+            
+                    
+                    Object-oriented programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="function.html">
             
                 <a href="function.html">
             
@@ -737,7 +750,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Variable, Scope, and Memory</a>
+        <a href="../.." >Natives</a>
     </h1>
 </div>
 
@@ -752,41 +765,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="variables-scope-and-memory">Variables, Scope. and Memory</h1>
+                                <h1 id="natives-&#x57FA;&#x672C;&#x5305;&#x88C5;&#x7C7B;&#x578B;">Natives: &#x57FA;&#x672C;&#x5305;&#x88C5;&#x7C7B;&#x578B;</h1>
+<p>&#x5E38;&#x7528;&#x7684;&#x539F;&#x751F;&#x5BF9;&#x8C61;&#x6709;&#xFF1A;String()&#xFF0C;Number()&#xFF0C;Boolean()&#xFF0C;Array()&#xFF0C;Object()&#xFF0C;Function()&#xFF0C;RegExp()&#xFF0C;Date()&#xFF0C;Error()&#xFF0C;Symbol()&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8FD9;&#x4E9B;&#x539F;&#x751F;&#x5BF9;&#x8C61;&#x5176;&#x5B9E;&#x662F;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x3002;</p>
+<h2 id="internal-class">Internal [[Class]]</h2>
+<p>typeof&#x7ED3;&#x679C;&#x4E3A;object&#x7684;&#x503C;&#x989D;&#x5916;&#x6709;&#x4E2A;[[Class]]&#x5C5E;&#x6027;&#x6765;&#x6807;&#x8BB0;&#xFF08;&#x53EF;&#x770B;&#x505A;&#x5185;&#x90E8;&#x5206;&#x7C7B;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;Object.prototype.toString(..)&#x83B7;&#x53D6;&#x3002;</p>
+<p>&#x800C;&#x5BF9;&#x57FA;&#x7840;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x6765;&#x8BF4;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Object</span>.prototype.toString.call( <span class="hljs-literal">null</span> );         <span class="hljs-comment">// &quot;[object Null]&quot;</span>
+<span class="hljs-built_in">Object</span>.prototype.toString.call( <span class="hljs-literal">undefined</span> );    <span class="hljs-comment">// &quot;[object Undefined]&quot;</span>
+
+<span class="hljs-built_in">Object</span>.prototype.toString.call( <span class="hljs-string">&quot;abc&quot;</span> );    <span class="hljs-comment">// &quot;[object String]&quot;</span>
+<span class="hljs-built_in">Object</span>.prototype.toString.call( <span class="hljs-number">42</span> );       <span class="hljs-comment">// &quot;[object Number]&quot;</span>
+<span class="hljs-built_in">Object</span>.prototype.toString.call( <span class="hljs-literal">true</span> );     <span class="hljs-comment">// &quot;[object Boolean]&quot;</span>
+</code></pre>
+<p>&#x5BF9;null&#x548C;undefined&#x6765;&#x8BF4;&#xFF0C;&#x5C3D;&#x7BA1;&#x6CA1;&#x6709;Null()&#x548C;Undefined()&#xFF0C;&#x4F46;&#x5185;&#x90E8;[[Class]]&#x7684;&#x503C;&#x66B4;&#x9732;&#x4E86;&quot;Null&quot;&#x548C;&quot;Undefined&quot;&#x3002;
+&#x5BF9;&#x5176;&#x5B83;&#x57FA;&#x7840;&#x7C7B;&#x578B;&#x6765;&#x8BF4;&#xFF0C;&#x8F93;&#x51FA;&#x7684;&#x662F;&#x5B83;&#x5BF9;&#x5E94;&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x7684;[[Class]]&#x3002;</p>
 <hr>
-<h2 id="variables">Variables</h2>
-<h3 id="variables-contain-2-types-of-data">variables contain 2 types of data:</h3>
-<ol>
-<li>primitive values:<ul>
-<li>simple atomic pieces of data</li>
-<li>you&apos;ll be manipulating the real data</li>
-<li>primitive values can&apos;t have properties added to them even though attempting to do so won&apos;t cause an error. In strict mode, it will throw <code>TypeError</code> for cannot create property</li>
-</ul>
-</li>
-<li>reference values:<ul>
-<li>objects that may be made up of multiple values</li>
-<li>when manipulating an object, you&apos;re really working on a <code>reference</code> to that object rather than the actual object itself.</li>
-<li>reference values can have properties.</li>
-</ul>
-</li>
-</ol>
-<h3 id="when-copying-values">when copying values:</h3>
-<ol>
-<li>primitive values:<ul>
-<li>the value stored on the variable object is <strong>created</strong> and <strong>copied</strong> into the location for the new variable.</li>
-<li>the new value is completely separate from the old one. It can be used with no side effect.</li>
-</ul>
-</li>
-<li>reference values:<ul>
-<li>the new value is actually a pointer to an object stored on the heap.</li>
-</ul>
-</li>
-</ol>
-<h3 id="argument-passing">argument passing:</h3>
-<hr>
-<h2 id="scope">Scope</h2>
-<hr>
-<h2 id="memory">Memory</h2>
+<h2 id="&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x7684;&#x9677;&#x9631;&#xFF08;object-wrapper-gotchas&#xFF09;">&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x7684;&#x9677;&#x9631;&#xFF08;Object Wrapper Gotchas&#xFF09;</h2>
+<pre><code class="lang-javascript">!<span class="hljs-keyword">new</span> <span class="hljs-built_in">Boolean</span>( <span class="hljs-literal">false</span> ); <span class="hljs-comment">// false</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">&apos;a&apos;</span>); <span class="hljs-comment">// object &#x6CE8;&#x610F;&#xFF0C;String&#x524D;&#x9700;&#x8981;new</span>
+<span class="hljs-built_in">Object</span>(<span class="hljs-string">&apos;a&apos;</span>) <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">String</span>; <span class="hljs-comment">// true &#x6CE8;&#x610F;&#xFF0C;Object&#x524D;&#x7684;new&#x53EF;&#x4EE5;&#x7701;&#x7565;</span>
+</code></pre>
+<h2 id="boxing-wrappers">Boxing wrappers</h2>
+<h3 id="&#x62C6;&#x7BB1;&#xFF08;unboxing&#xFF09;">&#x62C6;&#x7BB1;&#xFF08;Unboxing&#xFF09;</h3>
+<p>&#x4F7F;&#x7528;valueOf()&#x6765;&#x83B7;&#x53D6;&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x57FA;&#x7840;&#x7C7B;&#x578B;&#x503C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>( <span class="hljs-string">&quot;abc&quot;</span> ).valueOf() <span class="hljs-comment">// &quot;abc&quot;</span>
+</code></pre>
+<p>&#x53E6;&#x5916;&#x62C6;&#x7BB1;&#x53EF;&#x4EE5;&#x9690;&#x5F0F;&#x53D1;&#x751F;&#xFF0C;&#x5982;new String( &quot;abc&quot; ) + &apos;&apos;&#x3002;&#x8FD9;&#x4E2A;&#xFF08;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF09;&#x4F1A;&#x5728;&#x7B2C;&#x56DB;&#x7AE0;&#x8BB2;&#x3002;</p>
+<h2 id="natives-as-constructors">Natives as constructors</h2>
+<p>&#x5BF9;&#x4E8E;<code>array</code>&#xFF0C;<code>object</code>&#xFF0C;<code>function</code>&#xFF0C;&#x548C;&#x6B63;&#x5219;&#x6765;&#x8BF4;&#xFF0C;&#x66F4;&#x5E38;&#x7528;&#x7684;&#x662F;&#x5B83;&#x4EEC;&#x7684;&#x5B57;&#x9762;&#x503C;&#x5F62;&#x5F0F;&#x3002;</p>
+<p>&#x5C31;&#x50CF;&#x4E0A;&#x9762;&#x770B;&#x5230;&#x7684;&#x5176;&#x5B83;&#x539F;&#x751F;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5F62;&#x5F0F;&#x4E00;&#x822C;&#x8981;&#x907F;&#x514D;&#xFF0C;&#x56E0;&#x4E3A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x9677;&#x9631;&#x3002;</p>
+<h3 id="native-prototypes">Native Prototypes</h3>
+<p>&#x5185;&#x7F6E;&#x539F;&#x751F;&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x51FD;&#x6570;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;.prototype&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E9B;.prototype&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x539F;&#x751F;&#x5BF9;&#x8C61;&#x72EC;&#x7279;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
 
                                 
                                 </section>
@@ -820,7 +830,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Variable, Scope, and Memory","level":"1.3.2","depth":2,"next":{"title":"Reference Types","level":"1.3.3","depth":2,"path":"javascript/ECMAScript/reference-types.md","ref":"javascript/ECMAScript/reference-types.md","articles":[]},"previous":{"title":"Fundamentals","level":"1.3.1","depth":2,"path":"javascript/ECMAScript/fundamentals.md","ref":"javascript/ECMAScript/fundamentals.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/variable-scope-memory.md","mtime":"2017-05-10T07:33:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T07:35:02.133Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Natives","level":"1.3.4","depth":2,"next":{"title":"Object-oriented programming","level":"1.3.5","depth":2,"path":"javascript/ECMAScript/5_object_oriented_programming.md","ref":"javascript/ECMAScript/5_object_oriented_programming.md","articles":[]},"previous":{"title":"Reference Types","level":"1.3.3","depth":2,"path":"javascript/ECMAScript/3_reference-types.md","ref":"javascript/ECMAScript/3_reference-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/4_natives.md","mtime":"2017-05-16T04:37:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-16T06:32:35.617Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -765,7 +765,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="reference-types">Reference Types</h1>
+                                <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id="reference-types">Reference Types</h1>
 <p>&#x9605;&#x8BFB;&#xFF1A;<a href="https://github.com/creeperyang/blog/issues/7" target="_blank">https://github.com/creeperyang/blog/issues/7</a></p>
 <h2 id="object">Object</h2>
 <p><code>Object</code> is a reference type. By using <code>new</code> operator, it creates an instance of <code>Object</code> reference type.</p>
@@ -823,18 +824,110 @@
 <li>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;</li>
 </ul>
 </li>
-<li><p><code>.slice(startPos, endPos)</code></p>
+<li><code>.slice(startPos, endPos)</code><h1 id="-&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6570;&#x7EC4;">- &#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6570;&#x7EC4;</h1>
+<h1 id="reference-type">Reference Type</h1>
+</li>
+</ol>
+<h2 id="object-type"><code>Object</code> type</h2>
 <ul>
-<li>&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6570;&#x7EC4;</li>
+<li><code>Object</code>&#x7684;&#x6BCF;&#x4E2A;instance&#x90FD;&#x6709;&#x4E0B;&#x5217;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;<ol>
+<li><code>Constructor</code></li>
+<li><code>hasOwnProperty(propertyName)</code>: &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x7ED9;&#x5B9A;property&#x5728;&#x5F53;&#x524D;&#x7684;instance&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x5728;prototype&#xFF09;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;</li>
+<li><code>isPrototypeOf(object)</code>: &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x4F20;&#x5165;&#x7684;object&#x662F;&#x5426;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;prototype</li>
+<li><code>propertyIsEnumerable(propertyName)</code>: &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x7ED9;&#x5B9A;property&#x662F;&#x5426;&#x80FD;&#x591F;&#x4F7F;&#x7528;for-in&#x8BED;&#x53E5;&#x3002;<code>propertyName</code>&#x5FC5;&#x987B;&#x4E3A;string&#x3002;</li>
+<li><code>toLocalString()</code></li>
+<li><code>toString()</code>: &#x8FD4;&#x56DE;instance&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;</li>
+<li><code>valueOf()</code>: &#x901A;&#x5E38;&#x4E0E;<code>toString()</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x76F8;&#x540C;</li>
+</ol>
+</li>
+<li>initialize:<ul>
+<li>use <code>literal notation</code> is preferred</li>
+</ul>
+</li>
+<li>access:<ul>
+<li>use <code>dot notation</code> is preferred</li>
+</ul>
+</li>
+</ul>
+<h2 id="array">Array</h2>
+<ul>
+<li>initialize:<ul>
+<li><code>var colors = new Array(10)</code>. you can pass array length (integer) to it.</li>
+</ul>
+</li>
+<li><p>arrays can contain a maximum of 4,294,967,295 items. If exceeds the count, it will throw errors.</p>
+</li>
+<li><p>Detecting array</p>
+<ol>
+<li><code>Array.isArray()</code> &lt;= recommended</li>
+<li><code>array instanceof Array</code></li>
+</ol>
+</li>
+<li><p>Stack method</p>
+<ol>
+<li><code>.push()</code></li>
+<li><code>.pop()</code></li>
+</ol>
+</li>
+<li><p>Queue method</p>
+<ol>
+<li><code>.unshift()</code> =&gt; enqueue</li>
+<li><code>.shift()</code> =&gt; dequeue</li>
+</ol>
+</li>
+<li><p>Reordering</p>
+<ol>
+<li><code>.reverse()</code></li>
+<li><code>.sort()</code><ul>
+<li>to accomplish a correct sort, pass a callback function to it.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Manipulation method</p>
+<ol>
+<li><code>.concat()</code></li>
+<li><p><code>.slice(startPos, endPos)</code></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+<ul>
 <li>if no params, return a copy</li>
 <li>if <code>startPos</code>, return <code>list[startPos:]</code></li>
 <li>if <code>startPos</code> and <code>endPos</code>, return <code>list[startPos:endPos]</code>. endPos is not included</li>
 </ul>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </li>
-<li><p><code>.splice()</code></p>
+<li><p><code>.splice()</code>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id="-&#x59CB;&#x7EC8;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;">- &#x59CB;&#x7EC8;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <ul>
-<li><p>&#x59CB;&#x7EC8;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</p>
-</li>
 <li><p>deletion
 <code>.splice(positionToDelete, numberOfElementToDelete)</code></p>
 </li>
@@ -847,15 +940,57 @@
 </ul>
 </li>
 </ol>
+</li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h3 id="location-methods">Location methods</h3>
-<p>item must be strictly equal as if compared using <code>===</code></p>
+<p>=======</p>
+<ul>
+<li><p>Location methods</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b
+item must be strictly equal as if compared using <code>===</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <ol>
 <li><code>.indexOf()</code></li>
 <li><code>.lastIndexOf()</code></li>
 </ol>
-<p>&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x67E5;&#x627E;&#x7684;&#x9879;&#xFF0C;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#x7684;index</p>
+</li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x67E5;&#x627E;&#x7684;&#x9879;&#xFF0C;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#x7684;index</p>
 <h3 id="iterative-methods">Iterative methods</h3>
-<p>&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;array&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x503C;</p>
+<p>=======</p>
+<ul>
+<li><p>Iterative methods</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b
+&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;array&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x503C;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <ol>
 <li><p><code>.every()</code></p>
 </li>
@@ -868,9 +1003,12 @@
 <li><p>`.some()</p>
 </li>
 </ol>
+</li>
+</ul>
 <h3 id="arrayprototypemap-vs-arrayprototypeforeach"><code>Array.prototype.map</code> vs <code>Array.prototype.forEach</code></h3>
 <p><code>.map</code> method creates a new array with the results of calling a provided function on every element in this array.
 <code>.forEach</code> excutes a callback function for each element</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h3 id="&#x7F29;&#x5C0F;&#x65B9;&#x6CD5;">&#x7F29;&#x5C0F;&#x65B9;&#x6CD5;</h3>
 <ol>
 <li><code>reduce()</code></li>
@@ -1027,11 +1165,103 @@ alert(s1.color);  <span class="hljs-comment">//undefined</span>
 <li><code>.indexOf(substring, startIndex)</code></li>
 </ol>
 <h3 id="trim&#x65B9;&#x6CD5;"><code>trim()</code>&#x65B9;&#x6CD5;</h3>
+<p>=======</p>
+<ul>
+<li><p><code>Array.from()</code>
+Creates a new Array instance from an array-like or iterable object.</p>
+</li>
+<li><p><code>Array.prototype.concat</code> - don&apos;t change the existing array, returns a new array.
+Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+</li>
+</ul>
+<p><code>arr.reduce(callback, [initialValue])</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// callback: (accumulator, currentValue)</span>
+<span class="hljs-comment">// - accumulator: previously returned value</span>
+<span class="hljs-comment">// - currentValue</span>
+
+<span class="hljs-keyword">var</span> sum = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">acc, val</span>) </span>{
+  <span class="hljs-keyword">return</span> acc + val;
+}, <span class="hljs-number">0</span>);
+<span class="hljs-comment">// sum is 6</span>
+
+<span class="hljs-keyword">var</span> list1 = [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]];
+<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, [<span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]]]];
+
+<span class="hljs-keyword">const</span> flatten = arr =&gt; arr.reduce(
+  (acc, val) =&gt; acc.concat(
+    <span class="hljs-built_in">Array</span>.isArray(val) ? flatten(val) : val
+  ),
+  []);
+flatten(list1); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
+flatten(list2); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
+
+<span class="hljs-comment">// ES5</span>
+<span class="hljs-keyword">var</span> flatten2 = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">return</span> array.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">acc, val</span>) </span>{
+        <span class="hljs-keyword">return</span> acc.concat(<span class="hljs-built_in">Array</span>.isArray(val) ? flatten2(val) : val);
+    }, []);
+};
+
+<span class="hljs-comment">// iterative:</span>
+<span class="hljs-keyword">var</span> list1 = [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]];
+<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, [<span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]]]];
+
+<span class="hljs-keyword">var</span> flatten = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array</span>) </span>{
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">var</span> queue = array.slice();
+    <span class="hljs-keyword">var</span> result = [];
+
+    <span class="hljs-keyword">while</span> (queue.length &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">const</span> val = queue.shift();
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Array</span>.isArray(val)) {
+            queue = val.concat(queue);
+        } <span class="hljs-keyword">else</span> {
+            result.push(val);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> result;
+};
+
+<span class="hljs-keyword">var</span> a = flatten(list1);
+<span class="hljs-built_in">console</span>.log(a);
+
+<span class="hljs-keyword">var</span> b = flatten(list2);
+<span class="hljs-built_in">console</span>.log(b);
+</code></pre>
+<h2 id="string">String</h2>
+<h3 id="check-substring">Check substring</h3>
+<ol>
+<li><code>String.prototype.includes(substring)</code></li>
+</ol>
+<h3 id="check-char--substring">Check char &amp; substring</h3>
+<ol>
+<li><code>String.prototype.indexOf(char)</code></li>
+<li><code>String.prototype.indexOf(substring)</code></li>
+</ol>
+<h3 id="remove-trailing--front-whitespace">Remove trailing &amp; front whitespace</h3>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
 <ol>
 <li><code>.trim()</code></li>
 <li><code>.trimLeft()</code></li>
 <li><code>.trimRight()</code></li>
 </ol>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h3 id="&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;</h3>
 <ol>
 <li><code>toLowerCase()</code></li>
@@ -1080,7 +1310,26 @@ alert(s1.color);  <span class="hljs-comment">//undefined</span>
 <li>ReferenceError</li>
 <li>SyntaxError</li>
 <li>TypeError</li>
-<li>URIError</li>
+<li><h1 id="urierror">URIError</h1>
+<h3 id="ascii--char">Ascii &lt;=&gt; Char</h3>
+</li>
+<li><code>s.charCodeAt(index)</code></li>
+<li><code>String.fromCharCode(asciiCode)</code><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
 </ul>
 <h2 id="math">Math</h2>
 <h3 id="rounding">Rounding</h3>
@@ -1101,10 +1350,29 @@ alert(s1.color);  <span class="hljs-comment">//undefined</span>
 <li><code>Math.pow(num, power)</code></li>
 <li><code>Math.sqrt()</code></li>
 </ol>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <hr>
 <h1 id="keyed-collections">Keyed collections</h1>
 <h2 id="map">Map</h2>
-<p><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-map-constructor" target="_blank">ECMA-262 6th edition - Map</a></p>
+<h1 id="ecma-262-6th-edition---map"><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-map-constructor" target="_blank">ECMA-262 6th edition - Map</a></h1>
+<h2 id="map">Map</h2>
+<p>Map is added in ECMAScript 2015.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank">MDN - Map</a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>48fa23fffca5a4b62569d8ffd31cd9e2496c219b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:</p>
 <ul>
 <li>easily to get <code>.size</code> for a Map</li>
@@ -1166,7 +1434,7 @@ alert(s1.color);  <span class="hljs-comment">//undefined</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Reference Types","level":"1.3.3","depth":2,"next":{"title":"Natives","level":"1.3.4","depth":2,"path":"javascript/ECMAScript/4_natives.md","ref":"javascript/ECMAScript/4_natives.md","articles":[]},"previous":{"title":"Variable, Scope, and Memory","level":"1.3.2","depth":2,"path":"javascript/ECMAScript/2_variable-scope-memory.md","ref":"javascript/ECMAScript/2_variable-scope-memory.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api","livereload"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/3_reference-types.md","mtime":"2017-05-16T06:39:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-16T06:40:09.903Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Reference Types","level":"1.3.3","depth":2,"next":{"title":"Natives","level":"1.3.4","depth":2,"path":"javascript/ECMAScript/4_natives.md","ref":"javascript/ECMAScript/4_natives.md","articles":[]},"previous":{"title":"Variable, Scope, and Memory","level":"1.3.2","depth":2,"path":"javascript/ECMAScript/2_variable-scope-memory.md","ref":"javascript/ECMAScript/2_variable-scope-memory.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/3_reference-types.md","mtime":"2017-05-16T04:37:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-16T06:32:35.617Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1174,10 +1442,6 @@ alert(s1.color);  <span class="hljs-comment">//undefined</span>
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

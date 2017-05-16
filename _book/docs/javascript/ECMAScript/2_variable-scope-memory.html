@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Reference Types · GitBook</title>
+        <title>Variable, Scope, and Memory · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="object.md" />
+    <link rel="next" href="3_reference-types.html" />
     
     
-    <link rel="prev" href="variable-scope-memory.html" />
+    <link rel="prev" href="1_fundamentals.html" />
     
 
     </head>
@@ -135,9 +135,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="fundamentals.html">
+        <li class="chapter " data-level="1.3.1" data-path="1_fundamentals.html">
             
-                <a href="fundamentals.html">
+                <a href="1_fundamentals.html">
             
                     
                     Fundamentals
@@ -148,9 +148,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="variable-scope-memory.html">
+        <li class="chapter active" data-level="1.3.2" data-path="2_variable-scope-memory.html">
             
-                <a href="variable-scope-memory.html">
+                <a href="2_variable-scope-memory.html">
             
                     
                     Variable, Scope, and Memory
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.3" data-path="reference-types.html">
+        <li class="chapter " data-level="1.3.3" data-path="3_reference-types.html">
             
-                <a href="reference-types.html">
+                <a href="3_reference-types.html">
             
                     
                     Reference Types
@@ -174,12 +174,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="object.md">
+        <li class="chapter " data-level="1.3.4" data-path="4_natives.html">
             
-                <span>
+                <a href="4_natives.html">
             
                     
-                    Object
+                    Natives
             
                 </a>
             
@@ -187,7 +187,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="function.html">
+        <li class="chapter " data-level="1.3.5" data-path="5_object_oriented_programming.md">
+            
+                <span>
+            
+                    
+                    Object-oriented programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="function.html">
             
                 <a href="function.html">
             
@@ -737,7 +750,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Reference Types</a>
+        <a href="../.." >Variable, Scope, and Memory</a>
     </h1>
 </div>
 
@@ -752,217 +765,106 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="object">Object</h1>
-<p>Menu</p>
+                                <h1 id="variables-scope-and-memory">Variables, Scope. and Memory</h1>
+<hr>
+<h2 id="variables">Variables</h2>
+<h3 id="variables-contain-2-types-of-data">variables contain 2 types of data:</h3>
+<ol>
+<li>primitive values:<ul>
+<li>simple atomic pieces of data</li>
+<li>you&apos;ll be manipulating the real data</li>
+<li>primitive values can&apos;t have properties added to them even though attempting to do so won&apos;t cause an error. In strict mode, it will throw <code>TypeError</code> for cannot create property</li>
+</ul>
+</li>
+<li>reference values:<ul>
+<li>objects that may be made up of multiple values</li>
+<li>when manipulating an object, you&apos;re really working on a <code>reference</code> to that object rather than the actual object itself.</li>
+<li>reference values can have properties.</li>
+</ul>
+</li>
+</ol>
+<h3 id="when-copying-values">when copying values:</h3>
+<ol>
+<li>primitive values:<ul>
+<li>the value stored on the variable object is <strong>created</strong> and <strong>copied</strong> into the location for the new variable.</li>
+<li>the new value is completely separate from the old one. It can be used with no side effect.</li>
+</ul>
+</li>
+<li>reference values:<ul>
+<li>the new value is actually a pointer to an object stored on the heap.</li>
+</ul>
+</li>
+</ol>
+<h3 id="argument-passing">argument passing:</h3>
 <ul>
-<li><a href="#array">Array</a></li>
-<li><a href="#string">String</a></li>
-<li><a href="#math">Math</a></li>
-<li><a href="#map">Map</a></li>
-<li><a href="#set">Set</a></li>
+<li>all arguments in ECMAScript are passed by value.</li>
+<li>if the value is primitive, then it acts just like a primitive value.</li>
+<li>if the value is a reference, it acts just like a reference variable copy.</li>
+<li>think of function arguments as nothing more than <strong>local variables</strong>.</li>
 </ul>
-<h2 id="array">Array</h2>
-<h3 id="detecting-array">Detecting array</h3>
-<ol>
-<li><code>Array.isArray()</code> &lt;= recommended</li>
-<li><code>array instanceof Array</code></li>
-</ol>
-<h3 id="stack-method">Stack method</h3>
-<ol>
-<li><code>.push()</code></li>
-<li><code>.pop()</code></li>
-</ol>
-<h3 id="queue-method">Queue method</h3>
-<ol>
-<li><code>.unshift()</code> =&gt; enqueue</li>
-<li><code>.shift()</code> =&gt; dequeue</li>
-</ol>
-<h3 id="reordering">Reordering</h3>
-<ol>
-<li><code>.reverse()</code></li>
-<li><code>.sort()</code><ul>
-<li>to accomplish a correct sort, pass a callback function to it.</li>
-</ul>
-</li>
-</ol>
-<h3 id="manipulation-method">Manipulation method</h3>
-<ol>
-<li><code>.concat()</code></li>
-<li><p><code>.slice(startPos, endPos)</code></p>
+<h3 id="determine-type">determine type</h3>
 <ul>
-<li>if no params, return a copy</li>
-<li>if <code>startPos</code>, return <code>list[startPos:]</code></li>
-<li>if <code>startPos</code> and <code>endPos</code>, return <code>list[startPos:endPos]</code>. endPos is not included</li>
+<li><code>typeof</code> is used for identifying primitive type.</li>
+<li><code>instanceof</code> is used for reference variables.</li>
+<li>all reference values, by definition, are instances of <code>object</code>.</li>
+<li>if <code>instanceof</code> operator is used with a primitive value, it will always return <code>false</code>, because primitives aren&apos;t objects.</li>
 </ul>
-</li>
-<li><p><code>.splice()</code></p>
+<hr>
+<h2 id="execution-context--scope">Execution Context &amp; Scope</h2>
 <ul>
-<li><p>deletion
-<code>.splice(positionToDelete, numberOfElementToDelete)</code></p>
-</li>
-<li><p>insertion
-<code>.splice(positionToInsert, 0, elements)</code></p>
-</li>
-<li><p>replacement
-<code>.splice(positionToReplace, 1, element)</code></p>
-</li>
+<li>the execution context of a variable or a function defines what other data it has access to, as well as how it should behave.</li>
+<li>the global execution context is depended on the host environment.</li>
+<li>each function has its own execution context.<ul>
+<li>after the function has finished executing, the stack is poped, returning control to the previously executing context.</li>
 </ul>
 </li>
-</ol>
-<h3 id="location-methods">Location methods</h3>
-<p>item must be strictly equal as if compared using <code>===</code></p>
-<ol>
-<li><code>.indexOf()</code></li>
-<li><code>.lastIndexOf()</code></li>
-</ol>
-<h3 id="iterative-methods">Iterative methods</h3>
-<p>&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;array&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x503C;</p>
-<ol>
-<li><p><code>.every()</code></p>
+<li><code>scope chain</code>: when code is executed in a context, the scope chain is created.<ul>
+<li>the purpose is to provide ordered access to all variables and functions that an execution context has access to.</li>
+<li>an inner context can access everything from all outer contexts through the scope chain, but the outer context cannot access the inner context.</li>
+</ul>
 </li>
-<li><p><code>.filter()</code></p>
+<li><code>scope chain</code> augmentation<ul>
+<li>the <code>catch</code> block in a <code>try-catch</code> statement</li>
+<li>a <code>with</code> statement</li>
+</ul>
 </li>
-<li><p><code>.forEach()</code></p>
+<li>when a variable is declared using <code>var</code>, it&apos;s automatically added to the most immediate context available.</li>
+<li>if a variable is initialized without first being declared, it gets <strong>added to the global context automatically</strong>.<ul>
+<li>in strict mode, it will cause an error.</li>
+</ul>
 </li>
-<li><p><code>.map()</code></p>
+<li>identifier lookup:<ul>
+<li>to look up a variable in function, the search starts at the front of the <code>scope chain</code>, looking for an identifier with the given name. If not, go to the previous one.</li>
+<li><strong>it is faster to access local variable than global variables, because there is no search ip the scope chain.</strong></li>
+</ul>
 </li>
-<li><p>`.some()</p>
-</li>
-</ol>
-<h3 id="arrayprototypemap-vs-arrayprototypeforeach"><code>Array.prototype.map</code> vs <code>Array.prototype.forEach</code></h3>
-<p><code>.map</code> method creates a new array with the results of calling a provided function on every element in this array.
-<code>.forEach</code> excutes a callback function for each element</p>
-<h3 id="arrayfrom"><code>Array.from()</code></h3>
-<p>Creates a new Array instance from an array-like or iterable object.</p>
-<h3 id="arrayprototypeconcat---dont-change-the-existing-array-returns-a-new-array"><code>Array.prototype.concat</code> - don&apos;t change the existing array, returns a new array.</h3>
-<p>Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
-<p><code>arr.reduce(callback, [initialValue])</code></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// callback: (accumulator, currentValue)</span>
-<span class="hljs-comment">// - accumulator: previously returned value</span>
-<span class="hljs-comment">// - currentValue</span>
-
-<span class="hljs-keyword">var</span> sum = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">acc, val</span>) </span>{
-  <span class="hljs-keyword">return</span> acc + val;
-}, <span class="hljs-number">0</span>);
-<span class="hljs-comment">// sum is 6</span>
-
-<span class="hljs-keyword">var</span> list1 = [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]];
-<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, [<span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]]]];
-
-<span class="hljs-keyword">const</span> flatten = arr =&gt; arr.reduce(
-  (acc, val) =&gt; acc.concat(
-    <span class="hljs-built_in">Array</span>.isArray(val) ? flatten(val) : val
-  ),
-  []);
-flatten(list1); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
-flatten(list2); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
-
-<span class="hljs-comment">// ES5</span>
-<span class="hljs-keyword">var</span> flatten2 = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array</span>) </span>{
-    <span class="hljs-keyword">return</span> array.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">acc, val</span>) </span>{
-        <span class="hljs-keyword">return</span> acc.concat(<span class="hljs-built_in">Array</span>.isArray(val) ? flatten2(val) : val);
-    }, []);
-};
-
-<span class="hljs-comment">// iterative:</span>
-<span class="hljs-keyword">var</span> list1 = [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]];
-<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, [<span class="hljs-number">4</span>, [<span class="hljs-number">5</span>]]]]]];
-
-<span class="hljs-keyword">var</span> flatten = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">array</span>) </span>{
-    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
-
-    <span class="hljs-keyword">var</span> queue = array.slice();
-    <span class="hljs-keyword">var</span> result = [];
-
-    <span class="hljs-keyword">while</span> (queue.length &gt; <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">const</span> val = queue.shift();
-        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Array</span>.isArray(val)) {
-            queue = val.concat(queue);
-        } <span class="hljs-keyword">else</span> {
-            result.push(val);
-        }
-    }
-
-    <span class="hljs-keyword">return</span> result;
-};
-
-<span class="hljs-keyword">var</span> a = flatten(list1);
-<span class="hljs-built_in">console</span>.log(a);
-
-<span class="hljs-keyword">var</span> b = flatten(list2);
-<span class="hljs-built_in">console</span>.log(b);
-</code></pre>
-<h2 id="string">String</h2>
-<h3 id="check-substring">Check substring</h3>
-<ol>
-<li><code>String.prototype.includes(substring)</code></li>
-</ol>
-<h3 id="check-char--substring">Check char &amp; substring</h3>
-<ol>
-<li><code>String.prototype.indexOf(char)</code></li>
-<li><code>String.prototype.indexOf(substring)</code></li>
-</ol>
-<h3 id="remove-trailing--front-whitespace">Remove trailing &amp; front whitespace</h3>
-<ol>
-<li><code>.trim()</code></li>
-<li><code>.trimLeft()</code></li>
-<li><code>.trimRight()</code></li>
-</ol>
-<h3 id="ascii--char">Ascii &lt;=&gt; Char</h3>
-<ol>
-<li><code>s.charCodeAt(index)</code></li>
-<li><code>String.fromCharCode(asciiCode)</code></li>
-</ol>
-<h2 id="math">Math</h2>
-<h3 id="rounding">Rounding</h3>
-<ol>
-<li><code>Math.ceil</code></li>
-<li><code>Math.floor</code></li>
-<li><code>Math.round</code></li>
-</ol>
-<h3 id="randomize">Randomize</h3>
-<ol>
-<li><code>Math.random</code></li>
-</ol>
-<h3 id="others">Others</h3>
-<ol>
-<li><code>Math.abs()</code></li>
-<li><code>Math.exp()</code> e&#x7684;m&#x6B21;&#x5E42;</li>
-<li><code>Math.log()</code> &#x81EA;&#x7136;&#x5BF9;&#x6570;</li>
-<li><code>Math.pow(num, power)</code></li>
-<li><code>Math.sqrt()</code></li>
-</ol>
-<h2 id="map">Map</h2>
-<p>Map is added in ECMAScript 2015.
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank">MDN - Map</a></p>
-<p>Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:</p>
+</ul>
+<hr>
+<h2 id="garbage-collection">Garbage collection</h2>
 <ul>
-<li>easily to get <code>.size</code> for a Map</li>
-<li>the key of objects is only allowed for <code>String</code> and <code>Symbol</code>. Map allows any values, including function, objects, and any primitive.</li>
+<li>javascript is a garbage-collected language. the executing environment is responsible for managing the memory required during code execution.</li>
+<li>collector runs periodically</li>
+<li>2 strategies:<ul>
+<li>mark-and-sweep (<strong>mostly used</strong>)<ul>
+<li>variables that go out of scope will automatically be marked for reclamation and will be deleted during the garbage-collection process.</li>
 </ul>
-<h3 id="performance-object-vs-map">performance: <code>object</code> vs <code>map</code></h3>
-<p>according to <a href="https://jsperf.com/es6-map-vs-object-properties/2" target="_blank">Jsperf - object vs map</a>, <code>map</code> is faster and more suitable for performing as a <code>hashmap</code></p>
-<h3 id="methods">methods</h3>
-<ol>
-<li><code>.set(key, value)</code></li>
-<li><code>.has(key)</code></li>
-<li><code>.keys()</code></li>
-<li><code>.delete(key)</code></li>
-<li><code>.clear()</code></li>
-<li><code>.size()</code></li>
-</ol>
-<h2 id="set">Set</h2>
-<p>Set is added in ECMAScript 2015.
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank">MDN - Set</a></p>
-<h3 id="methods">methods</h3>
-<ol>
-<li><code>.length</code></li>
-<li><code>.add(value)</code></li>
-<li><code>.clear()</code></li>
-<li><code>.delete(value)</code></li>
-<li><code>.has(value)</code></li>
-<li><code>.keys()</code></li>
-</ol>
+</li>
+<li>reference-counting<ul>
+<li>it keeps track of how many references there are to a particular value. javascript engines no longer use this algorithm.</li>
+<li>the issue is still around with IE.</li>
+<li>it causes problems when circular references exist in code</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="memory">Memory</h2>
+<ul>
+<li>the amount of memory available for use in web browsers is typically <strong>much less</strong> than is available for desktop applications.</li>
+<li>keeping the amount of used memory to a minimum leads to better page performance.</li>
+<li>when data is no longer necessary, it&apos;s best to set the value to <code>null</code></li>
+</ul>
 
                                 
                                 </section>
@@ -996,7 +898,7 @@ flatten(list2); <span class="hljs-comment">// returns [0, 1, 2, 3, 4, 5]</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Reference Types","level":"1.3.3","depth":2,"next":{"title":"Object","level":"1.3.4","depth":2,"path":"javascript/ECMAScript/object.md","ref":"javascript/ECMAScript/object.md","articles":[]},"previous":{"title":"Variable, Scope, and Memory","level":"1.3.2","depth":2,"path":"javascript/ECMAScript/variable-scope-memory.md","ref":"javascript/ECMAScript/variable-scope-memory.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/reference-types.md","mtime":"2017-05-09T20:09:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T07:35:02.133Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variable, Scope, and Memory","level":"1.3.2","depth":2,"next":{"title":"Reference Types","level":"1.3.3","depth":2,"path":"javascript/ECMAScript/3_reference-types.md","ref":"javascript/ECMAScript/3_reference-types.md","articles":[]},"previous":{"title":"Fundamentals","level":"1.3.1","depth":2,"path":"javascript/ECMAScript/1_fundamentals.md","ref":"javascript/ECMAScript/1_fundamentals.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/ECMAScript/2_variable-scope-memory.md","mtime":"2017-05-12T07:25:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-16T06:32:35.617Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
