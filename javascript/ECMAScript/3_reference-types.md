@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Reference Types
 
 阅读：https://github.com/creeperyang/blog/issues/7
@@ -66,59 +65,12 @@ function getCar(brand, options = {}) {
     - 如果不是数组，直接添加
   2. `.slice(startPos, endPos)`
     - 不会影响原数组
-=======
-# Reference Type
-
-
-## `Object` type
-- `Object`的每个instance都有下列属性和方法
-  1. `Constructor`
-  2. `hasOwnProperty(propertyName)`: 用于检查给定property在当前的instance（而不是在prototype）中是否存在
-  3. `isPrototypeOf(object)`: 用于检查传入的object是否为另一个对象的prototype
-  4. `propertyIsEnumerable(propertyName)`: 用于检查给定property是否能够使用for-in语句。`propertyName`必须为string。
-  5. `toLocalString()`
-  6. `toString()`: 返回instance的字符串表示
-  7. `valueOf()`: 通常与`toString()`的返回值相同
-- initialize:
-  - use `literal notation` is preferred
-- access:
-  - use `dot notation` is preferred
-
-## Array
-- initialize:
-  - `var colors = new Array(10)`. you can pass array length (integer) to it.
-- arrays can contain a maximum of 4,294,967,295 items. If exceeds the count, it will throw errors.
-
-- Detecting array
-  1. `Array.isArray()` <= recommended
-  2. `array instanceof Array`
-
-- Stack method
-  1. `.push()`
-  2. `.pop()`
-
-- Queue method
-  1. `.unshift()` => enqueue
-  2. `.shift()` => dequeue
-
-- Reordering
-  1. `.reverse()`
-  2. `.sort()`
-    - to accomplish a correct sort, pass a callback function to it.
-
-- Manipulation method
-  1. `.concat()`
-  2. `.slice(startPos, endPos)`
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
     - if no params, return a copy
     - if `startPos`, return `list[startPos:]`
     - if `startPos` and `endPos`, return `list[startPos:endPos]`. endPos is not included
 
   3. `.splice()`
-<<<<<<< HEAD
     - 始终都会返回一个数组
-=======
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
 
     - deletion
 `.splice(positionToDelete, numberOfElementToDelete)`
@@ -129,23 +81,16 @@ function getCar(brand, options = {}) {
     - replacement
 `.splice(positionToReplace, 1, element)`
 
-<<<<<<< HEAD
+
 ### Location methods
-=======
-- Location methods
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
 item must be strictly equal as if compared using `===`
 
   1. `.indexOf()`
   2. `.lastIndexOf()`
 
-<<<<<<< HEAD
 参数：要查找的项，开始查找的index
 
 ### Iterative methods
-=======
-- Iterative methods
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
 以下方法都不会修改array中所包含的值
 
   1. `.every()`
@@ -163,7 +108,6 @@ item must be strictly equal as if compared using `===`
 `.forEach` excutes a callback function for each element
 
 
-<<<<<<< HEAD
 ### 缩小方法
 1. `reduce()`
 2. `reduceRight()`
@@ -341,89 +285,10 @@ Unicode code points range from 0 to 1114111 (0x10FFFF). The first 128 Unicode co
   1. `.indexOf(substring, startIndex)`
 
 ### `trim()`方法
-=======
-- `Array.from()`
-Creates a new Array instance from an array-like or iterable object.
-
-- `Array.prototype.concat` - don't change the existing array, returns a new array.
-Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
-
-`arr.reduce(callback, [initialValue])`
-
-```javascript
-// callback: (accumulator, currentValue)
-// - accumulator: previously returned value
-// - currentValue
-
-var sum = [0, 1, 2, 3].reduce(function(acc, val) {
-  return acc + val;
-}, 0);
-// sum is 6
-
-var list1 = [[0, 1], [2, 3], [4, 5]];
-var list2 = [0, [1, [2, [3, [4, [5]]]]]];
-
-const flatten = arr => arr.reduce(
-  (acc, val) => acc.concat(
-    Array.isArray(val) ? flatten(val) : val
-  ),
-  []);
-flatten(list1); // returns [0, 1, 2, 3, 4, 5]
-flatten(list2); // returns [0, 1, 2, 3, 4, 5]
-
-// ES5
-var flatten2 = function(array) {
-    return array.reduce(function(acc, val) {
-        return acc.concat(Array.isArray(val) ? flatten2(val) : val);
-    }, []);
-};
-
-// iterative:
-var list1 = [[0, 1], [2, 3], [4, 5]];
-var list2 = [0, [1, [2, [3, [4, [5]]]]]];
-
-var flatten = function(array) {
-    let i = 0;
-
-    var queue = array.slice();
-    var result = [];
-
-    while (queue.length > 0) {
-        const val = queue.shift();
-        if (Array.isArray(val)) {
-            queue = val.concat(queue);
-        } else {
-            result.push(val);
-        }
-    }
-
-    return result;
-};
-
-var a = flatten(list1);
-console.log(a);
-
-var b = flatten(list2);
-console.log(b);
-```
-
-
-## String
-
-### Check substring
-  1. `String.prototype.includes(substring)`
-
-### Check char & substring
-  1. `String.prototype.indexOf(char)`
-  1. `String.prototype.indexOf(substring)`
-
-### Remove trailing & front whitespace
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
   1. `.trim()`
   2. `.trimLeft()`
   3. `.trimRight()`
 
-<<<<<<< HEAD
 ### 字符串大小写转换方法
   1. `toLowerCase()`
   2. `toLocaleLowerCase()`
@@ -470,11 +335,6 @@ console.log(b);
   - SyntaxError
   - TypeError
   - URIError
-=======
-### Ascii <=> Char
-  1. `s.charCodeAt(index)`
-  2. `String.fromCharCode(asciiCode)`
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
 
 ## Math
 
@@ -493,18 +353,12 @@ console.log(b);
   4. `Math.pow(num, power)`
   5. `Math.sqrt()`
 
-<<<<<<< HEAD
 ***
 
 # Keyed collections
 
 ## Map
 [ECMA-262 6th edition - Map](http://www.ecma-international.org/ecma-262/6.0/#sec-map-constructor)
-=======
-## Map
-Map is added in ECMAScript 2015.
-[MDN - Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
->>>>>>> 48fa23fffca5a4b62569d8ffd31cd9e2496c219b
 
 Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:
   - easily to get `.size` for a Map
