@@ -1,0 +1,212 @@
+# Reference Type
+
+
+## `Object` type
+- `Object`的每个instance都有下列属性和方法
+  1. `Constructor`
+  2. `hasOwnProperty(propertyName)`: 用于检查给定property在当前的instance（而不是在prototype）中是否存在
+  3. `isPrototypeOf(object)`: 用于检查传入的object是否为另一个对象的prototype
+  4. `propertyIsEnumerable(propertyName)`: 用于检查给定property是否能够使用for-in语句。`propertyName`必须为string。
+  5. `toLocalString()`
+  6. `toString()`: 返回instance的字符串表示
+  7. `valueOf()`: 通常与`toString()`的返回值相同
+- initialize:
+  - use `literal notation` is preferred
+- access:
+  - use `dot notation` is preferred
+
+## Array
+- initialize:
+  - `var colors = new Array(10)`. you can pass array length (integer) to it.
+- arrays can contain a maximum of 4,294,967,295 items. If exceeds the count, it will throw errors.
+
+- Detecting array
+  1. `Array.isArray()` <= recommended
+  2. `array instanceof Array`
+
+- Stack method
+  1. `.push()`
+  2. `.pop()`
+
+- Queue method
+  1. `.unshift()` => enqueue
+  2. `.shift()` => dequeue
+
+- Reordering
+  1. `.reverse()`
+  2. `.sort()`
+    - to accomplish a correct sort, pass a callback function to it.
+
+- Manipulation method
+  1. `.concat()`
+  2. `.slice(startPos, endPos)`
+    - if no params, return a copy
+    - if `startPos`, return `list[startPos:]`
+    - if `startPos` and `endPos`, return `list[startPos:endPos]`. endPos is not included
+
+  3. `.splice()`
+
+    - deletion
+`.splice(positionToDelete, numberOfElementToDelete)`
+
+    - insertion
+`.splice(positionToInsert, 0, elements)`
+
+    - replacement
+`.splice(positionToReplace, 1, element)`
+
+- Location methods
+item must be strictly equal as if compared using `===`
+
+  1. `.indexOf()`
+  2. `.lastIndexOf()`
+
+- Iterative methods
+以下方法都不会修改array中所包含的值
+
+  1. `.every()`
+
+  2. `.filter()`
+
+  3. `.forEach()`
+
+  4. `.map()`
+
+  5. `.some()
+
+### `Array.prototype.map` vs `Array.prototype.forEach`
+`.map` method creates a new array with the results of calling a provided function on every element in this array.
+`.forEach` excutes a callback function for each element
+
+
+- `Array.from()`
+Creates a new Array instance from an array-like or iterable object.
+
+- `Array.prototype.concat` - don't change the existing array, returns a new array.
+Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+`arr.reduce(callback, [initialValue])`
+
+```javascript
+// callback: (accumulator, currentValue)
+// - accumulator: previously returned value
+// - currentValue
+
+var sum = [0, 1, 2, 3].reduce(function(acc, val) {
+  return acc + val;
+}, 0);
+// sum is 6
+
+var list1 = [[0, 1], [2, 3], [4, 5]];
+var list2 = [0, [1, [2, [3, [4, [5]]]]]];
+
+const flatten = arr => arr.reduce(
+  (acc, val) => acc.concat(
+    Array.isArray(val) ? flatten(val) : val
+  ),
+  []);
+flatten(list1); // returns [0, 1, 2, 3, 4, 5]
+flatten(list2); // returns [0, 1, 2, 3, 4, 5]
+
+// ES5
+var flatten2 = function(array) {
+    return array.reduce(function(acc, val) {
+        return acc.concat(Array.isArray(val) ? flatten2(val) : val);
+    }, []);
+};
+
+// iterative:
+var list1 = [[0, 1], [2, 3], [4, 5]];
+var list2 = [0, [1, [2, [3, [4, [5]]]]]];
+
+var flatten = function(array) {
+    let i = 0;
+
+    var queue = array.slice();
+    var result = [];
+
+    while (queue.length > 0) {
+        const val = queue.shift();
+        if (Array.isArray(val)) {
+            queue = val.concat(queue);
+        } else {
+            result.push(val);
+        }
+    }
+
+    return result;
+};
+
+var a = flatten(list1);
+console.log(a);
+
+var b = flatten(list2);
+console.log(b);
+```
+
+
+## String
+
+### Check substring
+  1. `String.prototype.includes(substring)`
+
+### Check char & substring
+  1. `String.prototype.indexOf(char)`
+  1. `String.prototype.indexOf(substring)`
+
+### Remove trailing & front whitespace
+  1. `.trim()`
+  2. `.trimLeft()`
+  3. `.trimRight()`
+
+### Ascii <=> Char
+  1. `s.charCodeAt(index)`
+  2. `String.fromCharCode(asciiCode)`
+
+## Math
+
+### Rounding
+  1. `Math.ceil`
+  2. `Math.floor`
+  3. `Math.round`
+
+### Randomize
+  1. `Math.random`
+
+### Others
+  1. `Math.abs()`
+  2. `Math.exp()` e的m次幂
+  3. `Math.log()` 自然对数
+  4. `Math.pow(num, power)`
+  5. `Math.sqrt()`
+
+## Map
+Map is added in ECMAScript 2015.
+[MDN - Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+Objects have been used as Maps historically. However, there are important differences between Objects and Maps that make using a Map better:
+  - easily to get `.size` for a Map
+  - the key of objects is only allowed for `String` and `Symbol`. Map allows any values, including function, objects, and any primitive.
+
+### performance: `object` vs `map`
+according to [Jsperf - object vs map](https://jsperf.com/es6-map-vs-object-properties/2), `map` is faster and more suitable for performing as a `hashmap`
+
+### methods
+  1. `.set(key, value)`
+  2. `.has(key)`
+  3. `.keys()`
+  4. `.delete(key)`
+  5. `.clear()`
+  6. `.size()`
+
+## Set
+Set is added in ECMAScript 2015.
+[MDN - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+### methods
+  1. `.length`
+  2. `.add(value)`
+  3. `.clear()`
+  4. `.delete(value)`
+  5. `.has(value)`
+  6. `.keys()`

@@ -3,9 +3,9 @@
 ### JavaScript
   * [Overall Introduction](javascript/javascript.md)
   * [ECMAScript]()
-    * [Fundamentals](javascript/ECMAScript/fundamentals.md)
-    * [Variable, Scope, and Memory](javascript/ECMAScript/variable-scope-memory.md)
-    * [Reference Types](javascript/ECMAScript/reference-types.md)
+    * [Fundamentals](javascript/ECMAScript/1_fundamentals.md)
+    * [Variable, Scope, and Memory](javascript/ECMAScript/2_variable-scope-memory.md)
+    * [Reference Types](javascript/ECMAScript/3_reference-types.md)
     * [Object](javascript/ECMAScript/object.md)
     * [Function](javascript/ECMAScript/function.md)
   * [DOM]()
