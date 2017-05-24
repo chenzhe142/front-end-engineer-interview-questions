@@ -91,7 +91,7 @@
       - if undefined, return `"undefined"`
 
 ### `Object`类型
-`Object`的每个instance都有下列属性和方法
+`Object`的每个instance都有下列属性和方法，以下方法均位于`Object.prototype`上。
   1. `Constructor`
   2. `hasOwnProperty(propertyName)`: 用于检查给定property在当前的instance（而不是在prototype）中是否存在
   3. `isPrototypeOf(object)`: 用于检查传入的object是否为另一个对象的prototype
