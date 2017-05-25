@@ -5,7 +5,7 @@
 - `top` `right` `bottom` `left` and `z-index` do not apply.
 
 ## `relative`
-- It is relative to its original position. 
+- It is relative to its original position.
 - Its original position's space is reserved.
 
 ![position relative demo](http://g.recordit.co/MHxEaKCvdv.gif)
@@ -23,6 +23,9 @@
 ## `sticky` (experimental feature)
 
 # `z-index`
+
+`z-index`只对设置过`position`的element起作用。
+
 For a **positioned** box (that is, one with any position other than static), the z-index property specifies:
 
 1. The stack level of the box in the current stacking context.
