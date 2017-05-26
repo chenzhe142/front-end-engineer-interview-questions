@@ -38,3 +38,9 @@ for finding subarray containing equal amount of elements, use `minus plus`. Do `
   2. start search from the set, check each of its neighbors.
   3. for each neighbor, remove the edge between itself and parent.
   4. if it has no incoming edges, add it to result set
+
+## Greedy
+
+## Matrix & array
+1. in-place update:
+  - use `bit`, `bitwise` operation
