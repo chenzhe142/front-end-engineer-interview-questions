@@ -11,12 +11,6 @@
 for finding subarray containing equal amount of elements, use `minus plus`. Do `minus` for A element, and do `plus` for B element. They will create two points with same Y-axis value (which means they eliminates the differences between them)
 2. [Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k)
 
-
-## Depth first search
-1. [frog jump](https://leetcode.com/problems/frog-jump/#/description): **DFS + memorization**, fail quickly!
-  - todo: read [other people's solution](https://discuss.leetcode.com/topic/59903/very-easy-to-understand-java-solution-with-explanations)
-
-
 ## Bucket sort: sort in linear time. usually the data range is known.
 1. [H-index](https://leetcode.com/problems/h-index/#/description)
 
@@ -24,9 +18,17 @@ for finding subarray containing equal amount of elements, use `minus plus`. Do `
 1. [Implement strStr()](https://leetcode.com/problems/implement-strstr/#/description): use KMP algorithm (read [this post](http://blog.csdn.net/v_july_v/article/details/7041827))
 
 ## Sliding windows:
-1. find a valid window, update result (with hashmap's help)
+1. find a valid window (move right pointer first, minimize the window size by moving left forward), update result (with hashmap's help, i.e. calculate count, etc)
 2. make window invalid,
 3. and repeat
+
+## Dynamic programming
+1. DFS + memorization
+2. use state transformation formula
+
+## Depth first search + memorization
+1. [frog jump](https://leetcode.com/problems/frog-jump/#/description): **DFS + memorization**, fail quickly!
+  - todo: read [other people's solution](https://discuss.leetcode.com/topic/59903/very-easy-to-understand-java-solution-with-explanations)
 
 ## Breadth first search (one-end, two-end, or multiple-end search)
 1. one-end: tree
