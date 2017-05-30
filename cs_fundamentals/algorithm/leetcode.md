@@ -13,6 +13,9 @@ for finding subarray containing equal amount of elements, use `minus plus`. Do `
 
 
 ## Depth first search
+1. [frog jump](https://leetcode.com/problems/frog-jump/#/description): **DFS + memorization**, fail quickly!
+  - todo: read [other people's solution](https://discuss.leetcode.com/topic/59903/very-easy-to-understand-java-solution-with-explanations)
+
 
 ## Bucket sort: sort in linear time. usually the data range is known.
 1. [H-index](https://leetcode.com/problems/h-index/#/description)
@@ -38,6 +41,24 @@ for finding subarray containing equal amount of elements, use `minus plus`. Do `
   2. start search from the set, check each of its neighbors.
   3. for each neighbor, remove the edge between itself and parent.
   4. if it has no incoming edges, add it to result set
+```
+L ← Empty list that will contain the sorted elements
+S ← Set of all nodes with no incoming edges
+while S is non-empty do
+    remove a node n from S
+    add n to tail of L
+    for each node m with an edge e from n to m do
+        remove edge e from the graph
+        if m has no other incoming edges then
+            insert m into S
+if graph has edges then
+    return error (graph has at least one cycle)
+else
+    return L (a topologically sorted order)
+```
+
+## Design
+1. LRU Cache: write a separate `LinkedList` constructor, split them to decrease the complexity.
 
 ## Greedy
 
