@@ -23,8 +23,8 @@ for finding subarray containing equal amount of elements, use `minus plus`. Do `
 3. and repeat
 
 ## Dynamic programming
-1. DFS + memorization
-2. use state transformation formula
+1. DFS + memorization (top down)
+2. use state transformation formula (bottom up)
 
 ## Depth first search + memorization
 1. [frog jump](https://leetcode.com/problems/frog-jump/#/description): **DFS + memorization**, fail quickly!
