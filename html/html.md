@@ -10,7 +10,7 @@
 - `<caption>`: the title of a `<table>`. first decendent of `<table>`
 - `<strong>`
 - `<datalist>`: can be used in auto-suggestion list. See [MDN - `<datalist>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
-- `<dl>`: description list, which can be used by form
+- `<dl>`: description list, which can be used by form. See [MDN - `<dl>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
 - `<dd>`: description, which can be used in form input & label combination
 
 ## `<img>`
