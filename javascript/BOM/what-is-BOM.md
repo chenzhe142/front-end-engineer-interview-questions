@@ -7,3 +7,7 @@
 5. the `screen` object, which gives detailed information about the user's screen resolution
 6. support for cookies
 7. custom objects such as `XMLHttpRequest` and IE's `ActiveXObject`
+
+------------
+
+`document.cookie`: access all cookies in string.
