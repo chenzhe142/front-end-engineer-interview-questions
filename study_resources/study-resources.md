@@ -31,6 +31,7 @@
 
 ## Blogs
 - [一亩三分地 － 骑驴找马换工作](http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=184542&extra=page%3D1%26filter%3Dsortid%26sortid%3D192%26sortid%3D192)
+- [前端开发笔记](https://www.gitbook.com/book/li-xinyang/frontend-notebook/details)
 
 ## Common practice & website features
 1. third-party login (Google, Facebook, etc): **OAuth2**
