@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Accessibility · GitBook</title>
+        <title>React reconciliation · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="tricks-learnings.html" />
     
-    
-    <link rel="prev" href="html.html" />
+    <link rel="prev" href="../study-resources/source-code-to-read/readlist.html" />
     
 
     </head>
@@ -409,9 +407,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="html.html">
+        <li class="chapter " data-level="3.1" data-path="../html/html.html">
             
-                <a href="html.html">
+                <a href="../html/html.html">
             
                     
                     Semantic tags
@@ -422,9 +420,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="accessibility.html">
+        <li class="chapter " data-level="3.2" data-path="../html/accessibility.html">
             
-                <a href="accessibility.html">
+                <a href="../html/accessibility.html">
             
                     
                     Accessibility
@@ -435,9 +433,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="tricks-learnings.html">
+        <li class="chapter " data-level="3.3" data-path="../html/tricks-learnings.html">
             
-                <a href="tricks-learnings.html">
+                <a href="../html/tricks-learnings.html">
             
                     
                     tricks & learnings
@@ -684,9 +682,9 @@
         
         
     
-        <li class="chapter " data-level="10.1" data-path="../frameworks/react-reconciliation.html">
+        <li class="chapter active" data-level="10.1" data-path="react-reconciliation.html">
             
-                <a href="../frameworks/react-reconciliation.html">
+                <a href="react-reconciliation.html">
             
                     
                     React reconciliation
@@ -727,7 +725,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Accessibility</a>
+        <a href=".." >React reconciliation</a>
     </h1>
 </div>
 
@@ -742,72 +740,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="accessibility">accessibility</h1>
-<p>It means people with disabilities can use the web. In details, they can perceive, navigate and interact with the website.</p>
-<h2 id="tab--hover">tab &amp; hover</h2>
-<ul>
-<li>how to find tab-focused element - <a href="https://davidwalsh.name/focused-element" target="_blank">David Walsh - focused element</a></li>
-</ul>
-<h2 id="use-tabindex-to-enable-focusable-html-elements">use <code>tabIndex</code> to enable focusable HTML elements</h2>
-<p><code>tabIndex</code> is a global attribute responsible for two things:</p>
-<ol>
-<li>it sets the order of &quot;focusable&quot; elements</li>
-<li>it makes elements &quot;focusable&quot;</li>
-</ol>
-<h3 id="use-case">use case</h3>
-<ol>
-<li>To make your element focusable, use <code>tabindex=&quot;0&quot;</code></li>
-<li>If don&apos;t want to make element to be focusable by tab, use <code>tabIndex=&quot;-1&quot;</code></li>
-</ol>
-<h3 id="links">links</h3>
-<ul>
-<li><a href="http://stackoverflow.com/questions/4112289/what-is-the-html-tabindex-attribute" target="_blank">stack overflow</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank">MDN - tabIndex</a></li>
-</ul>
-<h3 id="how-to-improve">how to improve</h3>
-<ol>
-<li>Do not make your pages dependent on images</li>
-<li>Make sure all your images have ALT text. Screen readers cannot &quot;read images&quot;. In order for your images meaningful for people with disabilities, you need to add written descriptions for the images.</li>
-<li>Don&apos;t make the font size too small</li>
-<li>Use highly contrasting colors for your text and background.</li>
-<li>Screen reader friendly: use proper <code>aria</code> label, name and descriptions to navigate users to interact the page.</li>
-<li>Use semantic markups, and then enhance with ARIA.</li>
-<li>add labels for form elements</li>
-<li>make sure you can navigate through a page using keyboard only</li>
-<li>create meaningful links</li>
-<li>etc.</li>
-</ol>
-<p>To use accessibility API describe an object:</p>
-<ol>
-<li>role</li>
-<li>name</li>
-<li>state</li>
-</ol>
-<p>Further readings:</p>
-<ul>
-<li><a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank">w3.org - Introduction to web accessibility</a></li>
-<li><a href="https://www.w3.org/WAI/intro/people-use-web/Overview.html" target="_blank">w3.org - How people with disabilities use the web</a></li>
-<li><a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/" target="_blank">Smashing magazine - web accessibility with accessibility API</a></li>
-</ul>
-<p>Online tools for checking your markup:</p>
-<ul>
-<li><a href="http://achecker.ca/checker/index.php#output_div" target="_blank">achecker</a></li>
-</ul>
-<h3 id="-web-accessibility-how-to-make-a-tag-accessible">- web accessibility: how to make <code>&lt;a&gt;</code> tag accessible?</h3>
-<p>HTML markup:</p>
-<ol>
-<li><code>href</code> should present</li>
-<li><code>name</code></li>
-<li><code>id</code> if needed</li>
-<li><p><code>textContent</code></p>
-</li>
-<li><p>make the text of <code>&lt;a&gt;</code> concise. so that when screen readers read the link, people with disabilities can understand it.</p>
-</li>
-<li>don&apos;t capitaliz link text. avoid using ASCII charactors, and using URLs as text.</li>
-<li>restrict numbers of links on a page</li>
-<li>always alert a user when opening a new tab/window. For example, add a new icon &quot;external-link&quot; so that screen readers can read it to people.</li>
-<li>to be continued</li>
-</ol>
+                                <h1 id="react-virtual-dom-diffing-algorithm">React virtual DOM diffing algorithm</h1>
+<p>&#x8282;&#x9009;&#x81EA;<a href="https://reactjs.org/docs/reconciliation.html" target="_blank">https://reactjs.org/docs/reconciliation.html</a></p>
+<p>React implements a heuristic O(n) algorithm based on two assumptions:</p>
+<p>Two elements of different types will produce different trees.
+The developer can hint at which child elements may be stable across different renders with a key prop.</p>
 
                                 
                                 </section>
@@ -835,14 +772,10 @@
 
             
                 
-                <a href="html.html" class="navigation navigation-prev " aria-label="Previous page: Semantic tags">
+                <a href="../study-resources/source-code-to-read/readlist.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Source code to read">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="tricks-learnings.html" class="navigation navigation-next " aria-label="Next page: tricks & learnings">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -851,7 +784,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Accessibility","level":"3.2","depth":1,"next":{"title":"tricks & learnings","level":"3.3","depth":1,"path":"html/tricks-learnings.md","ref":"html/tricks-learnings.md","articles":[]},"previous":{"title":"Semantic tags","level":"3.1","depth":1,"path":"html/html.md","ref":"html/html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html/accessibility.md","mtime":"2019-02-27T06:42:11.420Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-02-27T07:28:01.099Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React reconciliation","level":"10.1","depth":1,"previous":{"title":"Source code to read","level":"8.2","depth":1,"path":"study-resources/source-code-to-read/readlist.md","ref":"study-resources/source-code-to-read/readlist.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"frameworks/react-reconciliation.md","mtime":"2019-02-27T07:25:46.561Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-02-27T07:28:01.099Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
