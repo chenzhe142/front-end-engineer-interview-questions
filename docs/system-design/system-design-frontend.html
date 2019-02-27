@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>tricks & learnings · GitBook</title>
+        <title>Front-end · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../web/rendering.html" />
+    <link rel="next" href="system-design-backend.html" />
     
     
-    <link rel="prev" href="accessibility.html" />
+    <link rel="prev" href="../web/performance.html" />
     
 
     </head>
@@ -409,9 +409,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="html.html">
+        <li class="chapter " data-level="3.1" data-path="../html/html.html">
             
-                <a href="html.html">
+                <a href="../html/html.html">
             
                     
                     Semantic tags
@@ -422,9 +422,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="accessibility.html">
+        <li class="chapter " data-level="3.2" data-path="../html/accessibility.html">
             
-                <a href="accessibility.html">
+                <a href="../html/accessibility.html">
             
                     
                     Accessibility
@@ -435,9 +435,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="tricks-learnings.html">
+        <li class="chapter " data-level="3.3" data-path="../html/tricks-learnings.html">
             
-                <a href="tricks-learnings.html">
+                <a href="../html/tricks-learnings.html">
             
                     
                     tricks & learnings
@@ -495,9 +495,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../system-design/system-design-frontend.html">
+        <li class="chapter active" data-level="6.1" data-path="system-design-frontend.html">
             
-                <a href="../system-design/system-design-frontend.html">
+                <a href="system-design-frontend.html">
             
                     
                     Front-end
@@ -508,9 +508,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../system-design/system-design-backend.html">
+        <li class="chapter " data-level="6.2" data-path="system-design-backend.html">
             
-                <a href="../system-design/system-design-backend.html">
+                <a href="system-design-backend.html">
             
                     
                     Back-end
@@ -553,9 +553,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.4" data-path="../system-design/my-approach.html">
+        <li class="chapter " data-level="6.4" data-path="my-approach.html">
             
-                <a href="../system-design/my-approach.html">
+                <a href="my-approach.html">
             
                     
                     My approach
@@ -746,7 +746,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >tricks & learnings</a>
+        <a href=".." >Front-end</a>
     </h1>
 </div>
 
@@ -761,18 +761,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="web&#x7591;&#x96BE;&#x6742;&#x75C7;">web&#x7591;&#x96BE;&#x6742;&#x75C7;</h1>
-<h2 id="unexpected-spacing-between-inline-block-elements">unexpected spacing between <code>inline-block</code> elements</h2>
-<p>article: <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/" target="_blank">CSS Tricks - fighting space between inline elements</a>
-if you have the following HTML:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>link1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>link2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>link3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-</code></pre>
-<p>There will be spacing between each link.
-&#x539F;&#x56E0;&#xFF1A;&#x56E0;<code>&lt;a&gt;</code>&#x662F;<code>inline element</code>&#xFF0C;&#x6BCF;&#x4E2A;tag&#x95F4;&#x7684;&#x6362;&#x884C;&#x88AB;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x4E8E;&#x662F;&#x6700;&#x7EC8;render&#x7684;&#x7ED3;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x7A7A;&#x683C;</p>
+                                <h1 id="system-design-for-front-end">System design for front-end</h1>
+<p>The content is originally from <a href="http://davidshariff.com/blog/preparing-for-a-front-end-web-development-interview-in-2017/" target="_blank">David Shariff&apos;s post</a> about preparing front-end engineer interview.</p>
+<h2 id="rendering">Rendering</h2>
+<ul>
+<li>client-side (CSR), </li>
+<li>server-side (SSR), </li>
+<li>universal rendering.<h2 id="layout">Layout</h2>
+</li>
+<li>if you&#x2019;re designing a system used by multiple development teams, you need to think about building components and if you require teams to follow a consist markup to use said components.<h2 id="state-management">State management</h2>
+</li>
+<li>such as choosing between unidirectional data flow or two-way data binding. You should also think about if your design will follow a passive or reactive programming model, and how components related to each other for example Foo&#x2013;&gt; Bar or Foo &#x2013;&gt;Bar.<h2 id="async-flow">Async flow</h2>
+&#x2013; your components may need to communicate in real-time with the server. </li>
+<li>The design you propose should consider XHR vs bidirectional calls. If your interviewer asks you to support older browsers, your design will need to choose between hidden iFrames, script tags or XHR for messaging. </li>
+<li>If not, you could propose using websockets or you might decide server-sent events (SSE) are better.<h2 id="separation-of-concerns">Separation of concerns</h2>
+&#x2013; Model-View-Controller (MVC), </li>
+<li>Model-View-ViewModel (MVVM) and </li>
+<li>Model-View-Presenter (MVP) patterns.<h2 id="multi-device-support">Multi-device support</h2>
+</li>
+<li>Will your design use the same implementation for the web, mobile web, and hybrid apps or will they be separate implementations? </li>
+<li>If you were building a site like Pinterest, you might consider three columns on the web but only one column on mobile devices. How would your design handle this?<h2 id="asset-delivery">Asset delivery</h2>
+</li>
+<li>In large applications, it&#x2019;s not uncommon to have independent teams owning their own codebases. These different codebases probably have dependencies on each other and each usually has their own pipeline to release changes to production. </li>
+<li>Your design should consider how assets are built with dependencies (code splitting), tested (unit and integration tests) and deployed. </li>
+<li>You should also think about how you will vend assets through a CDN or inline them to reduce network latency.</li>
+</ul>
 
                                 
                                 </section>
@@ -800,12 +813,12 @@ if you have the following HTML:</p>
 
             
                 
-                <a href="accessibility.html" class="navigation navigation-prev " aria-label="Previous page: Accessibility">
+                <a href="../web/performance.html" class="navigation navigation-prev " aria-label="Previous page: Performance">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../web/rendering.html" class="navigation navigation-next " aria-label="Next page: Rendering">
+                <a href="system-design-backend.html" class="navigation navigation-next " aria-label="Next page: Back-end">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -816,7 +829,7 @@ if you have the following HTML:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tricks & learnings","level":"3.3","depth":1,"next":{"title":"Rendering","level":"4.1","depth":1,"path":"web/rendering.md","ref":"web/rendering.md","articles":[]},"previous":{"title":"Accessibility","level":"3.2","depth":1,"path":"html/accessibility.md","ref":"html/accessibility.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html/tricks-learnings.md","mtime":"2019-02-27T06:42:11.421Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-02-27T07:13:22.178Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Front-end","level":"6.1","depth":1,"next":{"title":"Back-end","level":"6.2","depth":1,"path":"system-design/system-design-backend.md","ref":"system-design/system-design-backend.md","articles":[]},"previous":{"title":"Performance","level":"4.2","depth":1,"path":"web/performance.md","ref":"web/performance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"system-design/system-design-frontend.md","mtime":"2019-02-27T06:42:11.426Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-02-27T07:13:22.178Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
