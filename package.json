@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/chenzhe142/front-end-study-notes#readme",
   "dependencies": {
-    "gitbook-cli": "^2.3.2"
+    "cryptiles": "4.1.2",
+    "gitbook-cli": "^2.3.2",
+    "hoek": "4.2.1"
   }
 }
